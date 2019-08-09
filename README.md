@@ -12,7 +12,8 @@ TwattleCate is a text-based message board based on the Fubuta channel, implement
     1. [Entity Relational Diagram](#entity-relational-diagram)
     1. [Database Diagram](database-diagram)
 
-## Concept
+
+## [^](#index)Concept 
 This project will do 2 main things that the users can see. It will allow people to create a point of discussion (through creating a post), and allow people to respond to posts, by creating their own.
 
 Each point of discussion will be its own thread on its own webpage, where users can follow the timeline of posts and see who replied to who. After a topic reaches a certain length, it will close and people will not be able to respond anymore. Every time someone makes a post in the topic, the topic will move to the top of the queue, which will be a certain length. After the topic leaves the queue, it is permanently deleted.
@@ -25,12 +26,12 @@ It will be a simple message board with basic functionalities, and will expand as
 
 TODO
 
-## Layout
+## [^](#index)Layout
 The website will be 3 layers deep. The homepage will contain links to the topics, and the topics will have a list of discussions on them, with links to each one. There is no limit to the number of discussions that exist (so far). A simplified map looks like:
 ![LAYOUT](/Assets/layout.jpg)
-### Wireframe
+### [^](#layout)Wireframe
 TODO: Aug 11
-## Database Design
+## [^](#index)Database Design
 The database is written with SQL, and will be implemented on a webserver. Each new discussion will create a table, so the database will need to be scalable and easy to navigate. This will evolve as I progress more into the project. Here is a preliminary implementation of the webserver so far:
 ```
 -- ~ -- ~ -- 1. Create Database -- ~ -- ~ --
@@ -108,7 +109,7 @@ GO
 DROP DATABASE MssaMessageBoard
 GO
 ```
-### Entity Relational Diagram
+### [^](#database-design)Entity Relational Diagram
 ![ERD](/Assets/erd.jpg)
-### Database Diagram
+### [^](#database-design)Database Diagram
 TODO: Aug 17
