@@ -23,5 +23,5 @@ TwattleCate is a text-based message board based on the Fubuta channel, implement
 ## Database Design
 
 ### Entity Relational Diagram
-
+![ERD](/Assets/erd.jpg)
 ### Database Diagram
