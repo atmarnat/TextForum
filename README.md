@@ -22,7 +22,9 @@ There will be many different web pages based on different topics that people can
 It will be a simple message board with basic functionalities, and will expand as the project grows.
 
 ### PowerPoint
-TODO
+
+![PowerPoint](/Assets/powerpoint.mp4)
+
 ## Layout
 The website will be 3 layers deep. The homepage will contain links to the topics, and the topics will have a list of discussions on them, with links to each one. There is no limit to the number of discussions that exist (so far). A simplified map looks like:
 ![LAYOUT](/Assets/layout.jpg)
