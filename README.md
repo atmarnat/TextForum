@@ -13,13 +13,20 @@ TwattleCate is a text-based message board based on the Fubuta channel, implement
     1. [Database Diagram](database-diagram)
 
 ## Concept
-~~TODO~~
+This project will do 2 main things that the users can see. It will allow people to create a point of discussion (through creating a post), and allow people to respond to posts, by creating their own.
+
+Each point of discussion will be its own thread on its own webpage, where users can follow the timeline of posts and see who replied to who. After a topic reaches a certain length, it will close and people will not be able to respond anymore. Every time someone makes a post in the topic, the topic will move to the top of the queue, which will be a certain length. After the topic leaves the queue, it is permanently deleted.
+
+There will be many different web pages based on different topics that people can join to discuss specific topics, like news, restaraunts, tv shows, etc, so the amount of threads that can be active at one time will be quite extensive. All of this information will be stored on a webserver, so each thread will be its own table of information. This will reqire much reading/writing/creating/deleting of information from the database.
+
+It will be a simple message board with basic functionalities, and will expand as the project grows.
+
 ### PowerPoint
-~~TODO~~
+TODO
 ## Layout
-~~TODO~~
+TODO
 ### Wireframe
-~~TODO~~
+TODO: Aug 11
 ## Database Design
 The database is written with SQL, and will be implemented on a webserver. Each new discussion will create a table, so the database will need to be scalable and easy to navigate. This will evolve as I progress more into the project. Here is a preliminary implementation of the webserver so far:
 ```
@@ -101,4 +108,4 @@ GO
 ### Entity Relational Diagram
 ![ERD](/Assets/erd.jpg)
 ### Database Diagram
-~~TODO~~
+TODO: Aug 17
