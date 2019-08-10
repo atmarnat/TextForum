@@ -32,7 +32,11 @@ The website will be 3 layers deep. The homepage will contain links to the topics
 ### [^](#layout)Wireframe
 #### Homepage
 ![home](/Assets/homepage.jpg)
-TODO:
+This is the front page of the website. It will have a variety of topics grouped by category. Each will have a picture next to the name, and the user can either click on the picture or the name of the topic in order to go to that webpage. Users will also be able to login to an account on the top left, or continue anonymously. In the top right, there will be a hamburger menu that lets users navigate back to home, view a page that talks about the website, view a page that describes the rules, activate a pop-up that lets them change account info, and finally a button that logs them out of the site. The account buttons are inactive on the anonymous account.
+
+When a user chooses login, they will be prompted with a popup that lets them enter an email and password to login, and a button to let users create a new account. When a user is logged in, their profile picture will display and the login button will be replaced with their username. Users will log out in the hamburger menu.
+
+At the bottom of the page will be a small description of the website, a disclaimer about usage, and the purpose.
 #### Topic View
 ![topic](/Assets/topicpage.jpg)
 TODO:
