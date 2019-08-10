@@ -37,12 +37,27 @@ This is the front page of the website. It will have a variety of topics grouped 
 When a user chooses login, they will be prompted with a popup that lets them enter an email and password to login, and a button to let users create a new account. When a user is logged in, their profile picture will display and the login button will be replaced with their username. Users will log out in the hamburger menu.
 
 At the bottom of the page will be a small description of the website, a disclaimer about usage, and the purpose.
+
+There will only be 1 of these.
+
 #### Topic View
 ![topic](/Assets/topicpage.jpg)
-TODO:
+For the topic pages, the title will be displayed at the top and center. Directly under it will be an input box where users can create new discussions, give it a title, and (in the future) upload pictures. I am hesistant on implementing this feature at the moment because of how difficult it is to check the content of an image without human eyes on it. The login features and hamburger menu will work the same as on the home page.
+
+The number of topics will be a set number per page (probably 10 or 20) to make it easier to navigate the site. I am not a fan of infinite scrolling. Users can use a feature at the top or bottom of the page to navigate different discussions. There will also be a search function so that a user can find discussions by content. At the bottom, users will also be able to delete their discussions (if the click the checkbox next to it), and other users will be able to report a discussion (if they click the checkbox of the discussion). There is also a button to return to the homepage at the bottom.
+
+Each discussion displayed will simply be the first message in that discussion, with the profile picture of the user that created it, the user name, the time it was created, and the post number. Post numbers go from 1 to infinity, and are unique for each topic. The content of the first message will also be displayed. The checkbox allows for reporting/deleting. There should be 10-20 of these per page, depending on the configuration.
+
+There will be a fixed number of these, and users will be unable to create new topics.
+
 #### Discussion View
 ![thread](/Assets/threadpage.jpg)
-TODO:
+The discussion view will have a lot of the same features as the Topic view. The login and hamburger parts share the features as the Home view and the Topic view. The Topic title will be used if no discussion name is used when it is created. If one is given, the topic title will be replaced with the discussion title (though the topic title part of the URL will not change). Instead of creating new discussions, users can reply to a discussion.
+
+The number of topics menu will be replaced with simple buttons that let a user to jump to the top or bottom of the page. The delete/report buttons will work the same way, and the home button will remain. Instead of a search function, a Return button will be used to let the user return to the Topic view. The messages will work exactly the same as in the Topic view, with 2 key differences. Only the first message will have no background, the rest will, and all replied posts will be displayed next to the user info. These replies will be links that jump down to the message that was replied to.
+
+There is a potentially infinite number of discussions, so there can be an infinite number of messages. I will probably close discussions after a certain number of messages to keep discusisons moving.
+
 ## [^](#index)Database Design
 The database is written with SQL, and will be implemented on a webserver. Each new discussion will create a table, so the database will need to be scalable and easy to navigate. This will evolve as I progress more into the project. Here is a preliminary implementation of the webserver so far:
 ```
