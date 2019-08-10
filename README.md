@@ -24,11 +24,7 @@ It will be a simple message board with basic functionalities, and will expand as
 
 ### PowerPoint
 
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="/Assets/homepage.jpg">
-    <source src="/Assets/Presentation.webm" type="video/webm">
-  </video>
-</figure>
+![PPT](/Assets/Presentation.webm)
 
 ## [^](#index)Layout
 The website will be 3 layers deep. The homepage will contain links to the topics, and the topics will have a list of discussions on them, with links to each one. There is no limit to the number of discussions that exist (so far). A simplified map looks like:
