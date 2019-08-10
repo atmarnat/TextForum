@@ -24,7 +24,7 @@ It will be a simple message board with basic functionalities, and will expand as
 
 ### PowerPoint
 
-![Still figuring out how videos work](/Assets/Presentation.mp4)
+![PPT](/Assets/Presentation.gif)
 
 ## [^](#index)Layout
 The website will be 3 layers deep. The homepage will contain links to the topics, and the topics will have a list of discussions on them, with links to each one. There is no limit to the number of discussions that exist (so far). A simplified map looks like:
