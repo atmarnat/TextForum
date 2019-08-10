@@ -33,7 +33,7 @@ The website will be 3 layers deep. The homepage will contain links to the topics
 Homepage:
 ![home](/Assets/homepage.jpg)
 Topic View:
-![topic](/Assets/topic.jpg)
+![topic](/Assets/topicpage.jpg)
 TODO:
 ## [^](#index)Database Design
 The database is written with SQL, and will be implemented on a webserver. Each new discussion will create a table, so the database will need to be scalable and easy to navigate. This will evolve as I progress more into the project. Here is a preliminary implementation of the webserver so far:
