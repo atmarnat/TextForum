@@ -30,10 +30,14 @@ TODO
 The website will be 3 layers deep. The homepage will contain links to the topics, and the topics will have a list of discussions on them, with links to each one. There is no limit to the number of discussions that exist (so far). A simplified map looks like:
 ![LAYOUT](/Assets/layout.jpg)
 ### [^](#layout)Wireframe
-Homepage:
+#### Homepage
 ![home](/Assets/homepage.jpg)
-Topic View:
+TODO:
+#### Topic View
 ![topic](/Assets/topicpage.jpg)
+TODO:
+#### Discussion View
+![thread](/Assets/threadpage.jpg)
 TODO:
 ## [^](#index)Database Design
 The database is written with SQL, and will be implemented on a webserver. Each new discussion will create a table, so the database will need to be scalable and easy to navigate. This will evolve as I progress more into the project. Here is a preliminary implementation of the webserver so far:
