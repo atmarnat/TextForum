@@ -56,7 +56,7 @@ The discussion view will have a lot of the same features as the Topic view. The 
 
 The number of topics menu will be replaced with simple buttons that let a user to jump to the top or bottom of the page. The delete/report buttons will work the same way, and the home button will remain. Instead of a search function, a Return button will be used to let the user return to the Topic view. The messages will work exactly the same as in the Topic view, with 2 key differences. Only the first message will have no background, the rest will, and all replied posts will be displayed next to the user info. These replies will be links that jump down to the message that was replied to.
 
-There is a potentially infinite number of discussions, so there can be an infinite number of messages. I will probably close discussions after a certain number of messages to keep discusisons moving.
+There is a potentially infinite number of discussions, so there can be an infinite number of messages. I will probably close discussions after a certain number of messages to keep discussions moving.
 
 ## [^](#index)Database Design
 The database is written with SQL, and will be implemented on a webserver. Each new discussion will create a table, so the database will need to be scalable and easy to navigate. This will evolve as I progress more into the project. Here is a preliminary implementation of the webserver so far:
