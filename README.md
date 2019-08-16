@@ -145,6 +145,6 @@ GO
 TODO:
 ## [^](#index)Usage
 ### [^](#usage)UML Diagram
-![UML](/Assets/uml.jpg)
+![UML](/Assets/UML.jpg)
 ### [^](#usage)Requirements Traceability Matrix
 TODO:
