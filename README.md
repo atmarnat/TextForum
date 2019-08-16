@@ -11,6 +11,9 @@ TwattleCate is a text-based message board based on the Fubuta channel, implement
 1. [Database Design](#database-design)
     1. [Entity Relational Diagram](#entity-relational-diagram)
     1. [Database Diagram](database-diagram)
+1. [Usage](#usage)
+    1. [UML Diagram](#uml-diagram)
+    1. [Requirements Traceability Matrix](#requirements-traceability-matrix)
 
 
 ## [^](#index)Concept 
@@ -139,4 +142,9 @@ GO
 ### [^](#database-design)Entity Relational Diagram
 ![ERD](/Assets/erd.jpg)
 ### [^](#database-design)Database Diagram
-TODO: Aug 17
+TODO:
+## [^](#index)Usage
+### [^](#usage)UML Diagram
+![UML](/Assets/uml.jpg)
+### [^](#usage)Requirements Traceability Matrix
+TODO:
