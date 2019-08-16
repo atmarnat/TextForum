@@ -164,7 +164,7 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 | fail    |   | 3.2 | Website shall update discussion list when new discussion created |
 | fail    |   | 3.3 | Website shall handle message linking to other messages in same discussion |
 | fail    |   | 3.4 | Website shall handle message linking to other messages across discussions/topics |
-| fail    | Website Layout  | 1 | Views shall display correctly |
+| fail    | Website Layout  | 4 | Views shall display correctly |
 | fail    |   | 4.1 | Menu shall point to the correct views |
 | fail    |   | 4.2 | HomePage shall point to topic views and login information |
 | fail    |   | 4.3 | Topic views shall have list of discussions |
