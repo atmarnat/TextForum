@@ -152,22 +152,22 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 
 | Status  | Requirement   | TestNo.      | Test Description |
 | ------: | :-----------: | :----------: | :--------------- |
-| fail    | User Login  | 1 | User shall make an account |
-| fail    |   | 1.1 | User shall make a username |
-| fail    |   | 1.2 | User shall make a password |
-| fail    |   | 1.3 | User shall upload a profile picture |
-| fail    |   | 1.4 | User shall be able to update profile |
-| fail    | Message Creation  | 2 | User shall create a message |
-| fail    |   | 2.1 | User shall delete a message |
-| fail    | Message Handling  | 3 | Website shall display messages |
-| fail    |   | 3.1 | Website shall group messages by discussion |
-| fail    |   | 3.2 | Website shall update discussion list when new discussion created |
-| fail    |   | 3.3 | Website shall handle message linking to other messages in same discussion |
-| fail    |   | 3.4 | Website shall handle message linking to other messages across discussions/topics |
-| fail    | Website Layout  | 4 | Views shall display correctly |
-| fail    |   | 4.1 | Menu shall point to the correct views |
-| fail    |   | 4.2 | HomePage shall point to topic views and login information |
-| fail    |   | 4.3 | Topic views shall have list of discussions |
-| fail    |   | 4.3.1 | Topic views shall arrange discussions by date of last post |
-| fail    |   | 4.4 | Discussion views shall have a list of messages |
-| fail    |   | 4.4.1 | User pictures shall display properly |
+| Not Tested    | User Login  | 1 | User shall make an account |
+| Not Tested    |   | 1.1 | User shall make a username |
+| Not Tested    |   | 1.2 | User shall make a password |
+| Not Tested    |   | 1.3 | User shall upload a profile picture |
+| Not Tested    |   | 1.4 | User shall be able to update profile |
+| Not Tested    | Message Creation  | 2 | User shall create a message |
+| Not Tested    |   | 2.1 | User shall delete a message |
+| Not Tested    | Message Handling  | 3 | Website shall display messages |
+| Not Tested    |   | 3.1 | Website shall group messages by discussion |
+| Not Tested    |   | 3.2 | Website shall update discussion list when new discussion created |
+| Not Tested    |   | 3.3 | Website shall handle message linking to other messages in same discussion |
+| Not Tested    |   | 3.4 | Website shall handle message linking to other messages across discussions/topics |
+| Not Tested    | Website Layout  | 4 | Views shall display correctly |
+| Not Tested    |   | 4.1 | Menu shall point to the correct views |
+| Not Tested    |   | 4.2 | HomePage shall point to topic views and login information |
+| Not Tested    |   | 4.3 | Topic views shall have list of discussions |
+| Not Tested    |   | 4.3.1 | Topic views shall arrange discussions by date of last post |
+| Not Tested    |   | 4.4 | Discussion views shall have a list of messages |
+| Not Tested    |   | 4.4.1 | User pictures shall display properly |
