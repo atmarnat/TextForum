@@ -156,7 +156,7 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 | Not Tested |           |           |               | 1.1          | User shall make a username | Test | unit test |
 | Not Tested |           |           |               | 1.2          | User shall make a password | Test | unit test |
 | Not Tested |           |           |               | 1.3          | User shall upload a profile picture | Demonstration | Enter the picture |
-| Not Tested |           |           |               | 1.4          | User shall be able to update profile | Analysis |  |
+| Not Tested |           |           |               | 1.4          | User shall be able to update profile | Analysis | unit test group(checking if all information is changed) |
 | Not Tested |           |           | Message Creation  | 2        | User shall create a message | Test | unit test |
 | Not Tested |           |           |               | 2.1          | User shall delete a message | Test | unit test |
 | Not Tested |           |           | Message Handling  | 3        | Website shall display messages | Inspection  | View the webpage to verify information |
