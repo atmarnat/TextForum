@@ -1,0 +1,1 @@
+A testing area for various parts of the project. May not directly associate with the main project. This will probably be removed as I get further along in the project. It is mainly to help me learn various things about ASP.NET and the MVC
