@@ -150,24 +150,24 @@ The user should be able to create a profile, log into it, modify the information
 ### [^](#usage)Requirements Traceability Matrix
 WIP: Some of the initial tests to run, and all of the different subsections of them
 
-| Status     | Build     | TimeStamp | Requirement   | TestNo.      | Test Description | Test Method | Test Procedure |
-| ---------: | :-------: | :-------: | :-----------: | :----------: | :--------------- | :---------: | :------------: |
-| Not Tested |           |           | User Login    | 1            | User shall make an account | Analysis | Enter the pw/username/(default)picture, update all three |
-| Not Tested |           |           |               | 1.1          | User shall make a username | Test | unit test |
-| Not Tested |           |           |               | 1.2          | User shall make a password | Test | unit test |
-| Not Tested |           |           |               | 1.3          | User shall upload a profile picture | Demonstration | Enter the picture |
-| Not Tested |           |           |               | 1.4          | User shall be able to update profile | Analysis | unit test group(checking if all information is changed) |
-| Not Tested |           |           | Message Creation  | 2        | User shall create a message | Test | unit test |
-| Not Tested |           |           |               | 2.1          | User shall delete a message | Test | unit test |
-| Not Tested |           |           | Message Handling  | 3        | Website shall display messages | Inspection  | View the webpage to verify information |
-| Not Tested |           |           |               | 3.1          | Website shall group messages by discussion | Analysis | unit test group verifying correct information from database |
-| Not Tested |           |           |               | 3.2          | Website shall update discussion list when new discussion created | Analysis | unit test group checking for message on both pages |
-| Not Tested |           |           |               | 3.3          | Website shall handle message linking to other messages in same discussion | Demonstration | Click generated links and see if they go to right spot |
-| Not Tested |           |           |               | 3.4          | Website shall handle message linking to other messages across discussions/topics | Demonstration | Click generated links and see if they go to right spot |
-| Not Tested |           |           | Website Layout  | 4          | Views shall display correctly | Inspection | View page and see if everything is lined up correctly |
-| Not Tested |           |           |               | 4.1          | Menu shall point to the correct views | Demonstration | Click links to see if they point to right locations |
-| Not Tested |           |           |               | 4.2          | HomePage shall point to topic views and login information | Demonstration | Click links to see if they point to right locations |
-| Not Tested |           |           |               | 4.3          | Topic views shall have list of discussions | Inspection | View the page and see if there are messages |
-| Not Tested |           |           |               | 4.3.1        | Topic views shall arrange discussions by date of last post | Test | unit test (by time ordering) |
-| Not Tested |           |           |               | 4.4          | Discussion views shall have a list of messages | Inspection  | View page and see if there are messages |
-| Not Tested |           |           |               | 4.4.1        | User pictures shall display properly | Inspection | View if pictures are uploading correctly |
+| TestNo.      | Status     | Build     | TimeStamp | Requirement       | Test Description | Test Method | Test Procedure |
+| -----------: | :--------: | :-------: | :-------: | :---------------: | :--------------- | :---------: | :------------: |
+| 1            | Not Tested |           |           | User Login        | User shall make an account | Analysis | Enter the pw/username/(default)picture, update all three |
+| 1.1          | Not Tested |           |           |                   | User shall make a username | Test | unit test |
+| 1.2          | Not Tested |           |           |                   | User shall make a password | Test | unit test |
+| 1.3          | Not Tested |           |           |                   | User shall upload a profile picture | Demonstration | Enter the picture |
+| 1.4          | Not Tested |           |           |                   | User shall be able to update profile | Analysis | unit test group(checking if all information is changed) |
+| 2            | Not Tested |           |           | Message Creation  | User shall create a message | Test | unit test |
+| 2.1          | Not Tested |           |           |                   | User shall delete a message | Test | unit test |
+| 3            | Not Tested |           |           | Message Handling  | Website shall display messages | Inspection  | View the webpage to verify information |
+| 3.1          | Not Tested |           |           |                   | Website shall group messages by discussion | Analysis | unit test group verifying correct information from database |
+| 3.2          | Not Tested |           |           |                   | Website shall update discussion list when new discussion created | Analysis | unit test group checking for message on both pages |
+| 3.3          | Not Tested |           |           |                   | Website shall handle message linking to other messages in same discussion | Demonstration | Click generated links and see if they go to right spot |
+| 3.4          | Not Tested |           |           |                   | Website shall handle message linking to other messages across discussions/topics | Demonstration | Click generated links and see if they go to right spot |
+| 4            | Not Tested |           |           | Website Layout    | Views shall display correctly | Inspection | View page and see if everything is lined up correctly |
+| 4.1          | Not Tested |           |           |                   | Menu shall point to the correct views | Demonstration | Click links to see if they point to right locations |
+| 4.2          | Not Tested |           |           |                   | HomePage shall point to topic views and login information | Demonstration | Click links to see if they point to right locations |
+| 4.3          | Not Tested |           |           |                   | Topic views shall have list of discussions | Inspection | View the page and see if there are messages |
+| 4.3.1        | Not Tested |           |           |                   | Topic views shall arrange discussions by date of last post | Test | unit test (by time ordering) |
+| 4.4          | Not Tested |           |           |                   | Discussion views shall have a list of messages | Inspection  | View page and see if there are messages |
+| 4.4.1        | Not Tested |           |           |                   | User pictures shall display properly | Inspection | View if pictures are uploading correctly |
