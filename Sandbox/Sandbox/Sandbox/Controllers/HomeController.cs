@@ -13,9 +13,5 @@ namespace MssaMvcApp.Controllers
         {
             return View();
         }
-        public IActionResult Topic()
-        {
-            return View();
-        }
     }
 }
