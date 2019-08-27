@@ -1,10 +1,12 @@
 ﻿body {
     background-color: white;
 }
-/* CSS link hover (green) */
+
 h1 {
     color: black;
     border: groove black;
+    text-align: center;
+    align-content: center;
 }
 
 p {

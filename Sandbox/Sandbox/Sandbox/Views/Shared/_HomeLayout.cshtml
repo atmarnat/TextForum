@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/css/styles.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/stylesHome.css")" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
     <div>
-        @RenderBody()
     </div>
-    <div>
-        @RenderBody()
+    @RenderBody()
+    <div class="row">
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
     </div>
+
     <div>
         <footer class="panel-footer">
             @RenderSection("footer", true)
