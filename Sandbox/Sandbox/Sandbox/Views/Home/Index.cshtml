@@ -1,27 +1,30 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
-    Layout = null;
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
-
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-</head>
-
 <body>
-    <h1>Home page</h1>
-    <!-- Food, Sports, Fashion, Programming, Health, Entertainment, Miscellaneous -->
-    <p><a href="/Topics/Food">Food</a></p>
-    <p><a href="/Topics/Sports">Sports</a></p>
-    <p><a href="/Topics/Fashion">Fashion</a></p>
-    <p><a href="/Topics/Programming">Programming</a></p>
-    <p><a href="/Topics/Health">Health</a></p>
-    <p><a href="/Topics/Entertainment">Entertainment</a></p>
-    <p><a href="/Topics/Miscellaneous">Miscellaneous</a></p>
+    <div>
+        <h1 class="bigtitle">Home page</h1>
+        <!-- Food, Sports, Fashion, Programming, Health, Entertainment, Miscellaneous -->
+        <p><a href="/Topics/Food">Food</a></p>
+        <p><a href="/Topics/Sports">Sports</a></p>
+        <p><a href="/Topics/Fashion">Fashion</a></p>
+        <p><a href="/Topics/Programming">Programming</a></p>
+        <p><a href="/Topics/Health">Health</a></p>
+        <p><a href="/Topics/Entertainment">Entertainment</a></p>
+        <p><a href="/Topics/Miscellaneous">Miscellaneous</a></p>
+    </div>
+    <div>
+    @section footer{
+        <p class="lead">
+            This is footer section.
+        </p>
+    }
+    </div>
 </body>
 </html>

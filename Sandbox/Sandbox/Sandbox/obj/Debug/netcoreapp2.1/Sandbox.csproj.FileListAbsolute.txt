@@ -28,3 +28,4 @@ C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\ne
 C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Topics\Health.g.cshtml.cs
 C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Topics\Entertainment.g.cshtml.cs
 C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Topics\Miscellaneous.g.cshtml.cs
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_HomeLayout.g.cshtml.cs
