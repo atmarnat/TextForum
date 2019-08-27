@@ -1,4 +1,12 @@
-﻿p {
+﻿body {
+    background-color: powderblue;
+}
+
+h1 {
+    color: blue;
+}
+
+p {
     font-family: sans-serif;
     font-size: 10pt;
     color: darkgreen;
