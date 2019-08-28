@@ -1,7 +1,7 @@
 ﻿/* Create three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 33.33%;
+    width: 30%;
     padding: 15px;
 }
 
@@ -15,6 +15,35 @@
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {
     .column {
+        width: 100%;
+    }
+}
+
+img {
+    vertical-align: middle;
+}
+
+img.thumbnail {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.block {
+    display: inline-block;
+    background-color: lightgray;
+    width: 30%;
+    padding: 15px;
+    text-align: left;
+}
+
+.container {
+    text-align: center;
+}
+
+@media screen and (max-width:400px) {
+    .container {
         width: 100%;
     }
 }

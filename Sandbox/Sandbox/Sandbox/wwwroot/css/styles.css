@@ -11,11 +11,17 @@ h1 {
 
 p {
     font-family: sans-serif;
-    font-size: 10pt;
+    font-size: 45pt;
     color: darkblue;
     background-color: floralwhite;
     border: groove black;
     padding: 2px;
+    width: 90%;
+}
+
+.head {
+    text-align: center;
+    width: 10%;
 }
 
 /* unvisited link */

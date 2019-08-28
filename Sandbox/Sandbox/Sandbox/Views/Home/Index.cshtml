@@ -9,30 +9,39 @@
 <html>
 <body>
     <div>
-        <h1>HomePage</h1>
+        @section pageName{
+            <h1>HomePage</h1>
+        }
     </div>
+        <div>
+            @section left{
+                <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Food">Food</a>
+                <br />
+                <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Sports">Sports</a>
+                <br />
+                <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Fashion">Fashion</a>
+                <br />
+            }
+        </div>
+        <div>
+            @section mid{
+
+                <img src="~/pictures/placeholder.jpg" class="thumbnail"/> <a href="/Topics/Programming">Programming</a>
+                <br />
+                <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Health">Health</a>
+                <br />
+                <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Entertainment">Entertainment</a>
+                <br />
+            }
+        </div>
+        <div>
+            @section right{
+                <img src="~/pictures/placeholder.jpg" class="thumbnail"/><a href="/Topics/Miscellaneous">Miscellaneous</a>
+                <br />
+            }
+        </div>
     <div>
-        <div>
-            <!-- Food, Sports, Fashion, Programming, Health, Entertainment, Miscellaneous -->
-            <p>
-                <a href="/Topics/Food">Food</a>
-                <a href="/Topics/Sports">Sports</a>
-                <a href="/Topics/Fashion">Fashion</a>
-            </p>
-        </div>
-        <div>
-            <p>
-                <a href="/Topics/Programming">Programming</a>
-                <a href="/Topics/Health">Health</a>
-                <a href="/Topics/Entertainment">Entertainment</a>
-            </p>
-        </div>
-        <div>
-            <p>
-                <a href="/Topics/Miscellaneous">Miscellaneous</a>
-            </p>
-        </div>
-    <div>
+        <br />
     @section footer{
             This is footer section.
     }
