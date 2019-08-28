@@ -1,7 +1,7 @@
 ﻿/* Create three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 33.33%;
+    width: 30%;
     padding: 15px;
 }
 
@@ -17,4 +17,15 @@
     .column {
         width: 100%;
     }
+}
+
+img {
+
+}
+
+img.thumbnail {
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    max-height: 100px;
 }

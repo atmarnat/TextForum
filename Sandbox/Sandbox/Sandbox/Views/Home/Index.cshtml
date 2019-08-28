@@ -9,27 +9,41 @@
 <html>
 <body>
     <div>
-        <h1>HomePage</h1>
+        @section pageName{
+            <h1>HomePage</h1>
+        }
     </div>
-    <div>
         <div>
-            <!-- Food, Sports, Fashion, Programming, Health, Entertainment, Miscellaneous -->
             <p>
-                <a href="/Topics/Food">Food</a>
-                <a href="/Topics/Sports">Sports</a>
-                <a href="/Topics/Fashion">Fashion</a>
+                @section left{
+                    <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Food">Food</a>
+                    <br />
+                    <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Sports">Sports</a>
+                    <br />
+                    <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Fashion">Fashion</a>
+                    <br />
+                }
             </p>
         </div>
         <div>
             <p>
-                <a href="/Topics/Programming">Programming</a>
-                <a href="/Topics/Health">Health</a>
-                <a href="/Topics/Entertainment">Entertainment</a>
+                @section mid{
+
+                    <img src="~/pictures/placeholder.jpg" class="thumbnail"/> <a href="/Topics/Programming">Programming</a>
+                    <br />
+                    <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Health">Health</a>
+                    <br />
+                    <img src="~/pictures/placeholder.jpg" class="thumbnail" /> <a href="/Topics/Entertainment">Entertainment</a>
+                    <br />
+                }
             </p>
         </div>
         <div>
             <p>
-                <a href="/Topics/Miscellaneous">Miscellaneous</a>
+                @section right{
+                    <img src="~/pictures/placeholder.jpg" class="thumbnail"/><a href="/Topics/Miscellaneous">Miscellaneous</a>
+                    <br />
+                }
             </p>
         </div>
     <div>

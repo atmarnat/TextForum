@@ -10,14 +10,23 @@
 </head>
 <body>
     <div>
+        @RenderSection("pageName", true)
     </div>
-    @RenderBody()
     <div class="row">
         <div class="column">
+            <p>
+                @RenderSection("left", true)
+            </p>
         </div>
         <div class="column">
+            <p>
+                @RenderSection("mid", true)
+            </p>
         </div>
         <div class="column">
+            <p>
+                @RenderSection("right", true)
+            </p>
         </div>
     </div>
 
