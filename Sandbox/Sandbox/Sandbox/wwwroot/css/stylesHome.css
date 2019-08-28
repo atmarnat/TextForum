@@ -14,6 +14,7 @@ img.thumbnail {
     width: 30%;
     padding: 15px;
     text-align: left;
+    background-color: whitesmoke;
 }
 
 .container {
