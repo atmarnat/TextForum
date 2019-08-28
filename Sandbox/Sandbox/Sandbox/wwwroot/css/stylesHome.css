@@ -20,7 +20,7 @@
 }
 
 img {
-
+    vertical-align: middle;
 }
 
 img.thumbnail {
@@ -28,4 +28,17 @@ img.thumbnail {
     width: auto;
     max-width: 100px;
     max-height: 100px;
+}
+
+.block {
+    display: inline-block;
+    background-color: lightgray;
+    width: 30%;
+    padding: 15px;
+    text-align: left;
+}
+
+.container {
+    text-align: center;
+    align-content: center;
 }

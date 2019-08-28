@@ -12,25 +12,25 @@
     <div>
         @RenderSection("pageName", true)
     </div>
-    <div class="row">
-        <div class="column">
+    <div class="container">
+        <div class="block">
             <p>
                 @RenderSection("left", true)
             </p>
         </div>
-        <div class="column">
+        <div class="block">
             <p>
                 @RenderSection("mid", true)
             </p>
         </div>
-        <div class="column">
+        <div class="block">
             <p>
                 @RenderSection("right", true)
             </p>
         </div>
     </div>
 
-    <div>
+    <div style="text-align:center;">
         <footer class="panel-footer">
             @RenderSection("footer", true)
         </footer>
