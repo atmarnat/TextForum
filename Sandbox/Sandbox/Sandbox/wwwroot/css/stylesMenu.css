@@ -130,12 +130,11 @@ span.psw {
 .menuBlock {
     display: table-cell;
     padding: 15px;
-    text-align: left;
     background-color: whitesmoke;
+    width: 33.33%;
 }
 
 .menuContainer {
-    text-align: center;
     display: table;
     width: 100%;
 }
