@@ -13,12 +13,7 @@ namespace Sandbox.Controllers
         // GET: /<controller>/
         //Food, Sports, Fashion, Programming, Health, Entertainment, Miscellaneous
         [HttpGet]
-        public IActionResult Food()
-        {
-            return View();
-        }
-        [HttpGet]
-        public IActionResult Sports()
+        public IActionResult Entertainment()
         {
             return View();
         }
@@ -28,22 +23,52 @@ namespace Sandbox.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult Programming()
+        public IActionResult Fitness()
         {
             return View();
         }
         [HttpGet]
-        public IActionResult Health()
+        public IActionResult Food()
         {
             return View();
         }
         [HttpGet]
-        public IActionResult Entertainment()
+        public IActionResult History()
         {
             return View();
         }
         [HttpGet]
-        public IActionResult Miscellaneous()
+        public IActionResult Language()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Literature()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Math()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Miscillaneous()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Places()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Social()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Sports()
         {
             return View();
         }
