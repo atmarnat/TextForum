@@ -9,19 +9,9 @@ h1 {
     align-content: center;
 }
 
-p {
-    font-family: sans-serif;
-    font-size: 45pt;
-    color: darkblue;
-    background-color: floralwhite;
-    border: groove black;
-    padding: 2px;
-    width: 90%;
-}
-
 .head {
     text-align: center;
-    width: 10%;
+    width: 20%;
 }
 
 /* unvisited link */
