@@ -53,7 +53,7 @@ namespace Sandbox.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult Miscillaneous()
+        public IActionResult Miscellaneous()
         {
             return View();
         }
