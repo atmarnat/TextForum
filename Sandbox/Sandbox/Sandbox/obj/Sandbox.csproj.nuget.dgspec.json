@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Natha\\Source\\Repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj": {}
+    "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Natha\\Source\\Repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj": {
+    "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Natha\\Source\\Repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj",
+        "projectUniqueName": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj",
         "projectName": "Sandbox",
-        "projectPath": "C:\\Users\\Natha\\Source\\Repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj",
-        "packagesPath": "C:\\Users\\Natha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Natha\\Source\\Repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\obj\\",
+        "projectPath": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj",
+        "packagesPath": "C:\\Users\\wwstudent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Natha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wwstudent\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +25,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://packagesource": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +53,6 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true

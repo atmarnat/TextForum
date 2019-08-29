@@ -2,13 +2,78 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/css/styles.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/stylesMenu.css")" rel="stylesheet" type="text/css" />
+    <script src="~/js/menu.js"></script>
+
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <!-- Beginning of the header for all files -->
+    <div class="menuContainer">
+        <div class="menuBlock">
+            <!-- button gotten from W3Schools -->
+            <div>
+                <img src="~/pictures/placeholder.jpg" style="width:80px;height:80px;" />
+            </div>
+            <div>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+                <div id="id01" class="modal">
+
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="~/pictures/placeholder.jpg" alt="Avatar" class="avatar">
+                        </div>
+
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                </div>
+                <!-- End of button-->
+            </div>
+
+
+        </div>
+        <div class="menuBlock">
+            @RenderSection("pageName", true)
+        </div>
+        <div class="menuBlock">
+            <!-- Start of menu-->
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <!-- end of menu -->
+        </div>
     </div>
+
+    <!-- End of the header for all files -->
+    <!-- Begin messsagebox input -->
+    <div class="container" align="center">
+        <input type="text" placeholder="Enter Username" name="uname" style="width:auto;">
+        <textarea rows="4" cols="50" placeholder="Message" style="width:auto;"></textarea>
+    </div>
+    <!-- End messagebox input -->
 </body>
 </html>
