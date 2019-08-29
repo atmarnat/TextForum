@@ -9,7 +9,7 @@ img.thumbnail {
     max-height: 60px;
 }
 
-.block {
+.blockMain {
     display: table-cell;
     width: 30%;
     padding: 15px;
@@ -17,7 +17,7 @@ img.thumbnail {
     background-color: whitesmoke;
 }
 
-.container {
+.containerMain {
     display: table;
     text-align: center;
     width: 100%;
@@ -34,7 +34,7 @@ img.thumbnail {
 }
 
 @media screen and (max-width:800px) {
-    .container {
+    .containerMain {
         width: 100%;
     }
 }
