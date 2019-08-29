@@ -61,9 +61,10 @@
             <div class="dropdown" style="float:right;">
                 <button class="dropbtn">Right</button>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">News</a>
+                    <a href="#">Contact</a>
                 </div>
             </div>
             <!-- end of menu -->
@@ -80,14 +81,14 @@
                 <td width="75%"><input type="text" name="fullname"><input type="submit" value="Submit"><br></td>
             </tr>
             <tr>
-                <td width="25%">namebox</td>
+                <td width="25%">Message</td>
                 <td width="75%">
                     <textarea rows="4" cols="30"></textarea>
                 </td>
             </tr>
             <tr>
-                <td width="25%">files</td>
-                <td width="75%"><input type="file"></td>
+                <td width="25%">Upload</td>
+                <td width="75%"><input type="file" style="width:100%"></td>
             </tr>
         </table>
     </form>
@@ -98,18 +99,10 @@
 
     <div class="ssContainer">
         <div class="ssHalf" style="text-align: left;">
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">&raquo;</a>
-            </div>
+            <a href="#" name="toBottom" style="text-decoration: none">v Bottom</a>
         </div>
         <div class="ssHalf" style="text-align: right;">
-            <button id="reportButton">Report</button>
+            <button id="reportButton">Return</button>
         </div>
     </div>
 
@@ -129,15 +122,7 @@
 
     <div class="ssContainer">
         <div class="ssHalf" style="text-align: left;">
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">&raquo;</a>
-            </div>
+            <a href="#" name="toTop" style="text-decoration: none">^ Top</a>
         </div>
         <div class="ssHalf" style="text-align: right;">
             <button id="deleteButton">Delete</button>
