@@ -45,12 +45,15 @@ label {
 /* handling body styles */
 .blockBody {
     display: table-cell;
-    padding: 15px;
+    display: inline-block;
+    text-align: left;
     background-color: whitesmoke;
+    width: 96%
 }
+
 .containerBody {
     display: table;
-    width: 80%;
     text-align: center;
+    width: 100%;
 }
 
