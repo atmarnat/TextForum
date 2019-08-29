@@ -72,3 +72,5 @@ C:\Users\Natha\Source\Repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcor
 C:\Users\Natha\Source\Repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Topics\Math.g.cshtml.cs
 C:\Users\Natha\Source\Repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Topics\Places.g.cshtml.cs
 C:\Users\Natha\Source\Repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Topics\Social.g.cshtml.cs
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_DiscussionLayout.g.cshtml.cs
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Topics\Entertainment\First.g.cshtml.cs

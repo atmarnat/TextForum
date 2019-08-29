@@ -57,3 +57,46 @@ label {
     width: 100%;
 }
 
+.ssHalf {
+    display: table-cell;
+    display: inline-block;
+    background-color: whitesmoke;
+    width: 47.5%;
+}
+
+.ssContainer {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+/* the pagination */
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 0px 6px;
+    text-decoration: none;
+    transition: background-color .2s;
+}
+
+.pagination a.active {
+    background-color: blue;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: lightgrey;
+}
+
+/* the search bar */
+input[type=textBar] {
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
