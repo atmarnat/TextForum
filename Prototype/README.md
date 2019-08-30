@@ -1,6 +1,6 @@
 # TwaddleCate Prototype
 
-This is the prototype for the message board project. It is just for demonstration.
+This is the prototype for the message board project. It is just for demonstration. The formatting is pretty set, but the colors will probably change in the future. I tried to standardize as much as possible, and got everything down to 3 layout views that are very easy to input data into.
 
 ## Home Page
 ![Home](Pictures/Home.png)
