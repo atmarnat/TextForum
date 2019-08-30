@@ -77,3 +77,4 @@ C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\ne
 C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
 C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Home\News.g.cshtml.cs
 C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\Sandbox\obj\Debug\netcoreapp2.1\Razor\Views\Entertainment\WoW.g.cshtml.cs

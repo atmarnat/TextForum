@@ -6,6 +6,7 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/css/stylesMenu.css")" rel="stylesheet" type="text/css" />
     <link href="~/css/stylesInput.css" rel="stylesheet" />
+    <link href="~/css/styleMessage.css" rel="stylesheet" />
     <script src="~/js/menu.js"></script>
 
 </head>
@@ -34,7 +35,7 @@
                 <img src="~/pictures/avatar.png" style="width:80px;height:80px;" />
             </div>
             <div>
-                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:80px;">Login</button>
 
                 <div id="id01" class="modal">
 
@@ -125,7 +126,10 @@
             </div>
         </div>
         <div class="ssHalf" style="text-align: right;">
-            <input type="textBar" name="search" placeholder="Search..">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Go</button>
+            </form>
         </div>
     </div>
 

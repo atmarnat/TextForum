@@ -13,5 +13,9 @@ namespace Sandbox.Controllers
         {
             return View();
         }
+        public IActionResult WoW()
+        {
+            return View();
+        }
     }
 }
