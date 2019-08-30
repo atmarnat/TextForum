@@ -19,7 +19,6 @@ label {
     width: 30%;
     padding: 15px;
     text-align: center;
-    background-color: whitesmoke;
 }
 
 
@@ -47,7 +46,6 @@ label {
     display: table-cell;
     display: inline-block;
     text-align: left;
-    background-color: whitesmoke;
     width: 96%
 }
 
@@ -60,7 +58,6 @@ label {
 .ssHalf {
     display: table-cell;
     display: inline-block;
-    background-color: whitesmoke;
     width: 47.5%;
 }
 
