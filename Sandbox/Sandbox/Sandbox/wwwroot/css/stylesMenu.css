@@ -1,7 +1,13 @@
-﻿/* Link style */
+﻿/* Modify the background here */
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Link style */
 a {
     text-decoration: none;
 }
+
 button:hover{
     
 }

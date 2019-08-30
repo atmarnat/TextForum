@@ -20,11 +20,10 @@
 }
 
 .modified {
-    font-family: sans-serif;
     font-size: 12pt;
+    border: 1px groove black;
     color: black;
     background-color: floralwhite;
-    border: groove black;
     padding: 4px 20px;
     width: 90%;
 }
