@@ -4,35 +4,34 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/css/stylesHome.css")" rel="stylesheet" type="text/css" />
     <link href="~/css/stylesMenu.css" rel="stylesheet" />
-
+    <link href="@Url.Content("~/css/stylesHome.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- Beginning of the header for all files -->
     <div class="menuContainer">
-        <div class="menuBlock">
+        <div class="menuBlock" style="vertical-align:top">
             <!-- button gotten from W3Schools -->
             <div>
-                <img src="~/pictures/placeholder.jpg" style="width:80px;height:80px;" />
+                <img src="~/pictures/avatar.png" style="width:80px;height:80px;" />
             </div>
             <div>
-                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:80px">Login</button>
 
                 <div id="id01" class="modal">
 
                     <form class="modal-content animate" action="/action_page.php">
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                            <img src="~/pictures/placeholder.jpg" alt="Avatar" class="avatar">
+                            <img src="~/pictures/avatar.png" alt="Avatar" class="avatar">
                         </div>
 
                         <div class="container">
                             <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required>
+                            <input type="text" placeholder="Enter Username" name="uname" style="width: 100%;padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;box-sizing: border-box;" required>
 
                             <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
+                            <input type="password" placeholder="Enter Password" name="psw" style="width: 100%;padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;box-sizing: border-box;" required>
 
                             <button type="submit">Login</button>
                             <label>
@@ -48,20 +47,19 @@
                 </div>
                 <!-- End of button-->
             </div>
-
-
         </div>
         <div class="menuBlock">
             @RenderSection("pageName", true)
         </div>
-        <div class="menuBlock">
+        <div class="menuBlock" style="vertical-align:top">
             <!-- Start of menu-->
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+            <div class="dropdown" style="float: right">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="~/Home/Index">Home</a>
+                    <a href="~/Home/About">About</a>
+                    <a href="~/Home/News">News</a>
+                    <a href="~/Home/Contact">Contact</a>
                 </div>
             </div>
             <!-- end of menu -->
@@ -69,20 +67,20 @@
     </div>
 
     <!-- End of the header for all files -->
-    <div class="container">
-        <div class="block">
+    <div class="containerMain">
+        <div class="blockMain">
             <p align="center">Knowledge</p>
             <div class="modified">
                 @RenderSection("left", true)
             </div>
         </div>
-        <div class="block">
+        <div class="blockMain">
             <p align="center">Health</p>
             <div class="modified">
                 @RenderSection("mid", true)
             </div>
         </div>
-        <div class="block">
+        <div class="blockMain">
             <p align="center">Culture</p>
             <div class="modified">
                 @RenderSection("right", true)
@@ -91,6 +89,7 @@
     </div>
 
     <div style="text-align:center;">
+        <br />
         <footer class="panel-footer">
             @RenderSection("footer", true)
         </footer>

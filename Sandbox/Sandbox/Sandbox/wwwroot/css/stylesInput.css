@@ -1,33 +1,10 @@
 ﻿* {
     box-sizing: border-box;
 }
-
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-}
-
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
-
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
 
 .containerText {
     border-radius: 5px;
@@ -42,7 +19,6 @@ input[type=submit] {
     width: 30%;
     padding: 15px;
     text-align: center;
-    background-color: whitesmoke;
 }
 
 
@@ -65,4 +41,59 @@ input[type=submit] {
     clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/* handling body styles */
+.blockBody {
+    display: table-cell;
+    display: inline-block;
+    text-align: left;
+    width: 96%
+}
+
+.containerBody {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.ssHalf {
+    display: table-cell;
+    display: inline-block;
+    width: 47.5%;
+}
+
+.ssContainer {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+/* the pagination */
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 0px 6px;
+    text-decoration: none;
+    transition: background-color .2s;
+}
+
+.pagination a.active {
+    background-color: blue;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: lightgrey;
+}
+
+/* the search bar */
+input[type=textBar] {
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
