@@ -29,18 +29,24 @@
     </div>
 
     <br />
-    <?php
-    $username = "Anonymous";
-    $postNo = 5;
-    $message = "I play a warlock";
-    function counter() {
-        static $x = 0;
-        echo $x;
-        $x++;
-    }
 
-    counter();
+    <!-- LEarning about scripting input-->
+    <p>Click the button to demonstrate the prompt box.</p>
 
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+function myFunction() {
+  var person = prompt("Please enter your name", "Anonymous");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "Hello " + person + "! How are you today?";
+  }
+}
+    </script>
+    <!-- end scripting text-->
     <div class="divReply">
         <div class="divImg">
             <img class="imageAvatar" src="~/pictures/avatar.png" />
@@ -58,5 +64,4 @@
             </table>
         </div>
     </div>
-    ?>
 </body>
