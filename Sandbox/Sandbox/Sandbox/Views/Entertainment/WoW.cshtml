@@ -29,6 +29,18 @@
     </div>
 
     <br />
+    <?php
+    $username = "Anonymous";
+    $postNo = 5;
+    $message = "I play a warlock";
+    function counter() {
+        static $x = 0;
+        echo $x;
+        $x++;
+    }
+
+    counter();
+
     <div class="divReply">
         <div class="divImg">
             <img class="imageAvatar" src="~/pictures/avatar.png" />
@@ -37,7 +49,7 @@
             <table style="width:100%">
                 <tr>
                     <td class="tdCheck"><input type="checkbox" name="#" value="#" checked><br></td>
-                    <th class="tdOther">[Anonymous] [date/time] [<a href="#">5</a>]</th>
+                    <th class="tdOther">[$username] [date/time] [<a href="#">5</a>]</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -46,4 +58,5 @@
             </table>
         </div>
     </div>
+    ?>
 </body>
