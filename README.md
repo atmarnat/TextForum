@@ -16,7 +16,7 @@ TwattleCate is a text-based message board based on the Fubuta channel, implement
     1. [Requirements Traceability Matrix](#requirements-traceability-matrix)
 
 
-## [^](#index)Concept 
+## [⮤](#index)Concept 
 This project will do 2 main things that the users can see. It will allow people to create a point of discussion (through creating a post), and allow people to respond to posts, by creating their own.
 
 Each point of discussion will be its own thread on its own webpage, where users can follow the timeline of posts and see who replied to who. After a topic reaches a certain length, it will close and people will not be able to respond anymore. Every time someone makes a post in the topic, the topic will move to the top of the queue, which will be a certain length. After the topic leaves the queue, it is permanently deleted.
@@ -29,10 +29,10 @@ It will be a simple message board with basic functionalities, and will expand as
 
 ![PPT](/Assets/Presentation.gif)
 
-## [^](#index)Layout
+## [⮤](#index)Layout
 The website will be 3 layers deep. The homepage will contain links to the topics, and the topics will have a list of discussions on them, with links to each one. There is no limit to the number of discussions that exist (so far). A simplified map looks like:
 ![LAYOUT](/Assets/layout.jpg)
-### [^](#layout)Wireframe
+### [⮤](#index)[^](#layout)Wireframe
 #### Homepage
 ![home](/Assets/homepage.jpg)
 This is the front page of the website. It will have a variety of topics grouped by category. Each will have a picture next to the name, and the user can either click on the picture or the name of the topic in order to go to that webpage. Users will also be able to login to an account on the top left, or continue anonymously. In the top right, there will be a hamburger menu that lets users navigate back to home, view a page that talks about the website, view a page that describes the rules, activate a pop-up that lets them change account info, and finally a button that logs them out of the site. The account buttons are inactive on the anonymous account.
@@ -61,7 +61,7 @@ The number of topics menu will be replaced with simple buttons that let a user t
 
 There is a potentially infinite number of discussions, so there can be an infinite number of messages. I will probably close discussions after a certain number of messages to keep discussions moving.
 
-## [^](#index)Database Design
+## [⮤](#index)Database Design
 The database is written with SQL, and will be implemented on a webserver. Each new discussion will create a table, so the database will need to be scalable and easy to navigate. This will evolve as I progress more into the project. Here is a preliminary implementation of the webserver so far:
 ```
 -- ~ -- ~ -- 1. Create Database -- ~ -- ~ --
@@ -139,15 +139,15 @@ GO
 DROP DATABASE MssaMessageBoard
 GO
 ```
-### [^](#database-design)Entity Relational Diagram
+### [⮤](#index)[^](#database-design)Entity Relational Diagram
 ![ERD](/Assets/erd.jpg)
-### [^](#database-design)Database Diagram
+### [⮤](#index)[^](#database-design)Database Diagram
 TODO:
-## [^](#index)Usage
+## [⮤](#index)Usage
 The user should be able to create a profile, log into it, modify the information, view any message, create a message, and delete their own message. A moderator is at a higher level, and should be able to do all the same things, but also delete other people messages and discussions. An administrator is at the highest level, and should be able to do all of the previous things, but also delete topics, any profile, and do anything to the design of the website. The Administrator is the developer that controls everything.
-### [^](#usage)UML Diagram
+### [⮤](#index)[^](#usage)UML Diagram
 ![UML](/Assets/UML.jpg)
-### [^](#usage)Requirements Traceability Matrix
+### [⮤](#index)[^](#usage)Requirements Traceability Matrix
 WIP: Some of the initial tests to run, and all of the different subsections of them
 
 | TestNo.      | Status     | Build     | TimeStamp | Requirement       | Test Description | Test Method | Test Procedure |
@@ -171,3 +171,5 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 | 4.3.1        | Not Tested |           |           |                   | Topic views shall arrange discussions by date of last post | Test | unit test (by time ordering) |
 | 4.4          | Not Tested |           |           |                   | Discussion views shall have a list of messages | Inspection  | View page and see if there are messages |
 | 4.4.1        | Not Tested |           |           |                   | User pictures shall display properly | Inspection | View if pictures are uploading correctly |
+
+[⮤](#index)
