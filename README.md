@@ -173,9 +173,17 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 | 4.4          | Not Tested |           |           |                   | Discussion views shall have a list of messages | Inspection  | View page and see if there are messages |
 | 4.4.1        | Not Tested |           |           |                   | User pictures shall display properly | Inspection | View if pictures are uploading correctly |
 
-## Product Backlog Items[⮤](#index)
+## [⮤](#index)Product Backlog Items
+#### Complete:
+1. GUI
+1. Database model
+
+#### WIP:
 1. Link database to project
+1. Create scripts to handle input from users
 1. Set up pagination
+
+#### TODO:
 1. Populate initial tables
 1. Create user accounts page
 1. Validate login info
