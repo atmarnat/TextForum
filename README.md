@@ -14,6 +14,7 @@ TwattleCate is a text-based message board based on the Fubuta channel, implement
 1. [Usage](#usage)
     1. [UML Diagram](#uml-diagram)
     1. [Requirements Traceability Matrix](#requirements-traceability-matrix)
+1. [Product Backlog Items](#product-backlog-items)
 
 
 ## [⮤](#index)Concept 
@@ -172,4 +173,11 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 | 4.4          | Not Tested |           |           |                   | Discussion views shall have a list of messages | Inspection  | View page and see if there are messages |
 | 4.4.1        | Not Tested |           |           |                   | User pictures shall display properly | Inspection | View if pictures are uploading correctly |
 
-[⮤](#index)
+## Product Backlog Items[⮤](#index)
+1. Link database to project
+1. Set up pagination
+1. Populate initial tables
+1. Create user accounts page
+1. Validate login info
+1. Push to a webserver
+1. Testing
