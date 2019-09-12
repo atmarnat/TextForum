@@ -189,3 +189,4 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 1. Validate login info
 1. Push to a webserver
 1. Testing
+1. Gui for mobile devices
