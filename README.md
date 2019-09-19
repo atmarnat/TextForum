@@ -2,7 +2,7 @@
 Project for the MSSA cohort
 
 ## Description
-TwattleCate is a text-based message board based on the Fubuta channel, implementing the GazouBBS script in conjunction with creating and managing user accounts. It uses the MVC model in order to provide users with a way to communicate with each other from anywhere on the planet in real time.
+TwattleCate is a text-based message board modeled after the Fubuta channel. Stylistically it works in a very similar manner to a Fubuta channel, but functionally it uses the MVC model in ASP.NET to provide users with a way to communicate with each other from anywhere on the planet in real time.
 ## Index
 1. [Concept](#concept)
     1. [PowerPoint](#powerpoint)
@@ -121,7 +121,7 @@ INSERT INTO Users (userName, userPassword)
 VALUES ('Anonymous', 'password')
 SELECT * FROM Users;
 
--- ~ -- ~ -- 4. How to in -- ~ -- ~ -- 
+-- ~ -- ~ -- 4. How to send messages into the database -- ~ -- ~ -- 
 INSERT INTO Posts (topicID, userID, created, content)
 VALUES(
 	3,		/*The current topic*/
@@ -172,11 +172,12 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 ## [⮤](#index)Product Backlog Items
 #### Complete:
 1. GUI
-1. Database model
+1. Database created
 
-#### WIP:
+#### Current WIP:
 1. Creating controllers/models to access database
 1. Set up pagination
+1. Get routing set up
 
 #### TODO:
 1. Populate initial tables
