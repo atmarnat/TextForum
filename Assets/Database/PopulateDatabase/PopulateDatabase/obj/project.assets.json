@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wwstudent\\source\\repos\\PopulateDatabase\\PopulateDatabase\\PopulateDatabase.csproj",
+      "projectUniqueName": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Assets\\Database\\PopulateDatabase\\PopulateDatabase\\PopulateDatabase.csproj",
       "projectName": "PopulateDatabase",
-      "projectPath": "C:\\Users\\wwstudent\\source\\repos\\PopulateDatabase\\PopulateDatabase\\PopulateDatabase.csproj",
+      "projectPath": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Assets\\Database\\PopulateDatabase\\PopulateDatabase\\PopulateDatabase.csproj",
       "packagesPath": "C:\\Users\\wwstudent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wwstudent\\source\\repos\\PopulateDatabase\\PopulateDatabase\\obj\\",
+      "outputPath": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Assets\\Database\\PopulateDatabase\\PopulateDatabase\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

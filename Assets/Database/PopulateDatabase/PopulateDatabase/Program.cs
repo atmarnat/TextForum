@@ -41,7 +41,7 @@ namespace PopulateDatabase
         static string MessageBuilder()
         {
             Random messageSize = new Random();
-            var chars = "AaBbCcDdEeFfGgHhIiJjKkHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz ,.'!";
+            var chars = "AaBbCcDdEeFfGgHhIiJjKkHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz ,.!";
             var message = new char[messageSize.Next(1, 254)];
 
             for (int i = 0; i < message.Length; i++)
