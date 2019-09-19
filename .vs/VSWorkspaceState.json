@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
-    "\\Sandbox",
+    "\\Assets\\Database",
+    "\\Prototype",
+    "\\Prototype\\Prototype",
     "\\Sandbox\\Sandbox"
   ],
-  "SelectedNode": "\\Sandbox\\Sandbox\\Sandbox.sln",
+  "SelectedNode": "\\Assets\\Database\\README.md",
   "PreviewInSolutionExplorer": false
 }

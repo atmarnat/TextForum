@@ -1,0 +1,10 @@
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\obj\Debug\netcoreapp2.2\PopulateDatabase.csproj.CoreCompileInputs.cache
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\obj\Debug\netcoreapp2.2\PopulateDatabase.AssemblyInfoInputs.cache
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\obj\Debug\netcoreapp2.2\PopulateDatabase.AssemblyInfo.cs
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\bin\Debug\netcoreapp2.2\PopulateDatabase.deps.json
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\bin\Debug\netcoreapp2.2\PopulateDatabase.runtimeconfig.json
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\bin\Debug\netcoreapp2.2\PopulateDatabase.runtimeconfig.dev.json
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\bin\Debug\netcoreapp2.2\PopulateDatabase.dll
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\bin\Debug\netcoreapp2.2\PopulateDatabase.pdb
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\obj\Debug\netcoreapp2.2\PopulateDatabase.dll
+C:\Users\wwstudent\source\repos\PopulateDatabase\PopulateDatabase\obj\Debug\netcoreapp2.2\PopulateDatabase.pdb
