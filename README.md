@@ -63,7 +63,7 @@ The number of topics menu will be replaced with simple buttons that let a user t
 There is a potentially infinite number of discussions, so there can be an infinite number of messages. I will probably close discussions after a certain number of messages to keep discussions moving.
 
 ## [⮤](#index)Database Design
-The database is written with SQL, and will be implemented on a webserver. Each new discussion will create a table, so the database will need to be scalable and easy to navigate. This will evolve as I progress more into the project. Here is a preliminary implementation of the webserver so far:
+The database is written with SQL, and will be implemented on a webserver. I have made significant changes to the design of the database in order to simplify data retrieval. There are only 3 tables now, one for users, one for all of the posts, and one for each topic. This greatly simplifies getting values for the website, and it minimizes the number of models needed for the MVC application. Here is a more refined version of the database:
 ```
 -- ~ -- ~ -- 1. Create Database -- ~ -- ~ --
 CREATE DATABASE MssaMessageBoard
@@ -73,68 +73,65 @@ GO
 
 -- ~ -- ~ -- 2. Create Tables -- ~ -- ~ -- 
 CREATE TABLE Users
-( UserName varchar (25), UserPassword varchar (25), UserEmail varchar (25), UserDateCreated DATE );
-ALTER TABLE Users ADD UserID INT Identity(0,1)
+( userID INT Identity(1,1), userName varchar (25) NOT NULL, email varchar (40),
+	userPhoto varchar(80), userPassword varchar(40) NOT NULL,
+	userPermissions int, PRIMARY KEY(userID));
 GO
 
---Do this for each different subject
-CREATE TABLE Food --Sports, Fashion, Programming, Health, Entertainment, Misc.
-( TopicID varchar(30), tPostNumCreate int, tPostDateCreate DATE, tPostUserID int);
-ALTER TABLE Food ADD tPostID INT IDENTITY(0,1) 
-GO 
-INSERT INTO Food
-(TopicID, tPostNumCreate, tPostDateCreate, tPostUserID)
-	VALUES
-	('Food', 0, GETDATE(), 0);
+CREATE TABLE Topics
+( topicID INT Identity(1,1), topic varchar (40), PRIMARY KEY(topicID));
+GO
+
+CREATE TABLE Posts
+( postID INT identity(1,1), topicID int, userID int, created date, content varchar (255), 
+	PRIMARY KEY(postID), 
+	FOREIGN KEY(topicID) REFERENCES Topics(topicID),
+	FOREIGN KEY(userID) REFERENCES Users(userID));
+GO
     
--- ~ -- ~ -- 3. HowTo Population -- ~ -- ~ --
-CREATE TABLE Discussion 
-(
-	PostNum int
-	, PostDate DATE
-	, PostUserID int
-	, PostTopicLoc varchar(30)
-	, PostMessage varchar(255)
-	, PostRank int
+-- ~ -- ~ -- 3. Setting up default values -- ~ -- ~ --
+INSERT INTO Topics (topic)
+VALUES ('Math');
+INSERT INTO Topics (topic)
+VALUES ('Language');
+INSERT INTO Topics (topic)
+VALUES ('Literature');
+INSERT INTO Topics (topic)
+VALUES ('History');
+INSERT INTO Topics (topic)
+VALUES ('Fitness');
+INSERT INTO Topics (topic)
+VALUES ('Food');
+INSERT INTO Topics (topic)
+VALUES ('Social');
+INSERT INTO Topics (topic)
+VALUES ('Sports');
+INSERT INTO Topics (topic)
+VALUES ('Entertainment');
+INSERT INTO Topics (topic)
+VALUES ('Fashion');
+INSERT INTO Topics (topic)
+VALUES ('Places');
+INSERT INTO Topics (topic)
+VALUES ('Miscellaneous');
+SELECT * FROM Topics;
+
+INSERT INTO Users (userName, email, userPassword)
+VALUES ('Administrator', 'abc@xyz.com', 'Password')
+INSERT INTO Users (userName, userPassword)
+VALUES ('Anonymous', 'password')
+SELECT * FROM Users;
+
+-- ~ -- ~ -- 4. How to in -- ~ -- ~ -- 
+INSERT INTO Posts (topicID, userID, created, content)
+VALUES(
+	3,		/*The current topic*/
+	1,		/*The current user, default is anonymous*/
+	GETDATE(),	/*The current date/time*/
+	'This is a sample message' /*The content body, what comes from the textbox*/
 );
-ALTER TABLE tempstuff ADD PostID INT IDENTITY(1,1)
-GO
 
-INSERT INTO Discussion
-(PostNum, PostDate, PostUserID, PostTopicLoc, PostMessage, PostRank, PostID)
-VALUES
-(
-	1 /*Some value, gotten from users*/
-	, GETDATE()
-	, (SELECT UserID FROM Users) /*ID of user that posted, usually 1 for now*/
-	, (SELECT TopicID
-		FROM Topic) /*some variable to relate to the topic id*/
-	, 'This is a message' /*input from user*/
-	, 1 /*order numbering, 1 to whatever*/
-	, 1 /*is always the post number of first message in discussion*/
-);
-
-INSERT INTO Topics  --topics are Food, Sports, Fashion, Programming, Health, Entertainment, Miscellaneous
-(	TopicID
-	, tPostNumCreate
-	, tPostDateCreate
-	, tPostUserID
-)
-VALUES -- for the list of topics for the first int.
-(
-	Topics	 
-	, (SELECT PostNum
-		FROM Discussion
-		WHERE PostRank = 1)
-	, (SELECT PostDate
-		FROM Discussion
-		WHERE PostRank = 1)
-	, (SELECT PostUserID
-		FROM Discussion
-		WHERE PostRank = 1)
-)
-
--- ~ -- ~ -- 4. CLEANUP -- ~ -- ~ -- 
+-- ~ -- ~ -- 5. CLEANUP -- ~ -- ~ -- 
 USE master
 GO
 DROP DATABASE MssaMessageBoard
