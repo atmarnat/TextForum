@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MessageBoard.Models.PostViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/css/stylesMenu.css")" rel="stylesheet" type="text/css" />
+    <link href="~/css/stylesInput.css" rel="stylesheet" />
+    <link href="~/css/styleMessage.css" rel="stylesheet" />
+    <script src="~/js/menu.js"></script>
+
+</head>
+
+<h2>Index</h2>
+
+
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(modelItem => item.content)
+    <div class="divFirst">
+        <div class="divImg">
+            <img class="imageAvatar" src="~/pictures/avatar.png" />
+        </div>
+        <div class="divWrapper">
+            <table style="width:100%">
+                <tr>
+                    <td class="tdCheck"><input type="checkbox" name="#" value="#" checked><br></td>
+                    <th class="tdOther">[Anonymous] [@Html.DisplayFor(modelItem => item.created)] [<a href="#">@Html.DisplayFor(modelItem => item.postID)</a>]</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="tdOther">@Html.DisplayFor(modelItem => item.content)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+}

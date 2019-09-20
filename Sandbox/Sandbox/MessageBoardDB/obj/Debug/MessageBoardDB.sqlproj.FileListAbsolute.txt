@@ -1,0 +1,6 @@
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\MessageBoardDB\bin\Debug\MessageBoardDB.dacpac
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\MessageBoardDB\bin\Debug\MessageBoardDB.dll
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\MessageBoardDB\bin\Debug\MessageBoardDB.pdb
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\MessageBoardDB\obj\Debug\MessageBoardDB.sqlprojAssemblyReference.cache
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\MessageBoardDB\obj\Debug\MessageBoardDB.dll
+C:\Users\wwstudent\source\repos\TwaddleCate\Sandbox\Sandbox\MessageBoardDB\obj\Debug\MessageBoardDB.pdb
