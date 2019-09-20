@@ -10,7 +10,7 @@ TwattleCate is a text-based message board modeled after the Fubuta channel. Styl
     1. [Wireframe](#wireframe)
 1. [Database Design](#database-design)
     1. [Entity Relational Diagram](#entity-relational-diagram)
-    1. [Database Diagram](database-diagram)
+    1. [Database Diagram](#database-diagram)
 1. [Usage](#usage)
     1. [UML Diagram](#uml-diagram)
     1. [Requirements Traceability Matrix](#requirements-traceability-matrix)
