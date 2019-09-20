@@ -9,9 +9,9 @@ namespace MessageBoard.Models
     public class PostViewModel
     {
         [Key]
-        public int postID { get; }
-        public int topicID { get; set; }
-        public int userID { get; set; }
+        public int postID { get; set; }
+        public string topic { get; set; }
+        public string user { get; set; }
         public DateTime created { get; set; }
         public string content { get; set; }
     }

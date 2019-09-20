@@ -18,13 +18,13 @@ namespace MessageBoard.Controllers
         public IActionResult Index()
         {
             var _postList = _dbContext.Posts.
-                Join(_dbContext.Topics, p => p.topicID, t => t.TopicID,
+                Join(_dbContext.Topics, p => p.TopicID, t => t.TopicID,
                 (p, t) => new PostViewModel
                 {
-                    topicID = p.topicID,
-                    userID = p.userID,
+                    topic = t.Topic,
+                    user = t.Topic,
                     created = DateTime.Now,
-                    content = p.content
+                    content = p.Content
                 }).ToList();
             IList<PostViewModel> postList = _postList;
 

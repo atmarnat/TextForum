@@ -9,14 +9,14 @@ namespace MessageBoard.Models
     public class Posts
     {
         [Key]
-        public int postID { get; set; }
+        public int PostID { get; set; }
         [Display(Name = "Topic")]
-        public int topicID { get; set; }
+        public int TopicID { get; set; }
         [Display(Name = "User")]
-        public int userID { get; set; }
+        public int UserID { get; set; }
         [Display(Name = "Date Created")]
-        public DateTime created { get; set; }
+        public DateTime Created { get; set; }
         [Display(Name = "Content")]
-        public string content { get; set; }
+        public string Content { get; set; }
     }
 }

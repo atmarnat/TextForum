@@ -16,10 +16,9 @@
 
 <h2>Index</h2>
 
-
+<hr />
 @foreach (var item in Model)
 {
-    @Html.DisplayFor(modelItem => item.content)
     <div class="divFirst">
         <div class="divImg">
             <img class="imageAvatar" src="~/pictures/avatar.png" />
@@ -28,7 +27,7 @@
             <table style="width:100%">
                 <tr>
                     <td class="tdCheck"><input type="checkbox" name="#" value="#" checked><br></td>
-                    <th class="tdOther">[Anonymous] [@Html.DisplayFor(modelItem => item.created)] [<a href="#">@Html.DisplayFor(modelItem => item.postID)</a>]</th>
+                    <th class="tdOther">[@Html.DisplayFor(modelItem => item.user)] [@Html.DisplayFor(modelItem => item.created)] [<a href="#">@Html.DisplayFor(modelItem => item.postID)</a>]</th>
                 </tr>
                 <tr>
                     <td></td>
@@ -37,4 +36,5 @@
             </table>
         </div>
     </div>
+    <hr />
 }
