@@ -172,14 +172,15 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 ## [⮤](#index)Product Backlog Items
 #### Complete:
 1. GUI
-1. Database created
+1. Database created and populated with initial data
+1. Able to read posts from the database
 
 #### Current WIP:
-1. Creating controllers/models to access database
-1. Set up pagination
-1. Get routing set up
+1. Adding messages to the Posts database
+1. Get routing set up (So pages are only based on variables, not their own views)
 
 #### TODO:
+1. Set up pagination
 1. Populate initial tables
 1. Create user accounts page
 1. Validate login info
