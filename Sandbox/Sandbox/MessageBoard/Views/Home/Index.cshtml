@@ -15,6 +15,31 @@
 </head>
 
 <h2>Index</h2>
+<!-- Begin messagebox input -->
+<div style="text-align: center"> Create Message</div>
+<form action="/action_page.php">
+    <table width="30%" align="center" border="1">
+        <tr>
+            <td width="25%">Name</td>
+            <td width="75%"><input type="text" name="fullname" style="width:72%"><input type="submit" value="Submit" style="width:28%"><br></td>
+        </tr>
+        <tr>
+            <td width="25%">Message</td>
+            <td width="75%">
+                <textarea rows="4" cols="30"></textarea>
+            </td>
+        </tr>
+        <!-- 
+        <tr>
+            <td width="25%">Upload</td>
+            <td width="75%"><input type="file" style="width:100%"></td>
+        </tr>
+            -->
+    </table>
+</form>
+<br />
+<!-- End messagebox input -->
+
 
 <hr />
 @foreach (var item in Model)
