@@ -23,7 +23,7 @@ namespace MessageBoard.Controllers
             {
                 postID = p.PostID,
                 user = u.UserName,
-                created = DateTime.Now,
+                created = p.Created,
                 content = p.Content
             }).ToList();
                 

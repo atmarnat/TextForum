@@ -12085,11 +12085,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\MessageBoard\\MessageBoard.csproj",
+      "projectUniqueName": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\MessageBoard\\MessageBoard.csproj",
       "projectName": "MessageBoard",
-      "projectPath": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\MessageBoard\\MessageBoard.csproj",
+      "projectPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\MessageBoard\\MessageBoard.csproj",
       "packagesPath": "C:\\Users\\wwstudent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\MessageBoard\\obj\\",
+      "outputPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\MessageBoard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

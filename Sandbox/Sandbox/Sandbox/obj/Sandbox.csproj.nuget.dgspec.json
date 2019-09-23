@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj": {}
+    "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj": {
+    "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj",
+        "projectUniqueName": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj",
         "projectName": "Sandbox",
-        "projectPath": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj",
+        "projectPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\Sandbox.csproj",
         "packagesPath": "C:\\Users\\wwstudent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wwstudent\\source\\repos\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\obj\\",
+        "outputPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\Sandbox\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
