@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MessageBoard.Models
 {
@@ -13,8 +15,8 @@ namespace MessageBoard.Models
 
         }
 
-        public DbSet<Users> Users { get; set; }
-        public DbSet<Posts> Posts { get; set; }
-        public DbSet<Topics> Topics { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Topic> Topics { get; set; }
     }
 }

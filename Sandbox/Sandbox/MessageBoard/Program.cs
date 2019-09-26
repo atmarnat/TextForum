@@ -14,11 +14,14 @@ namespace MessageBoard
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            WebHostBuilder(args).Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        public static IWebHost WebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            .UseStartup<Startup>()
+            .UseDefaultServiceProvider(options =>
+            options.ValidateScopes = false)
+            .Build();
     }
 }
