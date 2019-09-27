@@ -13,7 +13,7 @@ namespace TextForum.Controllers
         private IPostRepository repository;
         private readonly ApplicationDbContext _dbContext;
 
-        public int PageSize = 5;
+        public int PageSize = 10;
         public PostController(IPostRepository repo, ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -39,6 +39,11 @@ namespace TextForum.Controllers
         {
             _dbContext.Posts.Add(newPost);
             _dbContext.SaveChanges();
+            return View();
+        }
+
+        public ViewResult Create()
+        {
             return View();
         }
     }

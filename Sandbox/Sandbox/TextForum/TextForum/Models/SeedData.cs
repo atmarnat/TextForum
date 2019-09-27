@@ -97,7 +97,47 @@ namespace TextForum.Models
                     },
                     new Topic
                     {
-                        TopicName = "Programming"
+                        TopicName = "Fashion"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Fitness"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Food"
+                    },
+                    new Topic
+                    {
+                        TopicName = "History"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Language"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Literature"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Math"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Miscellaneous"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Places"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Social"
+                    },
+                    new Topic
+                    {
+                        TopicName = "Sports"
                     }
                 );
                 context.SaveChanges();

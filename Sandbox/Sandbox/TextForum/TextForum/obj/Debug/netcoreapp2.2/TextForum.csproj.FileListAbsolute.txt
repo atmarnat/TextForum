@@ -51,3 +51,4 @@ C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextFo
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextForum\obj\Debug\netcoreapp2.2\TextForum.dll
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextForum\obj\Debug\netcoreapp2.2\TextForum.pdb
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextForum\obj\Debug\netcoreapp2.2\TextForum.csproj.CopyComplete
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Post\Create.g.cshtml.cs
