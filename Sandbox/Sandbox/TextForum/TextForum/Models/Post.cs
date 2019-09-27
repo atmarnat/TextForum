@@ -12,7 +12,7 @@ namespace TextForum.Models
         public int PostID { get; set; }
         public int TopicID { get; set; }
         public int UserID { get; set; }
-        public DateTime Created { get; set; }
+        public DateTime Created { get; set; } = DateTime.Now;
         public string Content { get; set; }
     }
 }

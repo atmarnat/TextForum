@@ -1,1 +1,24 @@
-﻿Hello From Create!
+﻿@model  TextForum.Models.Post
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+
+<body>
+    Hello From Create!
+    <form asp-action="Create" method="post">
+        <input type="hidden" id="UserID" name="userID" value=1>
+        <input type="hidden" id="TopicID" name="topidID" value=1>
+        <input type="hidden" id="custId" name="custId" value=DateTime.Now>
+        <p>
+            <textarea asp-for="Content">Content: </textarea>
+            <inpt asp-for"Name" />
+        </p>
+        <button type="submit">Post</button>
+    </form>
+    <button type="button" onclick="location.href='@Url.Action("List", "Post")'">Back</button>
+</body>
+</html>

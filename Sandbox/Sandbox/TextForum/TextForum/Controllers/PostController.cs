@@ -35,13 +35,14 @@ namespace TextForum.Controllers
             });
 
         [HttpPost]
-        public ViewResult AddPost(Post newPost)
+        public ViewResult Create(Post newPost)
         {
             _dbContext.Posts.Add(newPost);
             _dbContext.SaveChanges();
             return View();
         }
 
+        [HttpGet]
         public ViewResult Create()
         {
             return View();
