@@ -1,0 +1,8 @@
+﻿@model  PostsListViewModel
+
+@foreach(var p in Model.Posts)
+{
+    @Html.Partial("PostList", p)
+}
+
+<div page-model="@Model.PagingInfo" page-action="List"></div>
