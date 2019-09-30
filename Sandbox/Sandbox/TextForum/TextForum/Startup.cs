@@ -41,7 +41,7 @@ namespace TextForum
                     defaults: new { Controller = "Post", action = "List" });
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Post}/{action=List}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
             SeedData.EnsurePopulated(app);
         }
