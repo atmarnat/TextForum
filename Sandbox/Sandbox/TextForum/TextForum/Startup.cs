@@ -37,7 +37,7 @@ namespace TextForum
             {
                 routes.MapRoute(
                     name: "pagination",
-                    template: "Posts/Page{topicID}/Page{postPage}",
+                    template: "Page{topicID}/Posts/Page{postPage}",
                     defaults: new { Controller = "Post", action = "List" });
                 routes.MapRoute(
                     name: "default",
