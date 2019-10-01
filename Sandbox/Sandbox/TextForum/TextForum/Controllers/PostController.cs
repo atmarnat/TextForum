@@ -19,11 +19,12 @@ namespace TextForum.Controllers
             _dbContext = dbContext;
             repository = repo;
         }
-        public ViewResult List(int postPage = 1)
+        public ViewResult List(int postPage = 1, int topicID = 1)
             => View(new PostsListViewModel
             { 
                 Posts = repository.Posts
-                .OrderBy(p => p.PostID)
+                .OrderByDescending(p => p.Created)
+                .Where(p => p.TopicID == topicID)
                 .Skip((postPage -1) * PageSize)
                 .Take(PageSize),
                 PagingInfo = new PagingInfo
@@ -35,17 +36,17 @@ namespace TextForum.Controllers
             });
 
         [HttpPost]
-        public ViewResult Create(Post newPost)
+        public IActionResult Create(Post newPost)
         {
             _dbContext.Posts.Add(newPost);
             _dbContext.SaveChanges();
-            return View();
+            return RedirectToAction("List");
         }
 
         [HttpGet]
-        public ViewResult Create()
+        public IActionResult Create()
         {
-            return View();
+            return RedirectToAction("List");
         }
     }
 }

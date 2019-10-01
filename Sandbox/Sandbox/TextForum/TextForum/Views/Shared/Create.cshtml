@@ -1,17 +1,9 @@
 ﻿@model  TextForum.Models.Post
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-
-<body>
-    Hello From Create!
+<div style="align-content = center; width: auto">
     <form asp-action="Create" method="post">
         <input type="hidden" id="UserID" name="userID" value=1>
-        <input type="hidden" id="TopicID" name="topidID" value=1>
+        <input type="hidden" id="TopicID" name="topicID" value=1>
         <input type="hidden" id="custId" name="custId" value=DateTime.Now>
         <p>
             <textarea asp-for="Content">Content: </textarea>
@@ -19,6 +11,4 @@
         </p>
         <button type="submit">Post</button>
     </form>
-    <button type="button" onclick="location.href='@Url.Action("List", "Post")'">Back</button>
-</body>
-</html>
+</div>

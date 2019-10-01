@@ -1,11 +1,16 @@
-﻿@model PostsListViewModel
+﻿<div style="text-align: center">
+    Create
+    @Html.Partial("Create", new TextForum.Models.Post())
+</div>
 
-<a asp-action="Create">Create</a>
 
+<div page-model="@Model.PagingInfo" page-action="List"></div>
 @foreach (var p in Model.Posts)
 {
-    @Html.Partial("PostList", p)
+    <div>
+        <h4>@p.TopicID [@p.UserID] [@p.Created] <a href="#">@p.PostID</a></h4>
+        @p.Content
+    </div>
     <hr />
 }
-
 <div page-model="@Model.PagingInfo" page-action="List"></div>
