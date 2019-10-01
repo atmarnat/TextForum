@@ -37,11 +37,11 @@ namespace TextForum
             {
                 routes.MapRoute(
                     name: "pagination",
-                    template: "Posts/Page{postPage}",
+                    template: "Posts/Page{topicID}/Page{postPage}",
                     defaults: new { Controller = "Post", action = "List" });
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{action=Index}/{controller=Home}/{id?}");
             });
             SeedData.EnsurePopulated(app);
         }
