@@ -35,7 +35,11 @@ namespace TextForum.Controllers
                         .Where (e => e.TopicID == id)
                         .Count()
                 },
-                CurrentTopic = id
+                CurrentTopic = id,
+                CurrentTopicName = repository.Topics
+                    .Where(t => t.TopicID == id)
+                    .Select(t => t.TopicName)
+                    .First()
             });
 
         [HttpPost]
@@ -50,6 +54,11 @@ namespace TextForum.Controllers
         public IActionResult Create()
         {
             return RedirectToAction("List");
+        }
+
+        public ViewResult Replies()
+        {
+            return View();
         }
     }
 }

@@ -11,5 +11,6 @@ namespace TextForum.Models.ViewModels
         public IEnumerable<Post> Posts { get; set; }
         public PagingInfo PagingInfo { get; set; }
         public int CurrentTopic { get; set; }
+        public string CurrentTopicName { get; set; }
     }
 }

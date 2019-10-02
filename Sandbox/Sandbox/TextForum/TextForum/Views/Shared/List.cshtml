@@ -1,8 +1,7 @@
-﻿@{
-    var Title = ViewContext.RouteData.Values["id"];
-}
+﻿<div style="text-align: center">
+    <h1>@Model.CurrentTopicName</h1>
+</div>
 
-<h1>@Title</h1>
 
 <div style="text-align: center">
     Create
@@ -13,7 +12,7 @@
 @foreach (var p in Model.Posts)
 {
     <div>
-        <h4>@p.TopicID [@p.UserID] [@p.Created] <a href="#">@p.PostID</a></h4>
+        <h4>[@p.UserID] [@p.Created] <a href="#">@p.PostID</a></h4>
         @p.Content
     </div>
     <hr />

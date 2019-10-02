@@ -52,3 +52,4 @@ C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextFo
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Create.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Shared\List.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\Sandbox\Sandbox\TextForum\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Replies.g.cshtml.cs
