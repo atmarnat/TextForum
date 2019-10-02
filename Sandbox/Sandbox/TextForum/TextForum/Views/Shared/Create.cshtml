@@ -1,9 +1,14 @@
 ﻿@model TextForum.Models.Post
 
+@{
+    string tID = (string)ViewContext.RouteData.Values["id"];
+}
+
+
 <div style="align-content = center; width: auto">
     <form asp-action="Create" method="POST">
         <input type="hidden" id="UserID" name="userID" value=1>
-        <input type="hidden" id="TopicID" name="topicID" value=1>
+        <input type="hidden" id="TopicID" name="topicID" value=@Int32.Parse(tID)>
         <input type="hidden" id="custId" name="custId" value=DateTime.Now>
         <p>
             <textarea asp-for="Content">Content: </textarea>
