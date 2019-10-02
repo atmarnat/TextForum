@@ -39,7 +39,12 @@ namespace TextForum.Controllers
                 CurrentTopicName = repository.Topics
                     .Where(t => t.TopicID == id)
                     .Select(t => t.TopicName)
-                    .First()
+                    .First(),
+                CurrentUserName = repository.Users
+                    .Where(u => u.UserID == 1)
+                    .Select(u => u.UserName)
+                    .First(),
+                Topics = repository.Topics
             });
 
         [HttpPost]
@@ -56,9 +61,9 @@ namespace TextForum.Controllers
             return RedirectToAction("List");
         }
 
-        public ViewResult Replies()
+        public IActionResult NavMenu()
         {
-            return View();
+            return RedirectToAction("List");
         }
     }
 }

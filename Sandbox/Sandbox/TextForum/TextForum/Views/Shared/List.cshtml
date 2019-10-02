@@ -1,4 +1,8 @@
-﻿<div style="text-align: center">
+﻿<div>
+    @Html.Partial("NavMenu")
+</div>
+
+<div style="text-align: center">
     <h1>@Model.CurrentTopicName</h1>
 </div>
 
@@ -8,13 +12,22 @@
     @Html.Partial("Create", new TextForum.Models.Post())
 </div>
 
+<hr />
 <div page-model="@Model.PagingInfo" page-action="List"></div>
-@foreach (var p in Model.Posts)
-{
-    <div>
-        <h4>[@p.UserID] [@p.Created] <a href="#">@p.PostID</a></h4>
-        @p.Content
-    </div>
-    <hr />
-}
+<hr />
+<div>
+    @foreach (var p in Model.Posts)
+    {
+        <div>
+            <h4>[@Model.CurrentUserName] [@p.Created] <a href="#">@p.PostID</a></h4>
+            @p.Content
+        </div>
+        <hr />
+    }
+</div>
 <div page-model="@Model.PagingInfo" page-action="List"></div>
+<hr />
+
+<div>
+    @Html.Partial("NavMenu")
+</div>

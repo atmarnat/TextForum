@@ -1,0 +1,17 @@
+﻿<div style="text-align: center;">
+[
+    <a asp-controller="Home" asp-action="Index">
+       Home
+    </a>
+]
+       @foreach (var t in Model.Topics)
+       {
+        <th>
+            [
+            <a asp-controller="Post" asp-action="List" asp-route-id="@t.TopicID">
+                @t.TopicName
+            </a>
+            ]
+        </th>
+    }
+</div>
