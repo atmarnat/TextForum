@@ -40,7 +40,7 @@ namespace TextForum.Controllers
         {
             _dbContext.Posts.Add(newPost);
             _dbContext.SaveChanges();
-            return RedirectToAction("List", 1);
+            return RedirectToAction("List", new {id = newPost.TopicID});
         }
 
         [HttpGet]
