@@ -23,10 +23,10 @@ namespace TextForum.Controllers
             => View(new PostsListViewModel
             { 
                 Posts = repository.Posts
-                .OrderByDescending(p => p.Created)
-                .Where(p => p.TopicID == id)
-                .Skip((postPage -1) * PageSize)
-                .Take(PageSize),
+                    .OrderByDescending(p => p.Created)
+                    .Where(p => p.TopicID == id)
+                    .Skip((postPage -1) * PageSize)
+                    .Take(PageSize),
                 PagingInfo = new PagingInfo
                 {
                     CurrentPage = postPage,
