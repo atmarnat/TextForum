@@ -31,8 +31,11 @@ namespace TextForum.Controllers
                 {
                     CurrentPage = postPage,
                     PostsPerPage = PageSize,
-                    TotalPosts = repository.Posts.Count()
-                }
+                    TotalPosts = repository.Posts
+                        .Where (e => e.TopicID == id)
+                        .Count()
+                },
+                CurrentTopic = id
             });
 
         [HttpPost]
