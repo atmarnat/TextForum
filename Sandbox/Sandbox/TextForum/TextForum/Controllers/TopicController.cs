@@ -19,33 +19,67 @@ namespace TextForum.Controllers
             _dbContext = dbContext;
             repository = repo;
         }
-        public ViewResult List(int id, int postPage = 1)
-            => View(new PostsListViewModel
-            { 
-                Posts = repository.Posts
-                    .OrderByDescending(p => p.Created)
-                    .Where(p => p.TopicID == id)
-                    .Skip((postPage -1) * PageSize)
-                    .Take(PageSize),
-                PagingInfo = new PagingInfo
+        public ViewResult List(int id, string search = null, int postPage = 1)
+        {
+            if (search == null)
+            {
+                return View(new PostsListViewModel
                 {
-                    CurrentPage = postPage,
-                    PostsPerPage = PageSize,
-                    TotalPosts = repository.Posts
-                        .Where (e => e.TopicID == id)
-                        .Count()
-                },
-                CurrentTopic = id,
-                CurrentTopicName = repository.Topics
-                    .Where(t => t.TopicID == id)
-                    .Select(t => t.TopicName)
-                    .First(),
-                CurrentUserName = repository.Users
-                    .Where(u => u.UserID == 1)
-                    .Select(u => u.UserName)
-                    .First(),
-                Topics = repository.Topics
-            });
+                    Posts = repository.Posts
+                          .OrderByDescending(p => p.Created)
+                          .Where(p => p.TopicID == id)
+                          .Skip((postPage - 1) * PageSize)
+                          .Take(PageSize),
+                    PagingInfo = new PagingInfo
+                    {
+                        CurrentPage = postPage,
+                        PostsPerPage = PageSize,
+                        TotalPosts = repository.Posts
+                              .Where(e => e.TopicID == id)
+                              .Count()
+                    },
+                    CurrentTopic = id,
+                    CurrentTopicName = repository.Topics
+                          .Where(t => t.TopicID == id)
+                          .Select(t => t.TopicName)
+                          .First(),
+                    CurrentUserName = repository.Users
+                          .Where(u => u.UserID == 1)
+                          .Select(u => u.UserName)
+                          .First(),
+                    Topics = repository.Topics
+                });
+            }
+            else
+            {
+                return View(new PostsListViewModel
+                {
+                    Posts = repository.Posts
+                      .OrderByDescending(p => p.Created)
+                      .Where(p => p.TopicID == id && p.Content.Contains(search))
+                      .Skip((postPage - 1) * PageSize)
+                      .Take(PageSize),
+                    PagingInfo = new PagingInfo
+                    {
+                        CurrentPage = postPage,
+                        PostsPerPage = PageSize,
+                        TotalPosts = repository.Posts
+                          .Where(e => e.TopicID == id && e.Content.Contains(search))
+                          .Count()
+                    },
+                    CurrentTopic = id,
+                    CurrentTopicName = repository.Topics
+                      .Where(t => t.TopicID == id)
+                      .Select(t => t.TopicName)
+                      .First(),
+                    CurrentUserName = repository.Users
+                      .Where(u => u.UserID == 1)
+                      .Select(u => u.UserName)
+                      .First(),
+                    Topics = repository.Topics
+                });
+            }
+        }
 
         [HttpPost]
         public IActionResult Create(Post newPost)

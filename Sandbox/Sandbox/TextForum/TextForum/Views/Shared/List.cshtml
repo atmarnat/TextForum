@@ -13,7 +13,10 @@
 </div>
 
 <hr />
-<div page-model="@Model.PagingInfo" page-action="List"></div>
+<form asp-action="List" controller="Topic">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit">Search</button>
+</form>
 <hr />
 <div>
     @foreach (var p in Model.Posts)
