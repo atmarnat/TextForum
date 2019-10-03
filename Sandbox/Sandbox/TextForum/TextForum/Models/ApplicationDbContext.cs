@@ -17,6 +17,6 @@ namespace TextForum.Models
         public DbSet<Post> Posts { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Topic> Topics { get; set; }
-        public DbSet<TextForum.Models.Replies> Replies { get; set; }
+        public DbSet<Replies> Replies { get; set; }
     }
 }

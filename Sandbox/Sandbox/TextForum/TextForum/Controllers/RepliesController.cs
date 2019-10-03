@@ -29,38 +29,24 @@ namespace TextForum.Controllers
                 Topics = repository.Topics,
                 FirstPost = repository.Posts
                     .Where(p => p.PostID == id)
-                    .First()
-            });
-
-        /*
-        public ViewResult List(int id, int postPage = 1)
-            => View(new PostsListViewModel
-            {
-                Posts = repository.Posts
-                    .OrderByDescending(p => p.Created)
-                    .Where(p => p.TopicID == id)
-                    .Skip((postPage - 1) * PageSize)
-                    .Take(PageSize),
-                PagingInfo = new PagingInfo
-                {
-                    CurrentPage = postPage,
-                    PostsPerPage = PageSize,
-                    TotalPosts = repository.Posts
-                        .Where(e => e.TopicID == id)
-                        .Count()
-                },
-                CurrentTopic = id,
-                CurrentTopicName = repository.Topics
-                    .Where(t => t.TopicID == id)
-                    .Select(t => t.TopicName)
                     .First(),
                 CurrentUserName = repository.Users
                     .Where(u => u.UserID == 1)
                     .Select(u => u.UserName)
                     .First(),
-                Topics = repository.Topics
+                CurrentTopic = repository.Posts
+                    .Where(p => p.PostID == id)
+                    .Select(p => p.TopicID)
+                    .First(),
+                CurrentTopicName = repository.Topics
+                    .Join(repository.Posts,
+                        t => t.TopicID,
+                        p => p.TopicID,
+                        (t, p) => new { Topic = t, Post = p})
+                    .Where(tp => tp.Post.PostID == id)
+                    .Select(tp => tp.Topic.TopicName)
+                    .First()
             });
-            */
         // GET: Replies/Create
         public IActionResult Create()
         {

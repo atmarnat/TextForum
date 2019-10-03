@@ -10,7 +10,7 @@ using TextForum.Models;
 namespace TextForum.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190927164734_Initial")]
+    [Migration("20191003180625_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,6 +38,27 @@ namespace TextForum.Migrations
                     b.HasKey("PostID");
 
                     b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("TextForum.Models.Replies", b =>
+                {
+                    b.Property<int>("ReplyID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Content");
+
+                    b.Property<DateTime>("Created");
+
+                    b.Property<int>("PostID");
+
+                    b.Property<int>("TopicID");
+
+                    b.Property<int>("UserID");
+
+                    b.HasKey("ReplyID");
+
+                    b.ToTable("Replies");
                 });
 
             modelBuilder.Entity("TextForum.Models.Topic", b =>

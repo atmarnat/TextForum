@@ -9,11 +9,10 @@ namespace TextForum.Models.ViewModels
     {
         public IEnumerable<Replies> Replies { get; set; }
         public IEnumerable<Topic> Topics { get; set; }
+        public IEnumerable<Post> Posts { get; set; }
         public Post FirstPost { get; set; }
-        /*
+        public string CurrentUserName { get; set; }
         public int CurrentTopic { get; set; }
         public string CurrentTopicName { get; set; }
-        public string CurrentUserName { get; set; }
-        public string CurrentPost { get; set; }*/
     }
 }

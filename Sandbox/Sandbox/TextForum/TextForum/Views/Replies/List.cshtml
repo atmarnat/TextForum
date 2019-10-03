@@ -2,10 +2,33 @@
     @Html.Partial("NavMenu")
 </div>
 
+<div style="text-align: center">
+    <h1>@Model.CurrentTopicName</h1>
+</div>
+
+
+<hr />
+<div></div>
+<hr />
+
 <div>
-    <h4>@Model.FirstPost.UserID [@Model.FirstPost.Created]</h4>
+    <h4>@Model.CurrentUserName [@Model.FirstPost.Created]</h4>
     @Model.FirstPost.Content
 </div>
+
+
+@foreach (var r in Model.Replies)
+{
+    <hr />
+    <div>
+        <h4>@Model.CurrentUserName [@r.Created]</h4>
+        @r.Content
+    </div>
+}
+
+<hr />
+<div></div>
+<hr />
 
 <div>
     @Html.Partial("NavMenu")

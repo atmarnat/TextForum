@@ -25,6 +25,23 @@ namespace TextForum.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Replies",
+                columns: table => new
+                {
+                    ReplyID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    TopicID = table.Column<int>(nullable: false),
+                    PostID = table.Column<int>(nullable: false),
+                    UserID = table.Column<int>(nullable: false),
+                    Created = table.Column<DateTime>(nullable: false),
+                    Content = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Replies", x => x.ReplyID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Topics",
                 columns: table => new
                 {
@@ -59,6 +76,9 @@ namespace TextForum.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Posts");
+
+            migrationBuilder.DropTable(
+                name: "Replies");
 
             migrationBuilder.DropTable(
                 name: "Topics");

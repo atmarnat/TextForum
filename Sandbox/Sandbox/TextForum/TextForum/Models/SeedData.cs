@@ -72,7 +72,7 @@ namespace TextForum.Models
                 (
                     new User
                     {
-                        UserName = "anonymous,",
+                        UserName = "anonymous",
                         Email = "n/a",
                         UserPassword = "",
                         UserPermissions = "000",
@@ -80,7 +80,7 @@ namespace TextForum.Models
                     },
                     new User
                     {
-                        UserName = "Admin,",
+                        UserName = "Admin",
                         Email = "abc@xyz.com",
                         UserPassword = "password",
                         UserPermissions = "111",

@@ -38,6 +38,27 @@ namespace TextForum.Migrations
                     b.ToTable("Posts");
                 });
 
+            modelBuilder.Entity("TextForum.Models.Replies", b =>
+                {
+                    b.Property<int>("ReplyID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Content");
+
+                    b.Property<DateTime>("Created");
+
+                    b.Property<int>("PostID");
+
+                    b.Property<int>("TopicID");
+
+                    b.Property<int>("UserID");
+
+                    b.HasKey("ReplyID");
+
+                    b.ToTable("Replies");
+                });
+
             modelBuilder.Entity("TextForum.Models.Topic", b =>
                 {
                     b.Property<int>("TopicID")
