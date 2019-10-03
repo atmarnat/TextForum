@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.DependencyInjection;
+using TextForum.Models;
 
 namespace TextForum.Models
 {
@@ -16,5 +17,6 @@ namespace TextForum.Models
         public DbSet<Post> Posts { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Topic> Topics { get; set; }
+        public DbSet<TextForum.Models.Replies> Replies { get; set; }
     }
 }

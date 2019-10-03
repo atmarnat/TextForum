@@ -17,5 +17,6 @@ namespace TextForum.Models
         public IQueryable<Post> Posts => context.Posts;
         public IQueryable<Topic> Topics => context.Topics;
         public IQueryable<User> Users => context.Users;
+        public IQueryable<Replies> Replies => context.Replies;
     }
 }
