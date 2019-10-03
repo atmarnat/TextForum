@@ -1,36 +1,41 @@
-﻿<div>
-    @Html.Partial("NavMenu")
-</div>
+﻿<head>
+    <title>@Model.CurrentTopicName-TwaddleCate</title>
+</head>
+<body>
+    <div>
+        @Html.Partial("NavMenu")
+    </div>
 
-<div style="text-align: center">
-    <h1>@Model.CurrentTopicName</h1>
-</div>
+    <div style="text-align: center">
+        <h1>@Model.CurrentTopicName</h1>
+    </div>
 
 
-<div style="text-align: center">
-    Create
-    @Html.Partial("Create", new TextForum.Models.Post())
-</div>
+    <div style="text-align: center">
+        Create
+        @Html.Partial("Create", new TextForum.Models.Post())
+    </div>
 
-<hr />
-<form asp-action="List" controller="Topic">
-    <input type="text" placeholder="Search.." name="search">
-    <button type="submit">Search</button>
-</form>
-<hr />
-<div>
-    @foreach (var p in Model.Posts)
-    {
-        <div>
-            <h4>@Model.CurrentUserName [@p.Created] [<a style="text-decoration: none;" asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">@p.PostID</a>] <a style="text-decoration: none;" asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">Reply</a></h4>
-            @p.Content
-        </div>
-        <hr />
-    }
-</div>
-<div page-model="@Model.PagingInfo" page-action="List"></div>
-<hr />
+    <hr />
+    <form asp-action="List" controller="Topic">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Search</button>
+    </form>
+    <hr />
+    <div>
+        @foreach (var p in Model.Posts)
+        {
+            <div>
+                <h4>@Model.CurrentUserName [@p.Created] [<a style="text-decoration: none;" asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">@p.PostID</a>] <a style="text-decoration: none;" asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">Reply</a></h4>
+                @p.Content
+            </div>
+            <hr />
+        }
+    </div>
+    <div page-model="@Model.PagingInfo" page-action="List"></div>
+    <hr />
 
-<div>
-    @Html.Partial("NavMenu")
-</div>
+    <div>
+        @Html.Partial("NavMenu")
+    </div>
+</body>
