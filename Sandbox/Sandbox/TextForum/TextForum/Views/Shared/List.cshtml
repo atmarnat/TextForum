@@ -19,7 +19,7 @@
     @foreach (var p in Model.Posts)
     {
         <div>
-            <h4>@Model.CurrentUserName [@p.Created] <a asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">@p.PostID</a></h4>
+            <h4>@Model.CurrentUserName [@p.Created] [<a style="text-decoration: none;" asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">@p.PostID</a>] <a style="text-decoration: none;" asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">Reply</a></h4>
             @p.Content
         </div>
         <hr />

@@ -1,39 +1,52 @@
-﻿<div>
-    @Html.Partial("NavMenu")
-</div>
+﻿<body>
+    <a name="top"></a>
 
-<div style="text-align: center">
-    <h1>@Model.CurrentTopicName</h1>
-</div>
+    <div>
+        @Html.Partial("NavMenu")
+    </div>
 
-<div style="text-align: center">
-    Reply
-    @Html.Partial("Reply", new TextForum.Models.Replies())
-</div>
+    <div style="text-align: center">
+        <h1>@Model.CurrentTopicName</h1>
+    </div>
 
-<hr />
-<div></div>
-<hr />
+    <div style="text-align: center">
+        Reply
+        @Html.Partial("Reply", new TextForum.Models.Replies())
+    </div>
 
-<div>
-    <h4>@Model.CurrentUserName [@Model.FirstPost.Created]</h4>
-    @Model.FirstPost.Content
-</div>
-
-
-@foreach (var r in Model.Replies)
-{
     <hr />
     <div>
-        <h4>@Model.CurrentUserName [@r.Created]</h4>
-        @r.Content
+        <!--<input type="button" value="Return" onclick="location.href='@Url.Action("List", "Topic", new {id="1" })'" />-->
+        [<a asp-controller="Topic" asp-action="List" asp-route-id="@Model.FirstPost.TopicID">Return</a>]
+        [<a href="#bottom">Bottom</a>]
     </div>
-}
+    <hr />
 
-<hr />
-<div></div>
-<hr />
+    <div>
+        <h4>@Model.CurrentUserName [@Model.FirstPost.Created]</h4>
+        @Model.FirstPost.Content
+    </div>
 
-<div>
-    @Html.Partial("NavMenu")
-</div>
+
+    @foreach (var r in Model.Replies)
+    {
+        <hr />
+        <div>
+            <h4>@Model.CurrentUserName [@r.Created]</h4>
+            @r.Content
+        </div>
+    }
+
+    <hr />
+    <div>
+        [<a asp-controller="Topic" asp-action="List" asp-route-id="@Model.FirstPost.TopicID">Return</a>]
+        [<a href="#top">Top</a>]
+    </div>
+    <hr />
+
+    <div>
+        @Html.Partial("NavMenu")
+    </div>
+
+    <a name="bottom"></a>
+</body>
