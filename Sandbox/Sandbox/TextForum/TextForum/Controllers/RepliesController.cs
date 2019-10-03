@@ -25,7 +25,8 @@ namespace TextForum.Controllers
         public IActionResult List(int id)
             => View(new ReplyListViewController
             {
-                Replies = repository.Replies,
+                Replies = repository.Replies
+                    .Where(r => r.PostID == id),
                 Topics = repository.Topics,
                 FirstPost = repository.Posts
                     .Where(p => p.PostID == id)
@@ -48,9 +49,18 @@ namespace TextForum.Controllers
                     .First()
             });
         // GET: Replies/Create
-        public IActionResult Create()
+        [HttpPost]
+        public IActionResult Reply(Replies newReply)
         {
-            return View();
+            _dbContext.Replies.Add(newReply);
+            _dbContext.SaveChanges();
+            return RedirectToAction("List", new { id = newReply.PostID });
+        }
+
+        [HttpGet]
+        public IActionResult Reply()
+        {
+            return RedirectToAction("List");
         }
         public IActionResult NavMenu()
         {

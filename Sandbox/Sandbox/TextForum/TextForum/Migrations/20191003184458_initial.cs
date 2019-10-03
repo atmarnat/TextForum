@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TextForum.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +30,6 @@ namespace TextForum.Migrations
                 {
                     ReplyID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    TopicID = table.Column<int>(nullable: false),
                     PostID = table.Column<int>(nullable: false),
                     UserID = table.Column<int>(nullable: false),
                     Created = table.Column<DateTime>(nullable: false),

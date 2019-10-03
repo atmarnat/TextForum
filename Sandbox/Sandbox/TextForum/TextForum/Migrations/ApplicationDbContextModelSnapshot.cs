@@ -50,8 +50,6 @@ namespace TextForum.Migrations
 
                     b.Property<int>("PostID");
 
-                    b.Property<int>("TopicID");
-
                     b.Property<int>("UserID");
 
                     b.HasKey("ReplyID");
