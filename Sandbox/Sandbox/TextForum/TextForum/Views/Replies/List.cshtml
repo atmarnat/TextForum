@@ -1,2 +1,12 @@
-﻿Welcome From Replies!
+﻿<div>
+    @Html.Partial("NavMenu")
+</div>
 
+<div>
+    <h4>@Model.FirstPost.UserID [@Model.FirstPost.Created]</h4>
+    @Model.FirstPost.Content
+</div>
+
+<div>
+    @Html.Partial("NavMenu")
+</div>

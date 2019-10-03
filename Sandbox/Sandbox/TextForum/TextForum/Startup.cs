@@ -35,6 +35,11 @@ namespace TextForum
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
+
+                //routes.MapRoute(
+                  //  name: "replies",
+                    //template: "",
+                    //defaults: new { Controller = "Replies", action = "List" });
                 routes.MapRoute(
                     name: "pagination",
                     template: "Page{topicID}/Posts/Page{postPage}",

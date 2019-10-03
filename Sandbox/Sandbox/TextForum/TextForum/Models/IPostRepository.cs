@@ -10,6 +10,6 @@ namespace TextForum.Models
         IQueryable<Post> Posts { get; }
         IQueryable<Topic> Topics { get; }
         IQueryable<User> Users { get; }
-
+        IQueryable<Replies> Replies { get; }
     }
 }
