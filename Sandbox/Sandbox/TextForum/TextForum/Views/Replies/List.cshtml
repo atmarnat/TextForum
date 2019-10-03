@@ -9,6 +9,7 @@
         <h1>@Model.CurrentTopicName</h1>
     </div>
 
+    <a name="reply"></a>
     <div style="text-align: center">
         Reply
         @Html.Partial("Reply", new TextForum.Models.Replies())
@@ -19,6 +20,7 @@
         <!--<input type="button" value="Return" onclick="location.href='@Url.Action("List", "Topic", new {id="1" })'" />-->
         [<a asp-controller="Topic" asp-action="List" asp-route-id="@Model.FirstPost.TopicID">Return</a>]
         [<a href="#bottom">Bottom</a>]
+        [<a href="">Refresh</a>]
     </div>
     <hr />
 
@@ -41,6 +43,8 @@
     <div>
         [<a asp-controller="Topic" asp-action="List" asp-route-id="@Model.FirstPost.TopicID">Return</a>]
         [<a href="#top">Top</a>]
+        [<a href="">Refresh</a>]
+        [<a href="#reply">Reply</a>]
     </div>
     <hr />
 
