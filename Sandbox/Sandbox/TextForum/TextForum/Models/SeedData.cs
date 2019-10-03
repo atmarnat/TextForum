@@ -15,6 +15,7 @@ namespace TextForum.Models
             ApplicationDbContext context = app.ApplicationServices
                 .GetRequiredService<ApplicationDbContext>();
             context.Database.Migrate();
+            /*
             if (!context.Posts.Any())
             {
                 context.Posts.AddRange
@@ -64,6 +65,7 @@ namespace TextForum.Models
                 );
                 context.SaveChanges();
             }
+            */
             if (!context.Users.Any())
             {
                 context.Users.AddRange

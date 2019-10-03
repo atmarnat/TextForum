@@ -19,7 +19,7 @@
     @foreach (var p in Model.Posts)
     {
         <div>
-            <h4>[@Model.CurrentUserName] [@p.Created] <a href="#">@p.PostID</a></h4>
+            <h4>@Model.CurrentUserName [@p.Created] <a href="#">@p.PostID</a></h4>
             @p.Content
         </div>
         <hr />

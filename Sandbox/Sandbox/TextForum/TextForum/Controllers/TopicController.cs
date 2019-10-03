@@ -8,13 +8,13 @@ using TextForum.Models.ViewModels;
 
 namespace TextForum.Controllers
 {
-    public class PostController : Controller
+    public class TopicController : Controller
     {
         private IPostRepository repository;
         private readonly ApplicationDbContext _dbContext;
 
         public int PageSize = 10;
-        public PostController(IPostRepository repo, ApplicationDbContext dbContext)
+        public TopicController(IPostRepository repo, ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
             repository = repo;
