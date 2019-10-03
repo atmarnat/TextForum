@@ -2,26 +2,31 @@
     <title>@Model.CurrentTopicName-TwaddleCate</title>
 </head>
 <body>
+    <!--This contains links to other areas of the site-->
     <div>
         @Html.Partial("NavMenu")
     </div>
 
+    <!--This is the title of the page-->
     <div style="text-align: center">
         <h1>@Model.CurrentTopicName</h1>
     </div>
 
-
+    <!--This is the area where people can make new posts-->
     <div style="text-align: center">
         Create
         @Html.Partial("Create", new TextForum.Models.Post())
     </div>
 
+    <!--Search functionality here-->
     <hr />
     <form asp-action="List" controller="Topic">
         <input type="text" placeholder="Search.." name="search">
         <button type="submit">Search</button>
     </form>
     <hr />
+
+    <!--This is where all the lists are added-->
     <div>
         @foreach (var p in Model.Posts)
         {
@@ -32,9 +37,12 @@
             <hr />
         }
     </div>
+    <!--This is where the added lists end-->
+    <!--Shows pagination-->
     <div page-model="@Model.PagingInfo" page-action="List"></div>
     <hr />
 
+    <!--Another navigation menu, same as at the top of the page-->
     <div>
         @Html.Partial("NavMenu")
     </div>
