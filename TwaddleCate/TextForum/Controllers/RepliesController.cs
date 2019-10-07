@@ -55,36 +55,39 @@ namespace TextForum.Controllers
         [HttpPost]
         public IActionResult Reply(Replies newReply)
         {
-            var file = HttpContext.Request.Form.Files;
-            if (file.Count != 0)
+            if (newReply.Content != null)
             {
-                MD5 md5Hash = MD5.Create();
-                string imgPath = "wwwroot/Images/";
-                string imgName = Guid.NewGuid().ToString();
-                string extension = "";
-                for (int i = file[0].FileName.Length - 1; i > 0; i--)
+                var file = HttpContext.Request.Form.Files;
+                if (file.Count != 0)
                 {
-                    extension = file[0].FileName[i].ToString() + extension;
-                    if (file[0].FileName[i] == '.') break;
-                }
-
-                string fullpath = imgPath + imgName + extension;
-                if (extension == ".jpg" || extension == ".gif" || extension == ".webm" || extension == ".jpeg" || extension == ".png")
-                {
-                    using (var fileStream = new FileStream(fullpath, FileMode.Create))
+                    MD5 md5Hash = MD5.Create();
+                    string imgPath = "wwwroot/Images/";
+                    string imgName = Guid.NewGuid().ToString();
+                    string extension = "";
+                    for (int i = file[0].FileName.Length - 1; i > 0; i--)
                     {
-                        file[0].CopyTo(fileStream);
+                        extension = file[0].FileName[i].ToString() + extension;
+                        if (file[0].FileName[i] == '.') break;
                     }
-                    newReply.ImgUrl = imgName + extension;
-                }
-                else
-                {
-                    newReply.ImgUrl = null;
-                }
-            }
 
-            _dbContext.Replies.Add(newReply);
-            _dbContext.SaveChanges();
+                    string fullpath = imgPath + imgName + extension;
+                    if (extension == ".jpg" || extension == ".gif" || extension == ".webm" || extension == ".jpeg" || extension == ".png")
+                    {
+                        using (var fileStream = new FileStream(fullpath, FileMode.Create))
+                        {
+                            file[0].CopyTo(fileStream);
+                        }
+                        newReply.ImgUrl = imgName + extension;
+                    }
+                    else
+                    {
+                        newReply.ImgUrl = null;
+                    }
+                }
+
+                _dbContext.Replies.Add(newReply);
+                _dbContext.SaveChanges();
+            }
             return RedirectToAction("List", new { id = newReply.PostID });
         }
 
