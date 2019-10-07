@@ -1,0 +1,59 @@
+﻿<head>
+    <title>@Model.FirstPost.PostID-@Model.CurrentTopicName-TwaddleCate</title>
+</head>
+<body>
+    <a name="top"></a>
+
+    <div>
+        @Html.Partial("NavMenu")
+    </div>
+
+    <div style="text-align: center">
+        <h1>@Model.CurrentTopicName</h1>
+    </div>
+
+    <a name="reply"></a>
+    <div style="text-align: center">
+        Reply
+        @Html.Partial("Reply", new TextForum.Models.Replies())
+    </div>
+
+    <hr />
+    <div>
+        [<a asp-controller="Topic" asp-action="List" asp-route-id="@Model.FirstPost.TopicID">Return</a>]
+        [<a href="#bottom">Bottom</a>]
+        [<a href="">Refresh</a>]
+    </div>
+    <hr />
+
+    <div>
+        <h4>@Model.CurrentUserName [@Model.FirstPost.Created]</h4>
+        @Model.FirstPost.Content
+    </div>
+
+
+    @foreach (var r in Model.Replies)
+    {
+        <hr />
+        <div>
+            <a href="#@r.ReplyID"></a>
+            <h4>@Model.CurrentUserName [@r.Created]</h4>
+            @r.Content
+        </div>
+    }
+
+    <hr />
+    <div>
+        [<a asp-controller="Topic" asp-action="List" asp-route-id="@Model.FirstPost.TopicID">Return</a>]
+        [<a href="#top">Top</a>]
+        [<a href="">Refresh</a>]
+        [<a href="#reply">Reply</a>]
+    </div>
+    <hr />
+
+    <div>
+        @Html.Partial("NavMenu")
+    </div>
+
+    <a name="bottom"></a>
+</body>

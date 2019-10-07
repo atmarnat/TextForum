@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextForum", "TextForum\TextForum.csproj", "{2FCED7E4-0B52-4BAC-96A9-7C38F0CB9B7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FCED7E4-0B52-4BAC-96A9-7C38F0CB9B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FCED7E4-0B52-4BAC-96A9-7C38F0CB9B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FCED7E4-0B52-4BAC-96A9-7C38F0CB9B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FCED7E4-0B52-4BAC-96A9-7C38F0CB9B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DDCBFA4-1BD0-4FF9-AB1F-BFE797780F3C}
+	EndGlobalSection
+EndGlobal

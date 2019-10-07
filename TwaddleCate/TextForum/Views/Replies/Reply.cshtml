@@ -1,0 +1,19 @@
+﻿@model TextForum.Models.Replies
+
+@{
+    string tID = (string)ViewContext.RouteData.Values["id"];
+}
+
+
+<div style="align-content: center; width: auto">
+    <form asp-action="Reply" asp-controller="Replies" method="POST">
+        <input type="hidden" id="UserID" name="userID" value=1>
+        <input type="hidden" id="PostID" name="PostID" value=@Int32.Parse(tID)>
+        <input type="hidden" id="custId" name="custId" value=DateTime.UtcNow>
+        <p>
+            <textarea asp-for="Content">Content: </textarea>
+            <inpt asp-for"Name" />
+        </p>
+        <button type="submit">Post</button>
+    </form>
+</div>

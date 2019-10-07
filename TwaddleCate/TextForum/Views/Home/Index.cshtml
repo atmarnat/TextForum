@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TextForum.Models.Topic>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <title>TwaddleCate</title>
+</head>
+<body>
+    <h1 style="text-align: center">TwaddleCate</h1>
+
+    <table class="table">
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
