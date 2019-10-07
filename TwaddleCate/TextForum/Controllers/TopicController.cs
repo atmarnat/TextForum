@@ -102,18 +102,24 @@ namespace TextForum.Controllers
         [HttpPost]
         public IActionResult Create(Post newPost)
         {
-            MD5 md5Hash = MD5.Create();
-            string imgPath = "wwwroot/Images/";
-            string imgName = GetMd5Hash(md5Hash, newPost.Created + DateTime.UtcNow.ToString());
-            string extension = "";
-            string[] pathAndExtension = newPost.ImgUrl.Split('.');
-            extension = "." + pathAndExtension.Last();
-
-            string fullpath = imgPath + imgName + extension;
-            if (extension == ".jpg" || extension == ".gif" || extension == ".webm" || extension == ".jpeg" || extension == ".png")
+            if (newPost.ImgUrl != null)
             {
-                System.IO.File.Copy(newPost.ImgUrl, fullpath);
-                newPost.ImgUrl = imgName+extension;
+                MD5 md5Hash = MD5.Create();
+                string imgPath = "wwwroot/Images/";
+                string imgName = GetMd5Hash(md5Hash, newPost.Created + DateTime.UtcNow.ToString());
+                string[] pathAndExtension = newPost.ImgUrl.Split('.');
+                string extension = "." + pathAndExtension.Last();
+
+                string fullpath = imgPath + imgName + extension;
+                if (extension == ".jpg" || extension == ".gif" || extension == ".webm" || extension == ".jpeg" || extension == ".png")
+                {
+                    System.IO.File.Copy(newPost.ImgUrl, fullpath);
+                    newPost.ImgUrl = imgName + extension;
+                }
+                else
+                {
+                    newPost.ImgUrl = null;
+                }
             }
 
             _dbContext.Posts.Add(newPost);
