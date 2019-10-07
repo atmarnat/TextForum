@@ -53,7 +53,16 @@
         <div>
             @if (@r.ImgUrl != null)
             {
-                <img src="~/Images/@r.ImgUrl" style="width: 400px; height: auto;">
+                @if (@r.ImgUrl.Contains("webm"))
+                {
+                    <video width="400" controls>
+                        <source src="~/Images/@r.ImgUrl" type="video" />
+                    </video>
+                }
+                else
+                {
+                    <img src="~/Images/@r.ImgUrl" style="width: 400px; height: auto;">
+                }
             }
         </div>
         <div>

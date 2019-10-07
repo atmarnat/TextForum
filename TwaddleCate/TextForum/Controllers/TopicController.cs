@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -102,18 +103,26 @@ namespace TextForum.Controllers
         [HttpPost]
         public IActionResult Create(Post newPost)
         {
-            if (newPost.ImgUrl != null)
+            var file = HttpContext.Request.Form.Files;
+            if (file.Count != 0)
             {
                 MD5 md5Hash = MD5.Create();
                 string imgPath = "wwwroot/Images/";
                 string imgName = GetMd5Hash(md5Hash, newPost.Created + DateTime.UtcNow.ToString());
-                string[] pathAndExtension = newPost.ImgUrl.Split('.');
-                string extension = "." + pathAndExtension.Last();
+                string extension = "";
+                for (int i = file[0].FileName.Length - 1; i > 0; i--)
+                {
+                    extension = file[0].FileName[i].ToString() + extension;
+                    if (file[0].FileName[i] == '.') break;
+                }
 
                 string fullpath = imgPath + imgName + extension;
                 if (extension == ".jpg" || extension == ".gif" || extension == ".webm" || extension == ".jpeg" || extension == ".png")
                 {
-                    System.IO.File.Copy(newPost.ImgUrl, fullpath);
+                    using (var fileStream = new FileStream(fullpath, FileMode.Create))
+                    {
+                        file[0].CopyTo(fileStream);
+                    }
                     newPost.ImgUrl = imgName + extension;
                 }
                 else
