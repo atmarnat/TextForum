@@ -42,7 +42,7 @@
         }
     </div>
     <div>
-        <h4>@Model.CurrentUserName [@Model.FirstPost.Created]</h4>
+        <h4>@Model.FirstPost.PostTitle [@Model.CurrentUserName] [@Model.FirstPost.Created]</h4>
         @Model.FirstPost.Content
     </div>
 
@@ -67,7 +67,7 @@
         </div>
         <div>
             <a href="#@r.ReplyID"></a>
-            <h4>@Model.CurrentUserName [@r.Created]</h4>
+            <h4>[@Model.CurrentUserName] [@r.Created]</h4>
             @r.Content
         </div>
     }

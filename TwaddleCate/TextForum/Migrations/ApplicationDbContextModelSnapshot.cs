@@ -31,6 +31,8 @@ namespace TextForum.Migrations
 
                     b.Property<string>("ImgUrl");
 
+                    b.Property<string>("PostTitle");
+
                     b.Property<int>("TopicID");
 
                     b.Property<int>("UserID");

@@ -71,7 +71,7 @@ namespace TextForum.Controllers
                 {
                     Posts = repository.Posts
                       .OrderByDescending(p => p.Created)
-                      .Where(p => p.TopicID == id && p.Content.Contains(search))
+                      .Where(p => p.TopicID == id && (p.Content.Contains(search) || p.PostTitle.Contains(search)))
                       .Skip((postPage - 1) * PageSize)
                       .Take(PageSize),
                     PagingInfo = new PagingInfo
@@ -79,7 +79,7 @@ namespace TextForum.Controllers
                         CurrentPage = postPage,
                         PostsPerPage = PageSize,
                         TotalPosts = repository.Posts
-                          .Where(e => e.TopicID == id && e.Content.Contains(search))
+                          .Where(e => e.TopicID == id && (e.Content.Contains(search) || e.PostTitle.Contains(search)))
                           .Count()
                     },
                     CurrentTopic = id,

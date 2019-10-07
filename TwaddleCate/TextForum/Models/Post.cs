@@ -13,6 +13,7 @@ namespace TextForum.Models
         public int TopicID { get; set; }
         public int UserID { get; set; }
         public DateTime Created { get; set; } = DateTime.UtcNow;
+        public string PostTitle { get; set; }
         public string Content { get; set; }
         public string ImgUrl { get; set; }
     }

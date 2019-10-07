@@ -17,6 +17,7 @@ namespace TextForum.Migrations
                     TopicID = table.Column<int>(nullable: false),
                     UserID = table.Column<int>(nullable: false),
                     Created = table.Column<DateTime>(nullable: false),
+                    PostTitle = table.Column<string>(nullable: true),
                     Content = table.Column<string>(nullable: true),
                     ImgUrl = table.Column<string>(nullable: true)
                 },
