@@ -10,7 +10,7 @@ using TextForum.Models;
 namespace TextForum.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191007171155_initial")]
+    [Migration("20191007200244_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,8 @@ namespace TextForum.Migrations
                     b.Property<string>("Content");
 
                     b.Property<DateTime>("Created");
+
+                    b.Property<string>("ImgUrl");
 
                     b.Property<int>("PostID");
 

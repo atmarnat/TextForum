@@ -50,6 +50,8 @@ namespace TextForum.Migrations
 
                     b.Property<DateTime>("Created");
 
+                    b.Property<string>("ImgUrl");
+
                     b.Property<int>("PostID");
 
                     b.Property<int>("UserID");

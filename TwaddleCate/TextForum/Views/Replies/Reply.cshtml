@@ -11,6 +11,9 @@
         <input type="hidden" id="PostID" name="PostID" value=@Int32.Parse(tID)>
         <input type="hidden" id="custId" name="custId" value=DateTime.UtcNow>
         <p>
+            <input type="file" id="ImgUrl" name="imgUrl" enctype="multipart/form-data" />
+        </p>
+        <p>
             <textarea asp-for="Content">Content: </textarea>
             <inpt asp-for"Name" />
         </p>

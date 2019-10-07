@@ -14,5 +14,6 @@ namespace TextForum.Models
         public int UserID { get; set; }
         public DateTime Created { get; set; } = DateTime.UtcNow;
         public string Content { get; set; }
+        public string ImgUrl { get; set; }
     }
 }

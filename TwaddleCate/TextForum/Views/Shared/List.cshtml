@@ -31,7 +31,7 @@
         @foreach (var p in Model.Posts)
         {
             <div>
-                @if (p.ImgUrl != null)
+                @if (@p.ImgUrl != null)
                 {
                 <img src="~/Images/@p.ImgUrl" style="width: 400px; height: auto;">
                 }
