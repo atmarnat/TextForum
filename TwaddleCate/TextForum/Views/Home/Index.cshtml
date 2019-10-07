@@ -15,8 +15,8 @@
             {
                 <tr>
                     <td>
-                        <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
-                    </td>
+                        <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"><img src="~/Images/placeholder.jpg" class="HomeThumbnail" /></a> <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
+</td>
                 </tr>
             }
         </tbody>

@@ -1,0 +1,13 @@
+﻿img.HomeThumbnail {
+    height: auto;
+    width: auto;
+    max-width: 60px;
+    max-height: 60px;
+    vertical-align: middle;
+}
+
+img.thumbnail {
+    height: auto;
+    width: 200px;
+    vertical-align: middle;
+}
