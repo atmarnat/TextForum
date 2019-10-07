@@ -29,6 +29,8 @@ namespace TextForum.Migrations
 
                     b.Property<DateTime>("Created");
 
+                    b.Property<string>("ImgUrl");
+
                     b.Property<int>("TopicID");
 
                     b.Property<int>("UserID");

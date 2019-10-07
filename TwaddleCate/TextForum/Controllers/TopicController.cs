@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TextForum.Models;
@@ -100,6 +102,20 @@ namespace TextForum.Controllers
         [HttpPost]
         public IActionResult Create(Post newPost)
         {
+            MD5 md5Hash = MD5.Create();
+            string imgPath = "wwwroot/Images/";
+            string imgName = GetMd5Hash(md5Hash, newPost.Created + DateTime.UtcNow.ToString());
+            string extension = "";
+            string[] pathAndExtension = newPost.ImgUrl.Split('.');
+            extension = "." + pathAndExtension.Last();
+
+            string fullpath = imgPath + imgName + extension;
+            if (extension == ".jpg" || extension == ".gif" || extension == ".webm" || extension == ".jpeg" || extension == ".png")
+            {
+                System.IO.File.Copy(newPost.ImgUrl, fullpath);
+                newPost.ImgUrl = imgName+extension;
+            }
+
             _dbContext.Posts.Add(newPost);
             _dbContext.SaveChanges();
             return RedirectToAction("List", new {id = newPost.TopicID});
@@ -117,6 +133,26 @@ namespace TextForum.Controllers
         public IActionResult NavMenu()
         {
             return RedirectToAction("List");
+        }
+        static string GetMd5Hash(MD5 md5Hash, string input)
+        {
+
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
         }
     }
 }

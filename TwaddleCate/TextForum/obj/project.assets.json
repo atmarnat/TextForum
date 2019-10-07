@@ -12946,11 +12946,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\TextForum\\TextForum\\TextForum.csproj",
+      "projectUniqueName": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
       "projectName": "TextForum",
-      "projectPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\TextForum\\TextForum\\TextForum.csproj",
+      "projectPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
       "packagesPath": "C:\\Users\\wwstudent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\Sandbox\\Sandbox\\TextForum\\TextForum\\obj\\",
+      "outputPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
