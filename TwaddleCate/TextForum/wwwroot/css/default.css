@@ -19,7 +19,35 @@ img.thumbnail {
 }
 
 /*Add Post Block*/
+table.ctable {
+    text-align: left;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+td.desc {
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: azure;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#textbox {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block; /*reset from inline*/
+    width: 100%;
+    margin: 0; /*remove defaults*/
+    padding: 4px;
+    background: #EEF;
+    border: 1px solid #333;
+    overflow-y: auto; /*resets IE*/
+    overflow-x: hidden; /*resets IE*/
+}
 
 /*Shared Post stuff*/
 span.user {
@@ -32,11 +60,6 @@ span.title {
     display: inline-block;
 }
 
-textarea {
-    resize: both;
-    overflow: auto;
-}
-
 div.postblock {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -47,15 +70,8 @@ div.postblock {
     padding-bottom: 5px;
     padding-left: 5px;
 }
-/*First Posts*/
 
-div.firsthead {
-
-}
-div.firstbody {
-
-}
-    /*Reply Posts*/
+/*Reply Posts*/
 div.replyhead {
 
 }
@@ -67,7 +83,6 @@ div.replybody {
 div.replyblock {
     background-color: azure;
     border: ridge;
-
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;

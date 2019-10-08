@@ -132,7 +132,6 @@ namespace TextForum.Controllers
                         newPost.ImgUrl = null;
                     }
                 }
-
                 _dbContext.Posts.Add(newPost);
                 _dbContext.SaveChanges();
             }

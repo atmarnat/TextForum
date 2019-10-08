@@ -43,7 +43,13 @@
             }
         </div>
         <div>
-            <h4><span class="title">@Model.FirstPost.PostTitle</span> [<span class="user">@Model.CurrentUserName</span>] [@Model.FirstPost.Created]</h4>
+            <h4>
+                @if (@Model.FirstPost.PostTitle != null)
+                {
+                <span class="title">@Model.FirstPost.PostTitle</span> 
+                }[<span class="user">@Model.CurrentUserName</span>] 
+                [@Model.FirstPost.Created]
+            </h4>
             @Model.FirstPost.Content
         </div>
     </div>

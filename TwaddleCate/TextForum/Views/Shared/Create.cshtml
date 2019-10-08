@@ -4,20 +4,24 @@
     string tID = (string)ViewContext.RouteData.Values["id"];
 }
 
-
-<div style="align-content: center; width: auto">
-    <form asp-action="Create" method="POST" enctype="multipart/form-data" >
+    <form asp-action="Create" method="POST" enctype="multipart/form-data">
         <input type="hidden" id="UserID" name="userID" value=1>
         <input type="hidden" id="TopicID" name="topicID" value=@Int32.Parse(tID)>
         <input type="hidden" id="custId" name="custId" value=DateTime.UtcNow>
-        <div>
-            <input type="text" id="PostTitle" name="postTitle" /> <button type="submit">Post</button>
-        </div>
-        <div>
-            <textarea asp-for="Content">Content: </textarea>
-        </div>
-        <div>
-            <input type="file" id="ImgUrl" name="imgUrl" />
-        </div>
+        <table class="ctable">
+            <tbody>
+                <tr>
+                    <td class="desc">Name</td>
+                    <td><input type="text" id="PostTitle" name="postTitle" style="width: 200px"/> <button type="submit" style="width: auto;">Post</button></td>
+                </tr>
+                <tr>
+                    <td class="desc">Content</td>
+                    <td><textarea asp-for="Content" style="width:100%; height: 100px">Content: </textarea></td>
+                </tr>
+                <tr>
+                    <td class="desc">File</td>
+                    <td><input type="file" id="ImgUrl" name="imgUrl" /></td>
+                </tr>
+            </tbody>
+        </table>
     </form>
-</div>
