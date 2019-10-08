@@ -38,10 +38,6 @@ textarea {
 }
 
 div.postblock {
-    background-color: azure;
-    border: solid;
-    border-width: 1px;
-    border-color: black;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
@@ -53,5 +49,31 @@ div.postblock {
 }
 /*First Posts*/
 
+div.firsthead {
 
-/*Reply Posts*/
+}
+div.firstbody {
+
+}
+    /*Reply Posts*/
+div.replyhead {
+
+}
+
+div.replybody {
+
+}
+
+div.replyblock {
+    background-color: azure;
+    border: ridge;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}

@@ -85,3 +85,4 @@ C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.dll
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.pdb
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.csproj.CopyComplete
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.csprojAssemblyReference.cache

@@ -26,31 +26,32 @@
     </div>
     <hr />
 
-    <div>
-        @if (@Model.FirstPost.ImgUrl != null)
-        {
-            @if (@Model.FirstPost.ImgUrl.Contains("webm"))
+    <div class="postblock">
+        <div>
+            @if (@Model.FirstPost.ImgUrl != null)
             {
-                <video width="400" controls>
-                    <source src="~/Images/@Model.FirstPost.ImgUrl" type="video/webm" />
-                </video>
+                @if (@Model.FirstPost.ImgUrl.Contains("webm"))
+                {
+                    <video width="400" controls>
+                        <source src="~/Images/@Model.FirstPost.ImgUrl" type="video/webm" />
+                    </video>
+                }
+                else
+                {
+                    <img src="~/Images/@Model.FirstPost.ImgUrl" style="width: 400px; height: auto;">
+                }
             }
-            else
-            {
-                <img src="~/Images/@Model.FirstPost.ImgUrl" style="width: 400px; height: auto;">
-            }
-        }
+        </div>
+        <div>
+            <h4><span class="title">@Model.FirstPost.PostTitle</span> [<span class="user">@Model.CurrentUserName</span>] [@Model.FirstPost.Created]</h4>
+            @Model.FirstPost.Content
+        </div>
     </div>
-    <div>
-        <h4><span class="title">@Model.FirstPost.PostTitle</span> [<span class="user">@Model.CurrentUserName</span>] [@Model.FirstPost.Created]</h4>
-        @Model.FirstPost.Content
-    </div>
-
 
     @foreach (var r in Model.Replies)
     {
         <hr />
-        <div class="postblock">
+        <div class="replyblock">
             <div>
                 @if (@r.ImgUrl != null)
                 {
