@@ -42,7 +42,7 @@
         }
     </div>
     <div>
-        <h4>@Model.FirstPost.PostTitle [@Model.CurrentUserName] [@Model.FirstPost.Created]</h4>
+        <h4><span class="title">@Model.FirstPost.PostTitle</span> [<span class="user">@Model.CurrentUserName</span>] [@Model.FirstPost.Created]</h4>
         @Model.FirstPost.Content
     </div>
 
@@ -50,25 +50,27 @@
     @foreach (var r in Model.Replies)
     {
         <hr />
-        <div>
-            @if (@r.ImgUrl != null)
-            {
-                @if (@r.ImgUrl.Contains("webm"))
+        <div class="postblock">
+            <div>
+                @if (@r.ImgUrl != null)
                 {
-                    <video width="400" controls>
-                        <source src="~/Images/@r.ImgUrl" type="video" />
-                    </video>
+                    @if (@r.ImgUrl.Contains("webm"))
+                    {
+                        <video width="400" controls>
+                            <source src="~/Images/@r.ImgUrl" type="video" />
+                        </video>
+                    }
+                    else
+                    {
+                        <img src="~/Images/@r.ImgUrl" style="width: 400px; height: auto;">
+                    }
                 }
-                else
-                {
-                    <img src="~/Images/@r.ImgUrl" style="width: 400px; height: auto;">
-                }
-            }
-        </div>
-        <div>
-            <a href="#@r.ReplyID"></a>
-            <h4>[@Model.CurrentUserName] [@r.Created]</h4>
-            @r.Content
+            </div>
+            <div>
+                <a href="#@r.ReplyID"></a>
+                <h4>[<span class="user">@Model.CurrentUserName</span>] [@r.Created]</h4>
+                @r.Content
+            </div>
         </div>
     }
 

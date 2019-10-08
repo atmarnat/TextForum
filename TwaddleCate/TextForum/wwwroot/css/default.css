@@ -32,6 +32,25 @@ span.title {
     display: inline-block;
 }
 
+textarea {
+    resize: both;
+    overflow: auto;
+}
+
+div.postblock {
+    background-color: azure;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
 /*First Posts*/
 
 
