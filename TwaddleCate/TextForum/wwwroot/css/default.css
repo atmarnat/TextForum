@@ -15,6 +15,7 @@ img.HomeThumbnail {
 img.thumbnail {
     height: auto;
     width: 200px;
+    max-width: 100%;
     vertical-align: middle;
 }
 
@@ -61,6 +62,11 @@ span.title {
 }
 
 div.postblock {
+    float: left;
+    display: inline;
+    width: 99%;
+    word-break: break-all;
+    word-wrap: break-word;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
@@ -83,6 +89,11 @@ div.replybody {
 div.replyblock {
     background-color: azure;
     border: ridge;
+    float: left;
+    display: inline;
+    width: 99%;
+    word-break: break-all;
+    word-wrap: break-word;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
