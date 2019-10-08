@@ -10,12 +10,14 @@
         <input type="hidden" id="UserID" name="userID" value=1>
         <input type="hidden" id="PostID" name="PostID" value=@Int32.Parse(tID)>
         <input type="hidden" id="custId" name="custId" value=DateTime.UtcNow>
-        <p>
-            <input type="file" id="ImgUrl" name="imgUrl" />
-        </p>
-        <p>
+        <div>
+            <button type="submit">Post</button>
+        </div>
+        <div>
             <textarea asp-for="Content">Content: </textarea>
-        </p>
-        <button type="submit">Post</button>
+        </div>
+        <div>
+            <input type="file" id="ImgUrl" name="imgUrl" />
+        </div>
     </form>
 </div>

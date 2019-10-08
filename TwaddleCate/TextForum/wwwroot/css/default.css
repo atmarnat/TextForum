@@ -1,4 +1,10 @@
-﻿img.HomeThumbnail {
+﻿/*Overall Formatting*/
+body {
+    background-color: gainsboro;
+}
+
+/*IMAGES*/
+img.HomeThumbnail {
     height: auto;
     width: auto;
     max-width: 60px;
@@ -11,3 +17,22 @@ img.thumbnail {
     width: 200px;
     vertical-align: middle;
 }
+
+/*Add Post Block*/
+
+
+/*Shared Post stuff*/
+span.user {
+    color: darkgoldenrod;
+    display: inline-block;
+}
+
+span.title {
+    color: forestgreen;
+    display: inline-block;
+}
+
+/*First Posts*/
+
+
+/*Reply Posts*/

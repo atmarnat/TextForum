@@ -62,7 +62,6 @@ C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\bin\Debug\
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\bin\Debug\netcoreapp2.2\TextForum.pdb
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\bin\Debug\netcoreapp2.2\TextForum.Views.dll
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\bin\Debug\netcoreapp2.2\TextForum.Views.pdb
-C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.csprojAssemblyReference.cache
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.csproj.CoreCompileInputs.cache
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.RazorAssemblyInfo.cache
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.RazorAssemblyInfo.cs
