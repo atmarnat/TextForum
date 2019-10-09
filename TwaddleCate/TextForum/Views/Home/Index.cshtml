@@ -3,22 +3,40 @@
 @{
     ViewData["Title"] = "Index";
 }
+
 <head>
     <title>TwaddleCate</title>
 </head>
 <body>
     <h1 style="text-align: center">TwaddleCate</h1>
-
-    <table class="table">
-        <tbody>
-            @foreach (var item in Model)
+    <div>
+        <hr />
+        <p style="text-align: center">
+            Welcome to TwaddleCate, a text-based forum, now with picture integration.
+        </p>
+        <hr />
+    </div>
+    <div style="text-align: center">
+        @foreach (var item in Model)
+        {
+            @if (item.TopicID <= 4)
             {
-                <tr>
-                    <td>
-                        <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"><img src="~/Images/placeholder.jpg" class="HomeThumbnail" /></a> <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
-                    </td>
-                </tr>
+                <div style="text-align: left; float: left; width: 33%">
+                    <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"><img src="~/Images/placeholder.jpg" class="HomeThumbnail" /></a> <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
+                </div>
             }
-        </tbody>
-    </table>
+            @if ((item.TopicID) > 4 && item.TopicID <= 8)
+            {
+                <div style="text-align: left; float: left; width: 33%">
+                    <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"><img src="~/Images/placeholder.jpg" class="HomeThumbnail" /></a> <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
+                </div>
+            }
+            @if ((item.TopicID) > 8)
+            {
+                <div style="text-align: left; float: left; width: 33%">
+                    <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"><img src="~/Images/placeholder.jpg" class="HomeThumbnail" /></a> <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
+                </div>
+            }
+        }
+        </div>
 </body>
