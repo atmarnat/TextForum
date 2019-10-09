@@ -12940,23 +12940,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Natha\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\wwstudent\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Natha\\OneDrive\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
+      "projectUniqueName": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
       "projectName": "TextForum",
-      "projectPath": "C:\\Users\\Natha\\OneDrive\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
-      "packagesPath": "C:\\Users\\Natha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Natha\\OneDrive\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\obj\\",
+      "projectPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
+      "packagesPath": "C:\\Users\\wwstudent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Natha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wwstudent\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12964,7 +12964,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://packagesource": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
