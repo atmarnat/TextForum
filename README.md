@@ -72,64 +72,59 @@ GO
 
 -- ~ -- ~ -- 2. Create Tables -- ~ -- ~ -- 
 CREATE TABLE Users
-( userID INT Identity(1,1), userName varchar (25) NOT NULL, email varchar (40),
-	userPhoto varchar(80), userPassword varchar(40) NOT NULL,
-	userPermissions int, PRIMARY KEY(userID));
+( UserID INT Identity(1,1), UserName varchar (25) NOT NULL, Email varchar (40),
+	UserPhoto varchar(80), UserPassword varchar(40),
+	UserPermissions int, PRIMARY KEY(userID));
 GO
 
 CREATE TABLE Topics
-( topicID INT Identity(1,1), topic varchar (40), PRIMARY KEY(topicID));
+( TopicID INT Identity(1,1), topic varchar (40), PRIMARY KEY(topicID));
 GO
 
 CREATE TABLE Posts
-( postID INT identity(1,1), topicID int, userID int, created date, content varchar (255), 
+( PostID INT identity(1,1), TopicID int, UserID int, Created date, PostTitle varchar (255), Content varchar (255), ImgUrl varchar (255),
+	PRIMARY KEY(postID), 
+	FOREIGN KEY(topicID) REFERENCES Topics(topicID),
+	FOREIGN KEY(userID) REFERENCES Users(userID));
+GO
+
+CREATE TABLE Replies
+( ReplyID INT identity(1,1), PostID int, UserID int, Created date, Content varchar (255), ImgUrl varchar(255),  
 	PRIMARY KEY(postID), 
 	FOREIGN KEY(topicID) REFERENCES Topics(topicID),
 	FOREIGN KEY(userID) REFERENCES Users(userID));
 GO
     
 -- ~ -- ~ -- 3. Setting up default values -- ~ -- ~ --
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Math');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Language');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Literature');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('History');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Fitness');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Food');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Social');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Sports');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Entertainment');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Fashion');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Places');
-INSERT INTO Topics (topic)
+INSERT INTO Topics (TopicName)
 VALUES ('Miscellaneous');
-SELECT * FROM Topics;
 
-INSERT INTO Users (userName, email, userPassword)
-VALUES ('Administrator', 'abc@xyz.com', 'Password')
-INSERT INTO Users (userName, userPassword)
-VALUES ('Anonymous', 'password')
-SELECT * FROM Users;
-
--- ~ -- ~ -- 4. How to send messages into the database -- ~ -- ~ -- 
-INSERT INTO Posts (topicID, userID, created, content)
-VALUES(
-	3,		/*The current topic*/
-	1,		/*The current user, default is anonymous*/
-	GETDATE(),	/*The current date/time*/
-	'This is a sample message' /*The content body, what comes from the textbox*/
-);
-
+INSERT INTO Users (UserName)
+VALUES ('anonymous')
+INSERT INTO Users (UserName, Email, UserPassword, UserPermissions)
+VALUES ('Administrator', 'replaceEmail', 'Password', 111)
 -- ~ -- ~ -- 5. CLEANUP -- ~ -- ~ -- 
 USE master
 GO
