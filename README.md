@@ -178,9 +178,11 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 1. Get routing set up (So pages are only based on variables, not their own views)
 1. Set up pagination
 1. Populate initial tables
+1. Pictures integrated
+1. Basic styling applied
 
 #### Current WIP:
-1. Integrating pictures into each post
+1. Applying more responsive styling, so that different devices render content correctly
 
 #### TODO:
 
@@ -188,4 +190,3 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 1. Validate login info
 1. Push to a webserver
 1. Testing
-1. Gui for mobile devices
