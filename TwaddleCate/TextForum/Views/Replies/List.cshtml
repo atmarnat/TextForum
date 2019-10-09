@@ -27,12 +27,12 @@
     <hr />
 
     <div class="postblock">
-        <div>
+        <p>
             @if (@Model.FirstPost.ImgUrl != null)
             {
                 @if (@Model.FirstPost.ImgUrl.Contains("webm"))
                 {
-                    <video width="400" controls>
+                    <video class="thumbnail" controls>
                         <source src="~/Images/@Model.FirstPost.ImgUrl" type="video/webm" />
                     </video>
                 }
@@ -41,8 +41,6 @@
                     <img class="thumbnail" src="~/Images/@Model.FirstPost.ImgUrl">
                 }
             }
-        </div>
-        <div>
             <h4>
                 @if (@Model.FirstPost.PostTitle != null)
                 {
@@ -50,34 +48,39 @@
                 }[<span class="user">@Model.CurrentUserName</span>] 
                 [@Model.FirstPost.Created]
             </h4>
+        </p>
+        <p style="padding: 4px">
             @Model.FirstPost.Content
-        </div>
+        </p>
     </div>
 
     @foreach (var r in Model.Replies)
     {
-        <hr />
         <div class="replyblock">
-            <div>
+            <p>
+                <a href="#@r.ReplyID"></a>
+                <h4>
+                    [<span class="user">@Model.CurrentUserName</span>]
+                    [@r.Created]
+                </h4>
                 @if (@r.ImgUrl != null)
                 {
                     @if (@r.ImgUrl.Contains("webm"))
                     {
-                        <video width="400" controls>
-                            <source src="~/Images/@r.ImgUrl" type="video" />
+                        <video class="thumbnail" controls>
+                            <source src="~/Images/@r.ImgUrl" type="video/webm" />
                         </video>
                     }
                     else
                     {
-                        <img src="~/Images/@r.ImgUrl" style="width: 400px; height: auto;">
+                        <img class="thumbnail" src="~/Images/@r.ImgUrl">
                     }
                 }
-            </div>
-            <div>
-                <a href="#@r.ReplyID"></a>
-                <h4>[<span class="user">@Model.CurrentUserName</span>] [@r.Created]</h4>
+
+            </p>
+            <p style="padding: 4px">
                 @r.Content
-            </div>
+            </p>
         </div>
     }
 

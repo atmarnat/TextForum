@@ -17,6 +17,19 @@ img.thumbnail {
     width: 200px;
     max-width: 100%;
     vertical-align: middle;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+video.thumbnail {
+    height: auto;
+    width: 200px;
+    max-width: 100%;
+    vertical-align: middle;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 /*Add Post Block*/
@@ -65,7 +78,7 @@ div.postblock {
     float: left;
     display: inline;
     width: 99%;
-    word-break: break-all;
+    white-space: normal;
     word-wrap: break-word;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -91,8 +104,8 @@ div.replyblock {
     border: ridge;
     float: left;
     display: inline;
-    width: 99%;
-    word-break: break-all;
+    width: 98%;
+    white-space: normal;
     word-wrap: break-word;
     margin-top: 5px;
     margin-bottom: 5px;

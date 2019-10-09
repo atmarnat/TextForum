@@ -108,7 +108,6 @@ namespace TextForum.Controllers
                 var file = HttpContext.Request.Form.Files;
                 if (file.Count != 0)
                 {
-                    MD5 md5Hash = MD5.Create();
                     string imgPath = "wwwroot/Images/";
                     string imgName = Guid.NewGuid().ToString();
                     string extension = "";
