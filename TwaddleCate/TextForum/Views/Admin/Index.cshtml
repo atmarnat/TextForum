@@ -12,7 +12,7 @@
             <td>@post.PostID</td>
             <td>@post.Content</td>
             <td>
-                <form asp-action="Delete" method="POST">
+                <form asp-action="DeleteP" method="POST">
                     <input type="hidden" name="PostID" value="@post.PostID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
                 </form>
             </td>
@@ -34,8 +34,8 @@
             <td>@post.PostID</td>
             <td>@post.Content</td>
             <td>
-                <form asp-action="Delete" method="POST">
-                    <input type="hidden" name="PostID" value="@post.PostID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                <form asp-action="DeleteR" method="POST">
+                    <input type="hidden" name="PostID" value="@post.ReplyID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
                 </form>
             </td>
         </tr>

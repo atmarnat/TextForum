@@ -30,18 +30,23 @@ namespace TextForum.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(int postID)
+        public IActionResult DeleteP(int postID)
         {
             Post deletePost = repository.DeletePost(postID);
+            if (deletePost != null)
+            {
+                TempData["message"] = $"{deletePost.PostID} was deleted";
+            }
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult DeleteR(int postID)
+        {
             Replies deleteReply = repository.DeleteReply(postID);
             if (deleteReply != null)
             {
                 TempData["message"] = $"{deleteReply.ReplyID} was deleted";
-            }
-
-            if (deletePost != null)
-            {
-                TempData["message"] = $"{deletePost.PostID} was deleted";
             }
             return RedirectToAction("Index");
         }
