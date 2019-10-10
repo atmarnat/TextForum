@@ -30,5 +30,17 @@ namespace TextForum.Models
             }
             return dbEntry;
         }
+
+        public Replies DeleteReply(int replyID)
+        {
+            Replies dbEntry = context.Replies
+                .FirstOrDefault(p => p.ReplyID == replyID);
+            if (dbEntry != null)
+            {
+                context.Replies.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
     }
 }

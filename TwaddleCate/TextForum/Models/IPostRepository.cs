@@ -12,5 +12,6 @@ namespace TextForum.Models
         IQueryable<User> Users { get; }
         IQueryable<Replies> Replies { get; }
         Post DeletePost(int PostID);
+        Replies DeleteReply(int ReplyID);
     }
 }
