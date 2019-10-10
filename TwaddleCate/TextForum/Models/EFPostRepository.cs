@@ -18,5 +18,17 @@ namespace TextForum.Models
         public IQueryable<Topic> Topics => context.Topics;
         public IQueryable<User> Users => context.Users;
         public IQueryable<Replies> Replies => context.Replies;
+
+        public Post DeletePost(int PostID)
+        {
+            Post dbEntry = context.Posts
+                .FirstOrDefault(p => p.PostID == PostID);
+            if (dbEntry != null)
+            {
+                context.Posts.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
     }
 }

@@ -1,0 +1,22 @@
+﻿
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Content</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var post in Model)
+    {
+        <tr>
+            <td>@post.PostID</td>
+            <td>@post.Content</td>
+            <td>
+                <form asp-action="Delete" method="POST">
+                    <input type="hidden" name="PostID" value="@post.PostID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+
