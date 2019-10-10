@@ -13,5 +13,6 @@ namespace TextForum.Models
         IQueryable<Replies> Replies { get; }
         Post DeletePost(int PostID);
         Replies DeleteReply(int ReplyID);
+        Replies DeletePostReply(int postID);
     }
 }
