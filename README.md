@@ -174,10 +174,11 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 1. Set up pagination
 1. Populate initial tables
 1. Pictures integrated
-1. Basic styling applied
+1. STyling has been applied
 
 #### Current WIP:
-1. Applying more responsive styling, so that different devices render content correctly
+1. Building Admin page so that posts can be managed
+1. Preparing to host onto Azure
 
 #### TODO:
 
