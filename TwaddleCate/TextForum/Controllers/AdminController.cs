@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TextForum.Models;
 using TextForum.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TextForum.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IPostRepository repository;
