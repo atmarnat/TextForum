@@ -50,7 +50,7 @@
                     {
                         <span class="title">@p.PostTitle</span>
                     }
-                    [<span class="user">@Model.CurrentUserName</span>]
+                    [<span class="user">@p.UserName</span>]
                     [@p.Created]
                     [<a style="text-decoration: none;" asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">@p.PostID</a>]
                     <a style="text-decoration: none;" asp-controller="Replies" asp-action="List" asp-route-id="@p.PostID">Reply</a>

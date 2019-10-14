@@ -10,8 +10,8 @@ using TextForum.Models;
 namespace TextForum.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191007220237_initial")]
-    partial class initial
+    [Migration("20191014175902_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,7 +37,7 @@ namespace TextForum.Migrations
 
                     b.Property<int>("TopicID");
 
-                    b.Property<int>("UserID");
+                    b.Property<string>("UserName");
 
                     b.HasKey("PostID");
 
@@ -58,7 +58,7 @@ namespace TextForum.Migrations
 
                     b.Property<int>("PostID");
 
-                    b.Property<int>("UserID");
+                    b.Property<string>("UserName");
 
                     b.HasKey("ReplyID");
 
@@ -76,27 +76,6 @@ namespace TextForum.Migrations
                     b.HasKey("TopicID");
 
                     b.ToTable("Topics");
-                });
-
-            modelBuilder.Entity("TextForum.Models.User", b =>
-                {
-                    b.Property<int>("UserID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("UserName");
-
-                    b.Property<string>("UserPassword");
-
-                    b.Property<string>("UserPermissions");
-
-                    b.Property<string>("UserPhoto");
-
-                    b.HasKey("UserID");
-
-                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

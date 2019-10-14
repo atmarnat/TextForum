@@ -45,7 +45,7 @@
                 @if (@Model.FirstPost.PostTitle != null)
                 {
                 <span class="title">@Model.FirstPost.PostTitle</span> 
-                }[<span class="user">@Model.CurrentUserName</span>] 
+                }[<span class="user">@Model.FirstPost.UserName</span>] 
                 [@Model.FirstPost.Created]
             </h4>
         </p>
@@ -60,7 +60,7 @@
             <p>
                 <a href="#@r.ReplyID"></a>
                 <h4>
-                    [<span class="user">@Model.CurrentUserName</span>]
+                    [<span class="user">@r.UserName</span>]
                     [@r.Created]
                 </h4>
                 @if (@r.ImgUrl != null)

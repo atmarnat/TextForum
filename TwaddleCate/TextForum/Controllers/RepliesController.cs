@@ -34,10 +34,6 @@ namespace TextForum.Controllers
                 FirstPost = repository.Posts
                     .Where(p => p.PostID == id)
                     .FirstOrDefault(),
-                CurrentUserName = repository.Users
-                    .Where(u => u.UserID == 1)
-                    .Select(u => u.UserName)
-                    .FirstOrDefault(),
                 CurrentTopic = repository.Posts
                     .Where(p => p.PostID == id)
                     .Select(p => p.TopicID)

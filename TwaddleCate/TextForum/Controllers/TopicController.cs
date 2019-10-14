@@ -54,12 +54,6 @@ namespace TextForum.Controllers
                           .Where(t => t.TopicID == id)
                           .Select(t => t.TopicName)
                           .First(),
-                    //Same thing as above, but for userID. Always anonymous for now
-                    //TODO: for when we get users
-                    CurrentUserName = repository.Users
-                          .Where(u => u.UserID == 1)
-                          .Select(u => u.UserName)
-                          .First(),
                     //Gets the full list of topics, so that the NavMenu can easily display them
                     Topics = repository.Topics
                 });
@@ -86,10 +80,6 @@ namespace TextForum.Controllers
                     CurrentTopicName = repository.Topics
                       .Where(t => t.TopicID == id)
                       .Select(t => t.TopicName)
-                      .First(),
-                    CurrentUserName = repository.Users
-                      .Where(u => u.UserID == 1)
-                      .Select(u => u.UserName)
                       .First(),
                     Topics = repository.Topics
                 });

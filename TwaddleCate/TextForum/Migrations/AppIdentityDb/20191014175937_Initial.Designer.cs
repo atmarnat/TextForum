@@ -10,8 +10,8 @@ using TextForum.Models;
 namespace TextForum.Migrations.AppIdentityDb
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20191014163959_initial")]
-    partial class initial
+    [Migration("20191014175937_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

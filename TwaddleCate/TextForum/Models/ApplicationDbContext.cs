@@ -15,7 +15,6 @@ namespace TextForum.Models
             : base(options) { }
 
         public DbSet<Post> Posts { get; set; }
-        public DbSet<User> Users { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Replies> Replies { get; set; }
     }

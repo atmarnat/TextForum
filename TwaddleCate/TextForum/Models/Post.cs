@@ -11,7 +11,7 @@ namespace TextForum.Models
         [Key]
         public int PostID { get; set; }
         public int TopicID { get; set; }
-        public int UserID { get; set; }
+        public string UserName { get; set; }
         public DateTime Created { get; set; } = DateTime.UtcNow;
         public string PostTitle { get; set; }
         public string Content { get; set; }

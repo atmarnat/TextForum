@@ -66,21 +66,6 @@ namespace TextForum.Models
                 context.SaveChanges();
             }
             */
-            if (!context.Users.Any())
-            {
-                context.Users.AddRange
-                (
-                    new User
-                    {
-                        UserName = "anonymous",
-                    },
-                    new User
-                    {
-                        UserName = "Admin",
-                    }
-                );
-                context.SaveChanges();
-            }
             if (!context.Topics.Any())
             {
                 context.Topics.AddRange

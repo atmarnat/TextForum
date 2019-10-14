@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TextForum.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace TextForum.Migrations
                     PostID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     TopicID = table.Column<int>(nullable: false),
-                    UserID = table.Column<int>(nullable: false),
+                    UserName = table.Column<string>(nullable: true),
                     Created = table.Column<DateTime>(nullable: false),
                     PostTitle = table.Column<string>(nullable: true),
                     Content = table.Column<string>(nullable: true),
@@ -33,7 +33,7 @@ namespace TextForum.Migrations
                     ReplyID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     PostID = table.Column<int>(nullable: false),
-                    UserID = table.Column<int>(nullable: false),
+                    UserName = table.Column<string>(nullable: true),
                     Created = table.Column<DateTime>(nullable: false),
                     Content = table.Column<string>(nullable: true),
                     ImgUrl = table.Column<string>(nullable: true)
@@ -55,23 +55,6 @@ namespace TextForum.Migrations
                 {
                     table.PrimaryKey("PK_Topics", x => x.TopicID);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Users",
-                columns: table => new
-                {
-                    UserID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    UserName = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(nullable: true),
-                    UserPhoto = table.Column<string>(nullable: true),
-                    UserPassword = table.Column<string>(nullable: true),
-                    UserPermissions = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.UserID);
-                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -84,9 +67,6 @@ namespace TextForum.Migrations
 
             migrationBuilder.DropTable(
                 name: "Topics");
-
-            migrationBuilder.DropTable(
-                name: "Users");
         }
     }
 }
