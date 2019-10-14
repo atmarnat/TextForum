@@ -119,3 +119,4 @@ C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\D
 C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\TextForum.csproj.CopyComplete
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Index.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.g.cshtml.cs

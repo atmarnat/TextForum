@@ -52,5 +52,33 @@ namespace TextForum.Controllers
             await signInManager.SignOutAsync();
             return Redirect(returnUrl);
         }
+
+        [AllowAnonymous]
+        public ViewResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [AllowAnonymous]
+        public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                IdentityUser user = new IdentityUser { UserName = registerViewModel.UserName, Email = registerViewModel.Email};
+                IdentityResult result = await userManager.CreateAsync(user, registerViewModel.Password);
+                if (result.Succeeded)
+                {
+                    //await signIn.SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("index", "home");
+                }
+                foreach (IdentityError error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+            }
+            return View(registerViewModel);
+        }
     }
 }
