@@ -40,7 +40,7 @@ namespace TextForum.Controllers
                     if ((await signInManager.PasswordSignInAsync(user,
                     loginModel.Password, false, false)).Succeeded)
                     {
-                        return Redirect(loginModel?.ReturnUrl ?? "/Index/Admin");
+                        return Redirect(loginModel?.ReturnUrl ?? "/Index/Home");
                     }
                 }
             }

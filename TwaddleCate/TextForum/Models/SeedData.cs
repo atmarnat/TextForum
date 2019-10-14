@@ -73,18 +73,10 @@ namespace TextForum.Models
                     new User
                     {
                         UserName = "anonymous",
-                        Email = "n/a",
-                        UserPassword = "",
-                        UserPermissions = "000",
-                        UserPhoto = "link/to/here"
                     },
                     new User
                     {
                         UserName = "Admin",
-                        Email = "abc@xyz.com",
-                        UserPassword = "password",
-                        UserPermissions = "111",
-                        UserPhoto = "link/to/there"
                     }
                 );
                 context.SaveChanges();

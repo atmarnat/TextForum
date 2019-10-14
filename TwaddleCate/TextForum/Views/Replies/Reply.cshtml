@@ -7,7 +7,14 @@
 
 <div style="align-content: center; width: auto">
     <form asp-action="Reply" asp-controller="Replies" method="POST" enctype="multipart/form-data">
-        <input type="hidden" id="UserID" name="userID" value=1>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <input type="hidden" id="UserID" name="userID" value=2>
+        }
+        else
+        {
+            <input type="hidden" id="UserID" name="userID" value=1>
+        }
         <input type="hidden" id="PostID" name="PostID" value=@Int32.Parse(tID)>
         <input type="hidden" id="custId" name="custId" value=DateTime.UtcNow>
         <table class="ctable">
