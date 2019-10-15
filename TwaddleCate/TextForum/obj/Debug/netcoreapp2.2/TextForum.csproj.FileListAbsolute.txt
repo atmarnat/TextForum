@@ -123,3 +123,4 @@ C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\CreateRole.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListRoles.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\EditRole.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\EditUsersInRole.g.cshtml.cs

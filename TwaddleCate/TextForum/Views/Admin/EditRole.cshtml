@@ -25,16 +25,21 @@
             <a asp-action="ListRoles" class="btn btn-primary">Cancel</a>
         </div>
     </div>
-
+    <hr />
     <div>
         <div>
             <h3>Users in this role</h3>
         </div>
+        <hr />
         <div>
             @foreach (var user in Model.Users)
             {
                 <h5>@user</h5>
             }
+        </div>
+        <hr />
+        <div>
+            <a asp-action="EditUsersInRole" asp-controller="Admin" asp-route-roleId="@Model.Id" class="btn btn-primary">Add/Remove Users</a> 
         </div>
     </div>
 </form>
