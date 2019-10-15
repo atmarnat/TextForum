@@ -41,7 +41,7 @@ namespace TextForum.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("index", "home");
+                    return RedirectToAction("ListRoles", "Admin");
                 }
 
                 foreach (IdentityError error in result.Errors)
@@ -51,6 +51,13 @@ namespace TextForum.Controllers
             }
 
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult ListRoles()
+        {
+            var roles = roleManager.Roles;
+            return View(roles);
         }
 
         public ViewResult Index()

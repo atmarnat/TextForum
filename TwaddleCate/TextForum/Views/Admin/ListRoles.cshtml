@@ -1,0 +1,27 @@
+﻿<h1>Role List</h1>
+<hr />
+<table style="text-align: left; border: 1px solid black">
+    <tr>
+        <th>ID</th>
+        <th></th>
+        <th>Role</th>
+        <th></th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var role in Model)
+    {
+        <tr>
+            <td>@role.Id</td>
+            <td> | </td>
+            <td>@role.Name</td>
+            <td> | </td>
+            <td><a href="#" class="btn btn-danger">Delete</a></td>
+        </tr>
+    }
+</table>
+<hr />
+[<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
+[<a asp-controller="Admin" asp-action="Index">Index</a>]
+[<a asp-controller="Home" asp-action="Index">Home</a>]
+<hr />
