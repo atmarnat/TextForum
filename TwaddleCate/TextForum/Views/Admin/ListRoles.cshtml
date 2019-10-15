@@ -7,17 +7,21 @@
         <th>Role</th>
         <th></th>
         <th>Action</th>
+        <th></th>
+        <th></th>
     </tr>
 
     @foreach (var role in Model)
     {
-        <tr>
-            <td>@role.Id</td>
-            <td> | </td>
-            <td>@role.Name</td>
-            <td> | </td>
-            <td><a href="#" class="btn btn-danger">Delete</a></td>
-        </tr>
+<tr>
+    <td>@role.Id</td>
+    <td> | </td>
+    <td>@role.Name</td>
+    <td> | </td>
+    <td><a class="btn btn-primary" asp-action="EditRole" asp-controller="Admin" asp-route-id="@role.Id">Edit</a></td>
+    <td> | </td>
+    <td><a href="#" class="btn btn-danger">Delete</a></td>
+</tr>
     }
 </table>
 <hr />

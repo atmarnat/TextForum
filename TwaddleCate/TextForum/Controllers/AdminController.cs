@@ -15,9 +15,11 @@ namespace TextForum.Controllers
     {
         private IPostRepository repository;
         private readonly RoleManager<IdentityRole> roleManager;
-        public AdminController(RoleManager<IdentityRole> roleManager, IPostRepository repo)
+        private readonly UserManager<IdentityUser> userManager;
+        public AdminController(RoleManager<IdentityRole> roleManager, IPostRepository repo, UserManager<IdentityUser> userManager)
         {
             this.roleManager = roleManager;
+            this.userManager = userManager;
             repository = repo;
         }
 
@@ -58,6 +60,56 @@ namespace TextForum.Controllers
         {
             var roles = roleManager.Roles;
             return View(roles);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditRole(string id)
+        {
+            var role = await roleManager.FindByIdAsync(id);
+
+            if (role == null)
+            {
+                return View("index");
+            }
+
+            var model = new EditRoleViewModel
+            {
+                Id = role.Id,
+                RoleName = role.Name
+            };
+
+            foreach (var user in userManager.Users)
+            {
+                if (await userManager.IsInRoleAsync(user, role.Name))
+                {
+                    model.Users.Add(user.UserName);
+                }
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditRole(EditRoleViewModel model)
+        {
+            var role = await roleManager.FindByIdAsync(model.Id);
+
+            if (role == null)
+            {
+                return View("index");
+            }
+            else
+            {
+                role.Name = model.RoleName;
+                var result = await roleManager.UpdateAsync(role);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("ListRoles");
+                }
+            }
+
+            return View(model);
         }
 
         public ViewResult Index()
