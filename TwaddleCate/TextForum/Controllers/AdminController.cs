@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using TextForum.Models;
 using TextForum.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace TextForum.Controllers
 {
@@ -13,13 +14,45 @@ namespace TextForum.Controllers
     public class AdminController : Controller
     {
         private IPostRepository repository;
-        private readonly ApplicationDbContext _dbContext;
-
-        public AdminController(IPostRepository repo, ApplicationDbContext dbContext)
+        private readonly RoleManager<IdentityRole> roleManager;
+        public AdminController(RoleManager<IdentityRole> roleManager, IPostRepository repo)
         {
-            _dbContext = dbContext;
+            this.roleManager = roleManager;
             repository = repo;
         }
+
+        [HttpGet]
+        public IActionResult CreateRole()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                IdentityRole identityRole = new IdentityRole
+                {
+                    Name = model.RoleName
+                };
+                IdentityResult result = await roleManager.CreateAsync(identityRole);
+
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("index", "home");
+                }
+
+                foreach (IdentityError error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+            }
+
+            return View(model);
+        }
+
         public ViewResult Index()
         {
             return View(
