@@ -20,7 +20,7 @@
         @foreach (var item in Model)
         {
             <div style="text-align: left; display: inline-flex; width: 30%; padding: 4px">
-                <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"><img src="~/Images/placeholder.jpg" class="HomeThumbnail" /></a> <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
+                <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"><img src="~/Images/@(item.TopicID).png" class="HomeThumbnail" /></a> <a asp-controller="Topic" asp-action="List" asp-route-id="@item.TopicID"> @Html.DisplayFor(modelItem => item.TopicName)</a>
             </div>
         }
     </div>
