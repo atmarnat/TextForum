@@ -71,7 +71,7 @@ namespace TextForum.Controllers
                 if (result.Succeeded)
                 {
                     //await signIn.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("index", "home");
+                    return RedirectToAction("login", "account");
                 }
                 foreach (IdentityError error in result.Errors)
                 {
