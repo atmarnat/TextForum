@@ -24,9 +24,10 @@ namespace TextForum.Models
         {
             Post dbEntry = context.Posts
                 .FirstOrDefault(p => p.PostID == PostID);
-            string tempUrl = dbEntry.ImgUrl;
+
             if (dbEntry != null)
             {
+                string tempUrl = dbEntry.ImgUrl;
                 context.Posts.Remove(dbEntry);
                 context.SaveChanges();
                 if (tempUrl != null)
@@ -41,9 +42,9 @@ namespace TextForum.Models
         {
             Replies dbEntry = context.Replies
                 .FirstOrDefault(p => p.PostID == PostID);
-            string tempUrl = dbEntry.ImgUrl;
             if (dbEntry != null)
             {
+                string tempUrl = dbEntry.ImgUrl;
                 context.Replies.Remove(dbEntry);
                 context.SaveChanges();
                 if (tempUrl != null)
@@ -59,9 +60,10 @@ namespace TextForum.Models
         {
             Replies dbEntry = context.Replies
                 .FirstOrDefault(p => p.ReplyID == replyID);
-            string tempUrl = dbEntry.ImgUrl;
+            
             if (dbEntry != null)
             {
+                string tempUrl = dbEntry.ImgUrl;
                 context.Replies.Remove(dbEntry);
                 context.SaveChanges();
                 if (tempUrl != null)
