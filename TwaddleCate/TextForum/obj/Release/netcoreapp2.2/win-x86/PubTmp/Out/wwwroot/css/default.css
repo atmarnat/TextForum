@@ -1,0 +1,118 @@
+﻿/*Overall Formatting*/
+body {
+    background-color: gainsboro;
+}
+
+/*IMAGES*/
+img.HomeThumbnail {
+    height: auto;
+    width: auto;
+    max-width: 60px;
+    max-height: 60px;
+    vertical-align: middle;
+}
+
+img.thumbnail {
+    height: auto;
+    width: 200px;
+    max-width: 100%;
+    vertical-align: middle;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+video.thumbnail {
+    height: auto;
+    width: 200px;
+    max-width: 100%;
+    vertical-align: middle;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+/*Add Post Block*/
+table.ctable {
+    text-align: left;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td.desc {
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: azure;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#textbox {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block; /*reset from inline*/
+    width: 100%;
+    margin: 0; /*remove defaults*/
+    padding: 4px;
+    background: #EEF;
+    border: 1px solid #333;
+    overflow-y: auto; /*resets IE*/
+    overflow-x: hidden; /*resets IE*/
+}
+
+/*Shared Post stuff*/
+span.user {
+    color: darkgoldenrod;
+    display: inline-block;
+}
+
+span.title {
+    color: forestgreen;
+    display: inline-block;
+}
+
+div.postblock {
+    float: left;
+    display: inline;
+    width: 99%;
+    white-space: normal;
+    word-wrap: break-word;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+/*Reply Posts*/
+div.replyhead {
+
+}
+
+div.replybody {
+
+}
+
+div.replyblock {
+    background-color: azure;
+    border: ridge;
+    float: left;
+    display: inline;
+    width: 98%;
+    white-space: normal;
+    word-wrap: break-word;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}

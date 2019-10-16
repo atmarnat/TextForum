@@ -24,11 +24,15 @@ namespace TextForum.Models
         {
             Post dbEntry = context.Posts
                 .FirstOrDefault(p => p.PostID == PostID);
+            string tempUrl = dbEntry.ImgUrl;
             if (dbEntry != null)
             {
-                DeleteImageAsync(dbEntry.ImgUrl);
                 context.Posts.Remove(dbEntry);
                 context.SaveChanges();
+                if (tempUrl != null)
+                {
+                    DeleteImageAsync(tempUrl);
+                }
             }
             return dbEntry;
         }
@@ -37,11 +41,15 @@ namespace TextForum.Models
         {
             Replies dbEntry = context.Replies
                 .FirstOrDefault(p => p.PostID == PostID);
+            string tempUrl = dbEntry.ImgUrl;
             if (dbEntry != null)
             {
-                DeleteImageAsync(dbEntry.ImgUrl);
                 context.Replies.Remove(dbEntry);
                 context.SaveChanges();
+                if (tempUrl != null)
+                {
+                    DeleteImageAsync(tempUrl);
+                }
                 DeletePostReply(PostID);
             }
             return dbEntry;
@@ -51,11 +59,15 @@ namespace TextForum.Models
         {
             Replies dbEntry = context.Replies
                 .FirstOrDefault(p => p.ReplyID == replyID);
+            string tempUrl = dbEntry.ImgUrl;
             if (dbEntry != null)
             {
-                DeleteImageAsync(dbEntry.ImgUrl);
                 context.Replies.Remove(dbEntry);
                 context.SaveChanges();
+                if (tempUrl != null)
+                {
+                    DeleteImageAsync(tempUrl);
+                }
             }
             return dbEntry;
         }
