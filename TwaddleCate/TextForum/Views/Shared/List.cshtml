@@ -37,12 +37,12 @@
                     @if (@p.ImgUrl.Contains("webm"))
                     {
                         <video class="thumbnail" controls">
-                            <source src="~/Images/@p.ImgUrl" type="video/webm" />
+                            <source src="https://imgrepository.blob.core.windows.net/images/@p.ImgUrl" type="video/webm" />
                         </video>
                     }
                     else
                     {
-                        <img class="thumbnail" src="~/Images/@p.ImgUrl" />
+                        <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@p.ImgUrl" />
                     }
                 }
                 <h4>

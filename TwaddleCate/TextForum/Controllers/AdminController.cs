@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 namespace TextForum.Controllers
 {
     [Authorize(Roles = "Admin")]
+    //[Authorize]
     public class AdminController : Controller
     {
         private IPostRepository repository;

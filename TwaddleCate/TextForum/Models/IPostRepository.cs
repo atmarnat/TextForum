@@ -10,6 +10,7 @@ namespace TextForum.Models
         IQueryable<Post> Posts { get; }
         IQueryable<Topic> Topics { get; }
         IQueryable<Replies> Replies { get; }
+
         Post DeletePost(int PostID);
         Replies DeleteReply(int ReplyID);
         Replies DeletePostReply(int postID);

@@ -6,6 +6,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 using TextForum.Models;
 using TextForum.Models.ViewModels;
 
@@ -91,30 +93,43 @@ namespace TextForum.Controllers
         //Saves those changes to the database
         //Finally redirects back to the same page currently on, with the parameter for the topic id of the new post.
         [HttpPost]
-        public IActionResult Create(Post newPost)
+        [RequestSizeLimit(10000000)]
+        public async Task<IActionResult> Create(Post newPost)
         {
             if (newPost.Content != null)
             {
                 var file = HttpContext.Request.Form.Files;
+                bool uploadSuccess = false;
+                string uploadedUri = null;
+
                 if (file.Count != 0)
                 {
-                    string imgPath = "wwwroot/Images/";
+
+                    //string imgPath = "wwwroot/Images/";
                     string imgName = Guid.NewGuid().ToString();
                     string extension = "";
                     for (int i = file[0].FileName.Length - 1; i > 0; i--)
                     {
-                        extension = file[0].FileName[i].ToString() + extension;
                         if (file[0].FileName[i] == '.') break;
+                        extension = file[0].FileName[i].ToString() + extension;
                     }
 
-                    string fullpath = imgPath + imgName + extension;
-                    if (extension == ".jpg" || extension == ".gif" || extension == ".webm" || extension == ".jpeg" || extension == ".png")
+                    //string fullpath = imgPath + imgName + extension;
+                    if (extension == "jpg" || extension == "gif" || extension == "webm" || extension == "jpeg" || extension == "png")
                     {
+                        /*
                         using (var fileStream = new FileStream(fullpath, FileMode.Create))
                         {
                             file[0].CopyTo(fileStream);
                         }
                         newPost.ImgUrl = imgName + extension;
+                        */
+                        newPost.ImgUrl = imgName + '.' + extension;
+                        using (var stream = file[0].OpenReadStream())
+                        {
+                            (uploadSuccess, uploadedUri) = await UploadToBlob(newPost.ImgUrl, stream, extension);
+                            TempData["uploadedUri"] = uploadedUri;
+                        }
                     }
                     else
                     {
@@ -139,6 +154,65 @@ namespace TextForum.Controllers
         public IActionResult NavMenu()
         {
             return RedirectToAction("List");
+        }
+
+        private async Task<(bool, string)> UploadToBlob(string filename, Stream stream = null, string extension = "")
+        {
+            CloudStorageAccount storageAccount = null;
+            CloudBlobContainer cloudBlobContainer = null;
+            string storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=imgrepository;AccountKey=hDp7VzQ6gODwXHSRqFmHJQBV94+kZmfG0GRyvNhVcwPxeV1UjJOOWXnaxOYVuA7kH2/zNxBZDZLusKkMhfjmsg==;EndpointSuffix=core.windows.net";
+
+            // Check whether the connection string can be parsed.
+            if (CloudStorageAccount.TryParse(storageConnectionString, out storageAccount))
+            {
+                try
+                {
+                    // Create the CloudBlobClient that represents the Blob storage endpoint
+                    CloudBlobClient cloudBlobClient = storageAccount.CreateCloudBlobClient();
+
+                    // Add to images container 
+                    cloudBlobContainer = cloudBlobClient.GetContainerReference("images");
+
+                    // Set the permissions so the blobs are public. 
+                    BlobContainerPermissions permissions = new BlobContainerPermissions
+                    {
+                        PublicAccess = BlobContainerPublicAccessType.Blob
+                    };
+                    await cloudBlobContainer.SetPermissionsAsync(permissions);
+
+                    // Get a reference to the blob address, then upload the file to the blob.
+                    CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(filename);
+
+
+                    if (stream != null)
+                    {
+                        // Pass in memory stream directly
+                        if (extension.Equals("webm"))
+                        {
+                            cloudBlockBlob.Properties.ContentType = "video/" + extension;
+                        }
+                        else
+                        {
+                            cloudBlockBlob.Properties.ContentType = "image/" + extension;
+                        }
+                        await cloudBlockBlob.UploadFromStreamAsync(stream);
+                    }
+                    else
+                    {
+                        return (false, null);
+                    }
+
+                    return (true, cloudBlockBlob.SnapshotQualifiedStorageUri.PrimaryUri.ToString());
+                }
+                catch (StorageException ex)
+                {
+                    return (false, null);
+                }
+            }
+            else
+            {
+                return (false, null);
+            }
         }
     }
 }

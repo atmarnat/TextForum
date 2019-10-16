@@ -33,12 +33,12 @@
                 @if (@Model.FirstPost.ImgUrl.Contains("webm"))
                 {
                     <video class="thumbnail" controls>
-                        <source src="~/Images/@Model.FirstPost.ImgUrl" type="video/webm" />
+                        <source src="https://imgrepository.blob.core.windows.net/images/@Model.FirstPost.ImgUrl" type="video/webm" />
                     </video>
                 }
                 else
                 {
-                    <img class="thumbnail" src="~/Images/@Model.FirstPost.ImgUrl">
+                    <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@Model.FirstPost.ImgUrl">
                 }
             }
             <h4>
@@ -68,12 +68,12 @@
                     @if (@r.ImgUrl.Contains("webm"))
                     {
                         <video class="thumbnail" controls>
-                            <source src="~/Images/@r.ImgUrl" type="video/webm" />
+                            <source src="https://imgrepository.blob.core.windows.net/images/@r.ImgUrl" type="video/webm" />
                         </video>
                     }
                     else
                     {
-                        <img class="thumbnail" src="~/Images/@r.ImgUrl">
+                        <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@r.ImgUrl">
                     }
                 }
 
