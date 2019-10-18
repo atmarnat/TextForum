@@ -21,10 +21,13 @@ img.thumbnail {
     margin-right: 15px;
     margin-bottom: 15px;
 }
-.thumbnail:hover {
-    width: auto;
-    height: auto;
+@media screen and (min-width: 768px) {
+    .thumbnail:hover {
+        width: auto;
+        height: auto;
+    }
 }
+
 video.thumbnail {
     height: auto;
     width: 200px;
