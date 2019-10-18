@@ -1,6 +1,8 @@
 # TwaddleCate
 Project for the MSSA cohort
 
+Currently deployed: http://twaddlecate.azurewebsites.net/
+
 ## Description
 TwattleCate is a text-based message board modeled after the Fubuta channel. Stylistically it works in a very similar manner to a Fubuta channel, but functionally it uses the MVC model in ASP.NET to provide users with a way to communicate with each other from anywhere on the planet in real time.
 ## Index
