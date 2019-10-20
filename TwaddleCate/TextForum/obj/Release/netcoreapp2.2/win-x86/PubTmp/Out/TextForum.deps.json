@@ -25,6 +25,7 @@
       "TextForum/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.6",
+          "Microsoft.AspNetCore.Mvc.Analyzers": "2.2.0",
           "Microsoft.NETCore.App": "2.2.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
           "WindowsAzure.Storage": "9.3.3"
@@ -3148,6 +3149,7 @@
       "TextForum/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.6",
+          "Microsoft.AspNetCore.Mvc.Analyzers": "2.2.0",
           "Microsoft.NETCore.App": "2.2.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
           "WindowsAzure.Storage": "9.3.3"

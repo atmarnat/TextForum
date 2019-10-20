@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj": {}
+    "C:\\Users\\Natha\\OneDrive\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj": {
+    "C:\\Users\\Natha\\OneDrive\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
+        "projectUniqueName": "C:\\Users\\Natha\\OneDrive\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
         "projectName": "TextForum",
-        "projectPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
-        "packagesPath": "C:\\Users\\wwstudent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wwstudent\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\obj\\publish\\win-x86\\",
+        "projectPath": "C:\\Users\\Natha\\OneDrive\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\TextForum.csproj",
+        "packagesPath": "C:\\Users\\Natha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Natha\\OneDrive\\Documents\\GitHub\\TwaddleCate\\TwaddleCate\\TextForum\\obj\\publish\\win-x86\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\wwstudent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Natha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://packagesource": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,6 +47,10 @@
               "target": "Package",
               "version": "[2.2.6, )",
               "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc.Analyzers": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
