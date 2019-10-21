@@ -13,11 +13,17 @@
     {
         <a asp-action="Logout" asp-controller="Account">Log Out</a>
         @User.Identity.Name
+        @if (User.IsInRole("Admin"))
+        {
+            <a asp-controller="Admin" asp-action="Index">Admin Panel</a>
+        }
+        else
+        {
+            <a asp-controller="Account" asp-action="Index">Account Management</a>
+        }
     }
-    @if (User.IsInRole("Admin"))
-    {
-        <a asp-controller="Admin" asp-action="Index">Admin Panel</a>
-    }
+    [<a asp-controller="home" asp-action="Index">Home</a>]
+
     <div>@RenderBody()</div>
 </body>
 </html>

@@ -80,5 +80,10 @@ namespace TextForum.Controllers
             }
             return View(registerViewModel);
         }
+
+        public ViewResult Index()
+        {
+            return View();
+        }
     }
 }
