@@ -228,14 +228,38 @@ namespace TextForum.Controllers
         public async Task<IActionResult> DeleteUser(string id)
         {
             var user = await userManager.FindByIdAsync(id);
-
-            var result = await userManager.DeleteAsync(user);
-            if (result.Succeeded)
+            if (user.UserName != "Admin")
             {
-                return RedirectToAction("ListUsers");
+                var result = await userManager.DeleteAsync(user);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("ListUsers");
+                }
+                else
+                {
+                    return View("ListUsers");
+                }
             }
 
             return View("ListUsers");
+        }
+
+        public async Task<IActionResult> DeleteRole(string id)
+        {
+            var role = await roleManager.FindByIdAsync(id);
+            if (role.Name != "Admin")
+            {
+                var result = await roleManager.DeleteAsync(role);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("ListRoles");
+                }
+                else
+                {
+                    return View("ListRoles");
+                }
+            }
+            return View("ListRoles");
         }
     }
 }

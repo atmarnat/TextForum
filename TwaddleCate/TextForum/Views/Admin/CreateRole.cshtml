@@ -1,6 +1,11 @@
 ﻿@model CreateRoleViewModel
 <h1>Create Role</h1>
 <hr />
+[<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
+[<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
+[<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
+<hr />
+
 <form method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
@@ -11,7 +16,7 @@
     <button type="submit" class="btn btn-primary">Create Role</button>
 </form>
 <hr />
+[<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
 [<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
-[<a asp-controller="Admin" asp-action="Index">Index</a>]
-[<a asp-controller="Home" asp-action="Index">Home</a>]
+[<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
 <hr />

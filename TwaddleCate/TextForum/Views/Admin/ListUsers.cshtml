@@ -1,18 +1,25 @@
 ﻿
 <h1>ListUsers</h1>
-
-
+<hr />
+[<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
+[<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
+[<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
+<hr />
 <table style="text-align: left">
     <tr>
         <th>User Name</th>
+        <th></th>
         <th>Email</th>
+        <th></th>
         <th>Action</th>
     </tr>
     @foreach (var user in Model)
     {
         <tr>
             <th>@user.UserName</th>
+            <td> | </td>
             <th>@user.Email</th>
+            <td> | </td>
             <th>
                 <form asp-action="DeleteUser" asp-route-id="@user.Id" method="post">
                     <a asp-ation="EditUser" asp-controller="Admin" asp-route-id="@user.Id" class="btn btn-primary">Edit</a>
@@ -22,3 +29,8 @@
         </tr>
     }
 </table>
+<hr />
+[<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
+[<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
+[<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
+<hr />

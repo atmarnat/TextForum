@@ -41,13 +41,13 @@
                     <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@Model.FirstPost.ImgUrl">
                 }
             }
-            <h4>
+            <h6>
                 @if (@Model.FirstPost.PostTitle != null)
                 {
                 <span class="title">@Model.FirstPost.PostTitle</span> 
                 }[<span class="user">@Model.FirstPost.UserName</span>] 
                 [@Model.FirstPost.Created]
-            </h4>
+            </h6>
         </p>
         <p style="padding: 4px">
             @Model.FirstPost.Content

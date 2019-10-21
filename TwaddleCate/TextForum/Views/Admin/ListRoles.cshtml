@@ -1,5 +1,9 @@
 ﻿<h1>Role List</h1>
 <hr />
+[<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
+[<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
+[<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
+<hr />
 <table style="text-align: left; border: 1px solid black">
     <tr>
         <th>ID</th>
@@ -13,19 +17,19 @@
 
     @foreach (var role in Model)
     {
-<tr>
-    <td>@role.Id</td>
-    <td> | </td>
-    <td>@role.Name</td>
-    <td> | </td>
-    <td><a class="btn btn-primary" asp-action="EditRole" asp-controller="Admin" asp-route-id="@role.Id">Edit</a></td>
-    <td> | </td>
-    <td><a href="#" class="btn btn-danger">Delete</a></td>
-</tr>
+        <tr>
+            <td>@role.Id</td>
+            <td> | </td>
+            <td>@role.Name</td>
+            <td> | </td>
+            <td><a class="btn btn-primary" asp-action="EditRole" asp-controller="Admin" asp-route-id="@role.Id">Edit</a></td>
+            <td> | </td>
+            <td><a class="btn btn-primary" asp-action="DeleteRole" asp-controller="Admin" asp-route-id="@role.Id">Delete</a></td>
+        </tr>
     }
 </table>
 <hr />
 [<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
-[<a asp-controller="Admin" asp-action="Index">Index</a>]
-[<a asp-controller="Home" asp-action="Index">Home</a>]
+[<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
+[<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
 <hr />
