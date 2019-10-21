@@ -76,3 +76,5 @@ C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\R
 C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\win-x86\TextForum.RazorTargetAssemblyInfo.cs
 C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\win-x86\TextForum.Views.pdb
 C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\win-x86\TextForum.csproj.CopyComplete
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\win-x86\Razor\Views\Account\Index.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\win-x86\Razor\Views\Admin\ListUsers.g.cshtml.cs

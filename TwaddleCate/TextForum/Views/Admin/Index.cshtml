@@ -7,7 +7,7 @@
 <h3>Posts List</h3>
 <hr />
 
-<table>
+<table style="text-align: left; border-collapse: collapse;">
     <tr>
         <th>Picture</th>
         <th>ID</th>
@@ -19,42 +19,41 @@
 
     @foreach (var post in Model.Posts)
     {
-        <tr>
-            <td>
-                @if (post.ImgUrl != null)
-                {
-                    @if (@post.ImgUrl.Contains("webm"))
+    <tr style="border: 1px solid black;">
+        <td>
+            @if (post.ImgUrl != null)
                     {
-                        <video class="thumbnail" controls>
-                            <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
-                        </video>
+            @if (@post.ImgUrl.Contains("webm"))
+                        {
+            <video class="thumbnail" controls>
+                <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
+            </video>
+                        }
+                        else
+                        {
+            <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
+                        }
                     }
-                    else
-                    {
-                        <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
-                    }
-                }
-            </td>
-            <td>@post.PostID</td>
-            <td>@post.TopicID</td>
-            <td>@post.UserName</td>
-            <td>@post.Content</td>
-            <td>
-                <form asp-action="DeleteP" method="POST">
-                    <input type="hidden" name="PostID" value="@post.PostID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                </form>
-            </td>
-        </tr>
+        </td>
+        <td>@post.PostID</td>
+        <td>@post.TopicID</td>
+        <td>@post.UserName</td>
+        <td>@post.Content</td>
+        <td>
+            <form asp-action="DeleteP" method="POST">
+                <input type="hidden" name="PostID" value="@post.PostID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+        </td>
+    </tr>
     }
 </table>
 <hr />
 <h3>Reply List</h3>
 <hr />
-<table>
+<table style="text-align: left; border-collapse: collapse;">
     <tr>
         <th>Picture</th>
         <th>ID</th>
-        <th>Topic</th>
         <th>User</th>
         <th>Content</th>
         <th>Action</th>
@@ -62,32 +61,31 @@
 
     @foreach (var post in Model.Replies)
     {
-        <tr>
-            <td>
-                @if (post.ImgUrl != null)
-                {
-                    @if (@post.ImgUrl.Contains("webm"))
+    <tr style="border: 1px solid black;">
+        <td>
+            @if (post.ImgUrl != null)
                     {
-                        <video class="thumbnail" controls>
-                            <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
-                        </video>
+            @if (@post.ImgUrl.Contains("webm"))
+                        {
+            <video class="thumbnail" controls>
+                <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
+            </video>
+                        }
+                        else
+                        {
+            <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
+                        }
                     }
-                    else
-                    {
-                        <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
-                    }
-                }
-            </td>
-            <td>@post.PostID</td>
-            <td></td>
-            <td>@post.UserName</td>
-            <td>@post.Content</td>
-            <td>
-                <form asp-action="DeleteR" method="POST">
-                    <input type="hidden" name="PostID" value="@post.ReplyID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                </form>
-            </td>
-        </tr>
+        </td>
+        <td>@post.PostID</td>
+        <td>@post.UserName</td>
+        <td>@post.Content</td>
+        <td>
+            <form asp-action="DeleteR" method="POST">
+                <input type="hidden" name="PostID" value="@post.ReplyID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+        </td>
+    </tr>
     }
 </table>
 <hr />
