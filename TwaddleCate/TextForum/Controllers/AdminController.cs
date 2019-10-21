@@ -216,5 +216,26 @@ namespace TextForum.Controllers
             repository.DeleteReply(postID);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult ListUsers()
+        {
+            var users = userManager.Users;
+            return View(users);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            var user = await userManager.FindByIdAsync(id);
+
+            var result = await userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("ListUsers");
+            }
+
+            return View("ListUsers");
+        }
     }
 }
