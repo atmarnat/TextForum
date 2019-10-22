@@ -15,6 +15,7 @@ namespace TextForum.Controllers
         private IPostRepository repository;
         private UserManager<IdentityUser> userManager;
         private SignInManager<IdentityUser> signInManager;
+        public int PageSize = 10;
         public AccountController(UserManager<IdentityUser> userMgr, IPostRepository repo,
         SignInManager<IdentityUser> signInMgr)
         {
@@ -88,16 +89,36 @@ namespace TextForum.Controllers
 
 
         [Authorize]
-        public ViewResult Index()
+        public ViewResult Index(int postPage = 1, int replyPage = 1)
         {
             var currentUser = User.FindFirstValue(ClaimTypes.Name);
             return View(
                 new AdminListViewModel
                 {
                     Posts = repository.Posts
-                    .Where(p => p.UserName == currentUser),
+                    .Where(p => p.UserName == currentUser)
+                        .Skip((postPage - 1) * PageSize)
+                        .Take(PageSize),
                     Replies = repository.Replies
                     .Where(p => p.UserName == currentUser)
+                        .Skip((replyPage - 1) * PageSize)
+                          .Take(PageSize),
+                    PagingInfo = new PagingInfo
+                    {
+                        CurrentPage = postPage,
+                        PostsPerPage = PageSize,
+                        TotalPosts = repository.Posts
+                              .Where(e => e.UserName == currentUser)
+                              .Count()
+                    },
+                    PagingInfoR = new PagingInfo
+                    {
+                        CurrentPage = replyPage,
+                        PostsPerPage = PageSize,
+                        TotalPosts = repository.Replies
+                              .Where(e => e.UserName == currentUser)
+                              .Count()
+                    },
                 }
             );
         }

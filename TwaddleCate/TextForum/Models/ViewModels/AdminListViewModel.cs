@@ -9,5 +9,7 @@ namespace TextForum.Models.ViewModels
     {
         public IEnumerable<Post> Posts { get; set; }
         public IEnumerable<Replies> Replies { get; set; }
+        public PagingInfo PagingInfo { get; set; }
+        public PagingInfo PagingInfoR { get; set; }
     }
 }

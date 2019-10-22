@@ -48,9 +48,10 @@ namespace TextForum
             {
 
                 //routes.MapRoute(
-                  //  name: "replies",
-                    //template: "",
-                    //defaults: new { Controller = "Replies", action = "List" });
+                //  name: "replies",
+                //template: "",
+                //defaults: new { Controller = "Replies", action = "List" });
+
                 routes.MapRoute(
                     name: "pagination",
                     template: "Page{topicID}/Posts/Page{postPage}",
