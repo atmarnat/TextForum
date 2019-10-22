@@ -133,3 +133,5 @@ C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\D
 C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListRoles.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Account\Index.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListUsers.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Posts.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Replies.g.cshtml.cs
