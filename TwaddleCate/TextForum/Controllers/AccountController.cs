@@ -1,7 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TextForum.Models;
 using TextForum.Models.ViewModels;
 
 namespace TextForum.Controllers
@@ -9,13 +12,15 @@ namespace TextForum.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private IPostRepository repository;
         private UserManager<IdentityUser> userManager;
         private SignInManager<IdentityUser> signInManager;
-        public AccountController(UserManager<IdentityUser> userMgr,
+        public AccountController(UserManager<IdentityUser> userMgr, IPostRepository repo,
         SignInManager<IdentityUser> signInMgr)
         {
             userManager = userMgr;
             signInManager = signInMgr;
+            repository = repo;
         }
         [AllowAnonymous]
         public ViewResult Login(string returnUrl)
@@ -81,9 +86,20 @@ namespace TextForum.Controllers
             return View(registerViewModel);
         }
 
+
+        [Authorize]
         public ViewResult Index()
         {
-            return View();
+            var currentUser = User.FindFirstValue(ClaimTypes.Name);
+            return View(
+                new AdminListViewModel
+                {
+                    Posts = repository.Posts
+                    .Where(p => p.UserName == currentUser),
+                    Replies = repository.Replies
+                    .Where(p => p.UserName == currentUser)
+                }
+            );
         }
     }
 }

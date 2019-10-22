@@ -41,13 +41,13 @@
                     <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@Model.FirstPost.ImgUrl">
                 }
             }
-            <h6>
+            <h5>
                 @if (@Model.FirstPost.PostTitle != null)
                 {
                 <span class="title">@Model.FirstPost.PostTitle</span> 
                 }[<span class="user">@Model.FirstPost.UserName</span>] 
                 [@Model.FirstPost.Created]
-            </h6>
+            </h5>
         </p>
         <p style="padding: 4px">
             @Model.FirstPost.Content
@@ -59,10 +59,10 @@
         <div class="replyblock">
             <p>
                 <a href="#@r.ReplyID"></a>
-                <h4>
+                <h5>
                     [<span class="user">@r.UserName</span>]
                     [@r.Created]
-                </h4>
+                </h5>
                 @if (@r.ImgUrl != null)
                 {
                     @if (@r.ImgUrl.Contains("webm"))
