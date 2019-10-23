@@ -102,7 +102,7 @@ namespace TextForum.Controllers
                     Replies = repository.Replies
                     .Where(p => p.UserName == currentUser)
                         .Skip((replyPage - 1) * PageSize)
-                          .Take(PageSize),
+                        .Take(PageSize),
                     PagingInfo = new PagingInfo
                     {
                         CurrentPage = postPage,
