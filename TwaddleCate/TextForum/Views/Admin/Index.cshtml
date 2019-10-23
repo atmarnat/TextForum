@@ -1,9 +1,15 @@
 ﻿<h1>Admin Index</h1>
 <hr />
-[<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
-[<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
-[<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
-<hr />
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        [<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
+        [<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
+        [<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
+    </p>
+    <hr />
+}
+
 <h3>Posts List</h3>
 <hr />
 
@@ -19,32 +25,32 @@
 
     @foreach (var post in Model.Posts)
     {
-    <tr style="border: 1px solid black;">
-        <td>
-            @if (post.ImgUrl != null)
+        <tr style="border: 1px solid black;">
+            <td>
+                @if (post.ImgUrl != null)
+                {
+                    @if (@post.ImgUrl.Contains("webm"))
                     {
-            @if (@post.ImgUrl.Contains("webm"))
-                        {
-            <video class="thumbnail" controls>
-                <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
-            </video>
-                        }
-                        else
-                        {
-            <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
-                        }
+                        <video class="thumbnail" controls>
+                            <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
+                        </video>
                     }
-        </td>
-        <td>@post.PostID</td>
-        <td>@post.TopicID</td>
-        <td>@post.UserName</td>
-        <td>@post.Content</td>
-        <td>
-            <form asp-action="DeleteP" method="POST">
-                <input type="hidden" name="PostID" value="@post.PostID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
-            </form>
-        </td>
-    </tr>
+                    else
+                    {
+                        <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
+                    }
+                }
+            </td>
+            <td>@post.PostID</td>
+            <td>@post.TopicID</td>
+            <td>@post.UserName</td>
+            <td>@post.Content</td>
+            <td>
+                <form asp-action="DeleteP" method="POST">
+                    <input type="hidden" name="PostID" value="@post.PostID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
     }
 </table>
 <hr />
@@ -61,35 +67,41 @@
 
     @foreach (var post in Model.Replies)
     {
-    <tr style="border: 1px solid black;">
-        <td>
-            @if (post.ImgUrl != null)
+        <tr style="border: 1px solid black;">
+            <td>
+                @if (post.ImgUrl != null)
+                {
+                    @if (@post.ImgUrl.Contains("webm"))
                     {
-            @if (@post.ImgUrl.Contains("webm"))
-                        {
-            <video class="thumbnail" controls>
-                <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
-            </video>
-                        }
-                        else
-                        {
-            <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
-                        }
+                        <video class="thumbnail" controls>
+                            <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
+                        </video>
                     }
-        </td>
-        <td>@post.PostID</td>
-        <td>@post.UserName</td>
-        <td>@post.Content</td>
-        <td>
-            <form asp-action="DeleteR" method="POST">
-                <input type="hidden" name="PostID" value="@post.ReplyID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
-            </form>
-        </td>
-    </tr>
+                    else
+                    {
+                        <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
+                    }
+                }
+            </td>
+            <td>@post.PostID</td>
+            <td>@post.UserName</td>
+            <td>@post.Content</td>
+            <td>
+                <form asp-action="DeleteR" method="POST">
+                    <input type="hidden" name="PostID" value="@post.ReplyID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>
+        </tr>
     }
 </table>
-<hr />
-[<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
-[<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
-[<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
-<hr />
+
+@if (User.IsInRole("Admin"))
+{
+    <hr />
+    <p>
+        [<a asp-controller="Admin" asp-action="CreateRole">Create Role</a>]
+        [<a asp-controller="Admin" asp-action="ListRoles">List Roles</a>]
+        [<a asp-controller="Admin" asp-action="ListUsers">List Users</a>]
+    </p>
+    <hr />
+}

@@ -13,7 +13,7 @@
     {
         <a asp-action="Logout" asp-controller="Account">Log Out</a>
         @User.Identity.Name
-        @if (User.IsInRole("Admin"))
+        @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
         {
             <a asp-controller="Admin" asp-action="Index">Admin Panel</a>
         }

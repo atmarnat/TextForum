@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace TextForum.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin, Moderator")]
     //[Authorize]
     public class AdminController : Controller
     {
@@ -24,12 +24,14 @@ namespace TextForum.Controllers
             repository = repo;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult CreateRole()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
         {
@@ -56,6 +58,7 @@ namespace TextForum.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult ListRoles()
         {
@@ -63,6 +66,7 @@ namespace TextForum.Controllers
             return View(roles);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> EditUser(string id)
         {
@@ -79,6 +83,7 @@ namespace TextForum.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> EditUser(EditUserViewModel model)
         {
@@ -97,7 +102,7 @@ namespace TextForum.Controllers
             return View(model);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> EditRole(string id)
         {
@@ -125,6 +130,7 @@ namespace TextForum.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> EditRole(EditRoleViewModel model)
         {
@@ -148,6 +154,7 @@ namespace TextForum.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> EditUsersInRole(string roleId)
         {
@@ -182,6 +189,7 @@ namespace TextForum.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> EditUsersInRole(List<UserRoleViewModel> model, string roleId)
         {
@@ -252,6 +260,7 @@ namespace TextForum.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult ListUsers()
         {
@@ -259,6 +268,7 @@ namespace TextForum.Controllers
             return View(users);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> DeleteUser(string id)
         {
@@ -279,6 +289,7 @@ namespace TextForum.Controllers
             return View("ListUsers");
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteRole(string id)
         {
             var role = await roleManager.FindByIdAsync(id);
