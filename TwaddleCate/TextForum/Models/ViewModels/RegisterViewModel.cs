@@ -12,6 +12,7 @@ namespace TextForum.Models.ViewModels
         public string UserName { get; set; }
 
         [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         [Required(ErrorMessage = "E-Mail Required")]
         public string Email { get; set; }
 
