@@ -1,4 +1,5 @@
-﻿<table style="text-align: left; border-collapse: collapse;">
+﻿<div page-model="@Model.PagingInfoR" page-action="index"></div>
+<table style="text-align: left; border-collapse: collapse;">
     <tr>
         <th>Picture</th>
         <th>ID</th>
@@ -6,30 +7,29 @@
         <th>Action</th>
     </tr>
 
-    @foreach (var post in Model.Replies)
+    @foreach (var replies in Model.Replies)
     {
         <tr style="border: 1px solid black;">
             <td>
-                @if (post.ImgUrl != null)
+                @if (replies.ImgUrl != null)
                 {
-                    @if (@post.ImgUrl.Contains("webm"))
+                    @if (replies.ImgUrl.Contains("webm"))
                     {
                         <video class="thumbnail" controls>
-                            <source src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl" type="video/webm" />
+                            <source src="https://imgrepository.blob.core.windows.net/images/@replies.ImgUrl" type="video/webm" />
                         </video>
                     }
                     else
                     {
-                        <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@post.ImgUrl">
+                        <img class="thumbnail" src="https://imgrepository.blob.core.windows.net/images/@replies.ImgUrl">
                     }
                 }
             </td>
-            <td>@post.PostID</td>
-            <td>@post.Content</td>
+            <td>@replies.PostID</td>
+            <td>@replies.Content</td>
             <td>
-                <a asp-controller="Replies" asp-action="list" asp-route-id="@post.PostID">Go</a>
+                <a asp-controller="Replies" asp-action="list" asp-route-id="@replies.PostID">Go</a>
             </td>
         </tr>
     }
 </table>
-<div page-model="@Model.PagingInfoR" page-action="index"></div>

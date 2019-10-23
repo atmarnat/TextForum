@@ -30,17 +30,34 @@ namespace TextForum.Infrastructure
         public override void Process(TagHelperContext context,
             TagHelperOutput output)
         {
-            IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
-            TagBuilder result = new TagBuilder("div");
-            for (int i = 1; i <= PageModel.TotalPages; i++)
+            if (PageModel.PostType == false)
             {
-                TagBuilder tag = new TagBuilder("a");
-                tag.Attributes["href"] = urlHelper.Action(PageAction,
-                    new { postPage = i });
-                tag.InnerHtml.Append(i.ToString());
-                result.InnerHtml.AppendHtml(tag);
+                IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
+                TagBuilder result = new TagBuilder("div");
+                for (int i = 1; i <= PageModel.TotalPages; i++)
+                {
+                    TagBuilder tag = new TagBuilder("a");
+                    tag.Attributes["href"] = urlHelper.Action(PageAction,
+                        new { postPage = i });
+                    tag.InnerHtml.Append(i.ToString());
+                    result.InnerHtml.AppendHtml(tag);
+                }
+                output.Content.AppendHtml(result.InnerHtml);
             }
-            output.Content.AppendHtml(result.InnerHtml);
+            else
+            {
+                IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
+                TagBuilder result = new TagBuilder("div");
+                for (int i = 1; i <= PageModel.TotalPages; i++)
+                {
+                    TagBuilder tag = new TagBuilder("a");
+                    tag.Attributes["href"] = urlHelper.Action(PageAction,
+                        new { replyPage = i });
+                    tag.InnerHtml.Append(i.ToString());
+                    result.InnerHtml.AppendHtml(tag);
+                }
+                output.Content.AppendHtml(result.InnerHtml);
+            }
         }
     }
 }

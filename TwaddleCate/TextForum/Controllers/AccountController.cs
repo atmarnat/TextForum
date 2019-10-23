@@ -113,6 +113,7 @@ namespace TextForum.Controllers
                     },
                     PagingInfoR = new PagingInfo
                     {
+                        PostType = true,
                         CurrentPage = replyPage,
                         PostsPerPage = PageSize,
                         TotalPosts = repository.Replies

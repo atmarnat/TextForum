@@ -10,6 +10,7 @@ namespace TextForum.Models.ViewModels
         public int TotalPosts { get; set; }
         public int PostsPerPage { get; set; }
         public int CurrentPage { get; set; }
+        public bool PostType { get; set; } = false;
 
         public int TotalPages =>
             (int)Math.Ceiling((decimal)TotalPosts / PostsPerPage);
