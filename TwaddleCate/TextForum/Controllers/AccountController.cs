@@ -123,5 +123,19 @@ namespace TextForum.Controllers
                 }
             );
         }
+        [HttpPost]
+        public IActionResult DeleteP(int postID)
+        {
+            repository.DeletePost(postID);
+            repository.DeletePostReply(postID);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult DeleteR(int postID)
+        {
+            repository.DeleteReply(postID);
+            return RedirectToAction("Index");
+        }
     }
 }

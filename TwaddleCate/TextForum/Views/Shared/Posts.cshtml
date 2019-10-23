@@ -30,7 +30,12 @@
             <td>@post.TopicID</td>
             <td>@post.Content</td>
             <td>
-                <a asp-controller="Replies" asp-action="list" asp-route-id="@post.PostID">Go</a>
+                <a asp-controller="Replies" asp-action="list" asp-route-id="@post.PostID">Go</a> 
+            </td>
+            <td>
+                <form asp-action="DeleteP" method="POST">
+                    <input type="hidden" name="PostID" value="@post.PostID" /><button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
             </td>
         </tr>
     }

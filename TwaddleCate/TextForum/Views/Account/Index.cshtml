@@ -1,5 +1,8 @@
 ﻿<h1>Account Management</h1>
-
+@if (User.IsInRole("Banned"))
+{
+    <div style="text-align: center"><h1 style="color:red">You are banned</h1></div>
+}
 <h3>Posts List</h3>
 <hr />
 

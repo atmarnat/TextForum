@@ -13,10 +13,17 @@
     </div>
 
     <!--This is the area where people can make new posts-->
-    <div style="text-align: center">
-        Create
-        @Html.Partial("Create", new TextForum.Models.Post())
-    </div>
+    @if (User.IsInRole("Banned"))
+    {
+        <div style="text-align: center"><h1 style="color:red">You are banned</h1></div>
+    }
+    else
+    {
+        <div style="text-align: center">
+            Create
+            @Html.Partial("Create", new TextForum.Models.Post())
+        </div>
+    }
 
     <!--Search functionality here-->
     <hr />

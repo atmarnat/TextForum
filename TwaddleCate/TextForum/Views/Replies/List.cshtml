@@ -13,11 +13,17 @@
     </div>
 
     <a name="reply"></a>
-    <div style="text-align: center">
-        Reply
-        @Html.Partial("Reply", new TextForum.Models.Replies())
-    </div>
-
+    @if (User.IsInRole("Banned"))
+    {
+        <div style="text-align: center"><h1 style="color:red">You are banned</h1></div>
+    }
+    else
+    {
+        <div style="text-align: center">
+            Reply
+            @Html.Partial("Reply", new TextForum.Models.Replies())
+        </div>
+    }
     <hr />
     <div>
         [<a asp-controller="Topic" asp-action="List" asp-route-id="@Model.FirstPost.TopicID">Return</a>]
@@ -44,8 +50,8 @@
             <h5>
                 @if (@Model.FirstPost.PostTitle != null)
                 {
-                <span class="title">@Model.FirstPost.PostTitle</span> 
-                }[<span class="user">@Model.FirstPost.UserName</span>] 
+                    <span class="title">@Model.FirstPost.PostTitle</span>
+                }[<span class="user">@Model.FirstPost.UserName</span>]
                 [@Model.FirstPost.Created]
             </h5>
         </p>
