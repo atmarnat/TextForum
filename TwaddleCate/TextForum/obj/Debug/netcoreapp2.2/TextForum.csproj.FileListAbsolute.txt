@@ -135,3 +135,4 @@ C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\ListUsers.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Posts.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Replies.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Debug\netcoreapp2.2\Razor\Views\Admin\EditUser.g.cshtml.cs

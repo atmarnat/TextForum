@@ -1,0 +1,55 @@
+﻿@model EditUserViewModel
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<h1>Edit User</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Id" />
+        <div>
+            <input asp-for="Id" disabled>
+        </div>
+    </div>
+    <div>
+        <label asp-for="UserName" />
+        <div>
+            <input asp-for="UserName">
+            <span asp-validation-for="UserName"></span>
+        </div>
+    </div>
+    <div>
+        <label asp-for="Email" />
+        <div>
+            <input asp-for="Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+    </div>
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <div>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a asp-action="ListUsers" class="btn btn-primary">Cancel</a>
+        </div>
+    </div>
+</form>
+
+<div>
+    <div>
+        <h3>User Roles</h3>
+    </div>
+    <div>
+        @foreach (var role in Model.Roles)
+        {
+            <p>@role</p>
+        }
+    </div>
+    <div>
+        <a asp-controller="Admin" asp-action="ListRoles" style="width:auto" class="btn btn-primary">
+            Manage Roles
+        </a>
+    </div>
+</div>
