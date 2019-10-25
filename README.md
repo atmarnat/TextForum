@@ -179,15 +179,19 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 1. Set up pagination
 1. Populate initial tables
 1. Pictures integrated
-1. STyling has been applied
+1. Styling has been applied
+1. Admin page created
+1. Hosted to Azure
+1. User accounts added
+1. User management page added
+1. Roles set up and managed
+1. Moderator role created and integrated
+1. Deletion of posts based on account level added
+1. Responsive design implemented
 
 #### Current WIP:
-1. Building Admin page so that posts can be managed
-1. Preparing to host onto Azure
+1. 
 
 #### TODO:
-
-1. Create user accounts page
 1. Validate login info
-1. Push to a webserver
 1. Testing
