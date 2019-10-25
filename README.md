@@ -136,7 +136,10 @@ GO
 ### [⮤](#index)[^](#database-design)Entity Relational Diagram
 ![ERD](/Assets/erd.jpg)
 ### [⮤](#index)[^](#database-diagram)Database Diagram
-![DatabaseDiagram](/Assets/databaseDiagram.jpg)
+##### Identity Database
+![DD1](/Assets/dd1.jpg)
+##### Project Database
+![DD2](/Assets/dd2.jpg)
 ## [⮤](#index)Usage
 The user should be able to create a profile, log into it, modify the information, view any message, create a message, and delete their own message. A moderator is at a higher level, and should be able to do all the same things, but also delete other people messages and discussions. An administrator is at the highest level, and should be able to do all of the previous things, but also delete topics, any profile, and do anything to the design of the website. The Administrator is the developer that controls everything.
 ### [⮤](#index)[^](#usage)UML Diagram
