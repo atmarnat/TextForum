@@ -190,8 +190,8 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 1. Responsive design implemented
 
 #### Current WIP:
-1. 
+1. Validate login info
 
 #### TODO:
-1. Validate login info
+1. Applying responsiveness to user input
 1. Testing
