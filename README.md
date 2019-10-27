@@ -20,20 +20,20 @@ TwattleCate is a text-based message board modeled after the Fubuta channel. Styl
 
 
 ## [⮤](#index)Concept 
-This project will do 2 main things that the users can see. It will allow people to create a point of discussion (through creating a post), and allow people to respond to posts, by creating their own.
+This project does three main things that the users can see. It allows people to create a point of discussion (through creating a post), allows people to respond to posts by creating their own, and allows people to create accounts so that they can view their post history (and delete their own posts) if they chose to do so.
 
-Each point of discussion will be its own thread on its own webpage, where users can follow the timeline of posts and see who replied to who. After a topic reaches a certain length, it will close and people will not be able to respond anymore. Every time someone makes a post in the topic, the topic will move to the top of the queue, which will be a certain length. After the topic leaves the queue, it is permanently deleted.
+Each post is its own thread that can be viewed seperately from the topics page, so people can see the timeline of posts and who replied to each post. Currently, there is no limit to the number of posts or replies that can be created. The posts are arranged based on the date, with newest being at the top of the list, while the replies are orders with newest replies being on the bottom.
 
-There will be many different web pages based on different topics that people can join to discuss specific topics, like news, restaraunts, tv shows, etc, so the amount of threads that can be active at one time will be quite extensive. All of this information will be stored on a webserver, so each thread will be its own table of information. This will reqire much reading/writing/creating/deleting of information from the database.
+There are currently twelve different topic pages based on different categories that people can join to discuss the different topics. The current topics are Entertainment, Fashion, Fitness, Food, History, Language, Literature, Math, Miscellaneous, Places, Social, and Sports. Integrating new topics or removing them is a simple addition/deletion from the database, as the code will generate everything for it once it is declared.ensive. All of the posts are handled in either the Posts table (which are the starting points for each thread of discussion), or the Replies table (which contains a list of replies correlating to the post that they are created under).
 
-It will be a simple message board with basic functionalities, and will expand as the project grows.
+It is currently a functioning message board, and continues to expand as it is developed.
 
 ### PowerPoint
 
 ![PPT](/Assets/Presentation.gif)
 
 ## [⮤](#index)Layout
-The website will be 3 layers deep. The homepage will contain links to the topics, and the topics will have a list of discussions on them, with links to each one. There is no limit to the number of discussions that exist (so far).
+The website is 3 layers deep. The homepage contains links to the topics, and the topics have a list of posts on them, with links to each thread of the post on them. There is no limit to the number of discussions that exist.
 ### [⮤](#index)[^](#layout)Wireframe
 #### Homepage
 ![home](/Assets/homepage.jpg)
