@@ -76,5 +76,8 @@ C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\R
 C:\Users\Natha\OneDrive\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\TextForum.csproj.CopyComplete
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Account\Index.g.cshtml.cs
 C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Admin\ListUsers.g.cshtml.cs
-C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Shared\Posts.g.cshtml.cs
-C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Shared\Replies.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Account\Posts.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Account\Replies.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Admin\EditUser.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Admin\Posts.g.cshtml.cs
+C:\Users\wwstudent\Documents\GitHub\TwaddleCate\TwaddleCate\TextForum\obj\Release\netcoreapp2.2\Razor\Views\Admin\Replies.g.cshtml.cs
