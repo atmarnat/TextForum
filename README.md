@@ -64,7 +64,7 @@ The number of topics menu will be replaced with simple buttons that let a user t
 There is a potentially infinite number of discussions, so there can be an infinite number of messages. I will probably close discussions after a certain number of messages to keep discussions moving.
 
 ## [⮤](#index)Database Design
-The database is written with SQL, and will be implemented on a webserver. I have made significant changes to the design of the database in order to simplify data retrieval. There are only 3 tables now, one for users, one for all of the posts, and one for each topic. This greatly simplifies getting values for the website, and it minimizes the number of models needed for the MVC application. Here is a more refined version of the database:
+The database is written with SQL, and is implemented on a webserver. I have made significant changes to the design of the database in order to simplify data retrieval. There are now two databases, one to handle the post content, and one to handle user identities. The default IdentityUser has been implemented, and can be seen in the database diagram. The content database now has a table for topics, a table for posts, and a table for replies, and has more values added to it. Here is a more refined version of the database:
 ```
 -- ~ -- ~ -- 1. Create Database -- ~ -- ~ --
 CREATE DATABASE MssaMessageBoard
@@ -73,12 +73,6 @@ USE MssaMessageBoard
 GO
 
 -- ~ -- ~ -- 2. Create Tables -- ~ -- ~ -- 
-CREATE TABLE Users
-( UserID INT Identity(1,1), UserName varchar (25) NOT NULL, Email varchar (40),
-	UserPhoto varchar(80), UserPassword varchar(40),
-	UserPermissions int, PRIMARY KEY(userID));
-GO
-
 CREATE TABLE Topics
 ( TopicID INT Identity(1,1), topic varchar (40), PRIMARY KEY(topicID));
 GO
