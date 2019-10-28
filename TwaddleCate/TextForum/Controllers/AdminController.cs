@@ -17,6 +17,7 @@ namespace TextForum.Controllers
         private IPostRepository repository;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly UserManager<IdentityUser> userManager;
+        public int PageSize = 10;
         public AdminController(RoleManager<IdentityRole> roleManager, IPostRepository repo, UserManager<IdentityUser> userManager)
         {
             this.roleManager = roleManager;
@@ -234,15 +235,34 @@ namespace TextForum.Controllers
         }
 
         [Authorize]
-        public ViewResult Index()
+        public ViewResult Index(int postPage = 1, int replyPage = 1)
         {
             return View(
                 new AdminListViewModel
                 {
-                    Posts = repository.Posts,
+                    Posts = repository.Posts
+                        .Skip((postPage - 1) * PageSize)
+                        .Take(PageSize),
                     Replies = repository.Replies
+                        .Skip((postPage - 1) * PageSize)
+                        .Take(PageSize),
+                    PagingInfo = new PagingInfo
+                    {
+                        CurrentPage = postPage,
+                        PostsPerPage = PageSize,
+                        TotalPosts = repository.Posts
+                              .Count()
+                    },
+                    PagingInfoR = new PagingInfo
+                    {
+                        PostType = true,
+                        CurrentPage = replyPage,
+                        PostsPerPage = PageSize,
+                        TotalPosts = repository.Replies
+                              .Count()
+                    },
                 }
-            );
+            ); ;
         }
 
         [HttpPost]
