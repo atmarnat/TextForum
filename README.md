@@ -185,6 +185,7 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 
 #### Current WIP:
 1. Validate login info
+1. Read into modifying user input
 
 #### TODO:
 1. Applying responsiveness to user input
