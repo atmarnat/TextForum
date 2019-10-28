@@ -20,20 +20,20 @@ TwattleCate is a text-based message board modeled after the Fubuta channel. Styl
 
 
 ## [⮤](#index)Concept 
-This project will do 2 main things that the users can see. It will allow people to create a point of discussion (through creating a post), and allow people to respond to posts, by creating their own.
+This project does three main things that the users can see. It allows people to create a point of discussion (through creating a post), allows people to respond to posts by creating their own, and allows people to create accounts so that they can view their post history (and delete their own posts) if they chose to do so.
 
-Each point of discussion will be its own thread on its own webpage, where users can follow the timeline of posts and see who replied to who. After a topic reaches a certain length, it will close and people will not be able to respond anymore. Every time someone makes a post in the topic, the topic will move to the top of the queue, which will be a certain length. After the topic leaves the queue, it is permanently deleted.
+Each post is its own thread that can be viewed seperately from the topics page, so people can see the timeline of posts and who replied to each post. Currently, there is no limit to the number of posts or replies that can be created. The posts are arranged based on the date, with newest being at the top of the list, while the replies are orders with newest replies being on the bottom.
 
-There will be many different web pages based on different topics that people can join to discuss specific topics, like news, restaraunts, tv shows, etc, so the amount of threads that can be active at one time will be quite extensive. All of this information will be stored on a webserver, so each thread will be its own table of information. This will reqire much reading/writing/creating/deleting of information from the database.
+There are currently twelve different topic pages based on different categories that people can join to discuss the different topics. The current topics are Entertainment, Fashion, Fitness, Food, History, Language, Literature, Math, Miscellaneous, Places, Social, and Sports. Integrating new topics or removing them is a simple addition/deletion from the database, as the code will generate everything for it once it is declared.ensive. All of the posts are handled in either the Posts table (which are the starting points for each thread of discussion), or the Replies table (which contains a list of replies correlating to the post that they are created under).
 
-It will be a simple message board with basic functionalities, and will expand as the project grows.
+It is currently a functioning message board, and continues to expand as it is developed.
 
 ### PowerPoint
 
 ![PPT](/Assets/Presentation.gif)
 
 ## [⮤](#index)Layout
-The website will be 3 layers deep. The homepage will contain links to the topics, and the topics will have a list of discussions on them, with links to each one. There is no limit to the number of discussions that exist (so far).
+The website is 3 layers deep. The homepage contains links to the topics, and the topics have a list of posts on them, with links to each thread of the post on them. There is no limit to the number of discussions that exist.
 ### [⮤](#index)[^](#layout)Wireframe
 #### Homepage
 ![home](/Assets/homepage.jpg)
@@ -64,7 +64,7 @@ The number of topics menu will be replaced with simple buttons that let a user t
 There is a potentially infinite number of discussions, so there can be an infinite number of messages. I will probably close discussions after a certain number of messages to keep discussions moving.
 
 ## [⮤](#index)Database Design
-The database is written with SQL, and will be implemented on a webserver. I have made significant changes to the design of the database in order to simplify data retrieval. There are only 3 tables now, one for users, one for all of the posts, and one for each topic. This greatly simplifies getting values for the website, and it minimizes the number of models needed for the MVC application. Here is a more refined version of the database:
+The database is written with SQL, and is implemented on a webserver. I have made significant changes to the design of the database in order to simplify data retrieval. There are now two databases, one to handle the post content, and one to handle user identities. The default IdentityUser has been implemented, and can be seen in the database diagram. The content database now has a table for topics, a table for posts, and a table for replies, and has more values added to it. Here is a more refined version of the database:
 ```
 -- ~ -- ~ -- 1. Create Database -- ~ -- ~ --
 CREATE DATABASE MssaMessageBoard
@@ -73,12 +73,6 @@ USE MssaMessageBoard
 GO
 
 -- ~ -- ~ -- 2. Create Tables -- ~ -- ~ -- 
-CREATE TABLE Users
-( UserID INT Identity(1,1), UserName varchar (25) NOT NULL, Email varchar (40),
-	UserPhoto varchar(80), UserPassword varchar(40),
-	UserPermissions int, PRIMARY KEY(userID));
-GO
-
 CREATE TABLE Topics
 ( TopicID INT Identity(1,1), topic varchar (40), PRIMARY KEY(topicID));
 GO
@@ -136,7 +130,10 @@ GO
 ### [⮤](#index)[^](#database-design)Entity Relational Diagram
 ![ERD](/Assets/erd.jpg)
 ### [⮤](#index)[^](#database-diagram)Database Diagram
-![DatabaseDiagram](/Assets/databaseDiagram.jpg)
+##### Identity Database
+![DD1](/Assets/dd1.jpg)
+##### Project Database
+![DD2](/Assets/dd2.jpg)
 ## [⮤](#index)Usage
 The user should be able to create a profile, log into it, modify the information, view any message, create a message, and delete their own message. A moderator is at a higher level, and should be able to do all the same things, but also delete other people messages and discussions. An administrator is at the highest level, and should be able to do all of the previous things, but also delete topics, any profile, and do anything to the design of the website. The Administrator is the developer that controls everything.
 ### [⮤](#index)[^](#usage)UML Diagram
@@ -176,15 +173,20 @@ WIP: Some of the initial tests to run, and all of the different subsections of t
 1. Set up pagination
 1. Populate initial tables
 1. Pictures integrated
-1. STyling has been applied
+1. Styling has been applied
+1. Admin page created
+1. Hosted to Azure
+1. User accounts added
+1. User management page added
+1. Roles set up and managed
+1. Moderator role created and integrated
+1. Deletion of posts based on account level added
+1. Responsive design implemented
 
 #### Current WIP:
-1. Building Admin page so that posts can be managed
-1. Preparing to host onto Azure
+1. Validate login info
+1. Read into modifying user input
 
 #### TODO:
-
-1. Create user accounts page
-1. Validate login info
-1. Push to a webserver
+1. Applying responsiveness to user input
 1. Testing
