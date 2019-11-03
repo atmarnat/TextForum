@@ -142,6 +142,7 @@ The user should be able to create a profile, log into it, modify the information
 ##### Requirements Traceability/Criteria
 This is a list of the tests that have been done, their status, and how/when they were last done.
 For a more in depth breakdown of the current/previous builds, a test list can be found at: [TRR 11/3/2019](https://github.com/atmarnat/TextForum/blob/master/TwaddleCate/README.md)
+
 | TestNo.      | Status     | Build     | TimeStamp | Requirement       | Test Description | Test Method | Test Procedure |
 | -----------: | :--------: | :-------: | :-------: | :---------------: | :--------------- | :---------: | :------------: |
 | 1            | Passed     | 1.0       | 11/3/2019 | User Login        | User shall make an account | Analysis | Enter the pw/username/(default)picture, update all three |
