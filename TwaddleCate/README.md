@@ -69,7 +69,7 @@ These are the basic functions of the website, and are all critical to the functo
 | 4.3          | Passed     | 1.0       | 11/3/2019 |                   | View the page and see if there are messages |
 | 4.3.1        | Passed     | 1.0       | 11/3/2019 |                   | unit test (by time ordering) |
 | 4.4          | Passed     | 1.0       | 11/3/2019 |                   | View page and see if there are messages |
-| 4.4.1        | Failed     | 1.0       | 11/3/2019 |                   | View if pictures are uploading correctly |
+| 4.4.1        | Failed     | 1.0       | 11/3/2019 |                   | View if pictures are uploading and resizing correctly |
 
 94% of test cases currently pass.
 
