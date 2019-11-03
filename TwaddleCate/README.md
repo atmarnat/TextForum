@@ -25,6 +25,8 @@ Below is a list of the TRRs for the project. All test cases are done locally, as
 | 4.4          | Discussion views shall have a list of messages | Inspection  |
 | 4.4.1        | User pictures shall display properly | Inspection |
 
+These are the basic functions of the website, and are all critical to the functonality. They should work at all times. These test cases MUST be run each time before the site is deployed, and SHOULD be working properly. 
+
 #### Requirements Traceability
 
 |       | User Login | Message Creation | Message Handling | Website Layout |
@@ -38,13 +40,15 @@ Below is a list of the TRRs for the project. All test cases are done locally, as
 | 3     |            |                  | OK               |                |
 | 3.1   |            |                  | OK               |                |
 | 3.2   |            |                  | OK               |                |
-| 4     |            |                  |                  | XX             |
+| 4     |            |                  |                  | OK             |
 | 4.1   |            |                  |                  | OK             |
 | 4.2   |            |                  |                  | OK             |
 | 4.3   |            |                  |                  | OK             |
 | 4.3.1 |            |                  |                  | OK             |
 | 4.4   |            |                  |                  | OK             |
-| 4.4.1 |            |                  |                  | FAILED         |
+| 4.4.1 |            |                  |                  | OK             |
+
+100% of requirements are linked to test cases.
 
 #### Exit Criteria
 
@@ -67,5 +71,11 @@ Below is a list of the TRRs for the project. All test cases are done locally, as
 | 4.4          | Passed     | 1.0       | 11/3/2019 |                   | View page and see if there are messages |
 | 4.4.1        | Failed     | 1.0       | 11/3/2019 |                   | View if pictures are uploading correctly |
 
+94% of test cases currently pass.
+
+#### Findings
+ - All Controller/Model code is working properly.
+ - Pictures are not resizing property on the desktop view when clicked on.
+ - The base tests are all now set up. Run before each deployment.
 
 
