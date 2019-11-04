@@ -15,7 +15,7 @@ TwattleCate is a text-based message board modeled after the Fubuta channel. Styl
     1. [Database Diagram](#database-diagram)
 1. [Usage](#usage)
     1. [UML Diagram](#uml-diagram)
-    1. [Requirements Traceability Matrix](#requirements-traceability-matrix)
+    1. [Testing](#testing)
 1. [Product Backlog Items](#product-backlog-items)
 
 
@@ -138,30 +138,31 @@ GO
 The user should be able to create a profile, log into it, modify the information, view any message, create a message, and delete their own message. A moderator is at a higher level, and should be able to do all the same things, but also delete other people messages and discussions. An administrator is at the highest level, and should be able to do all of the previous things, but also delete topics, any profile, and do anything to the design of the website. The Administrator is the developer that controls everything.
 ### [⮤](#index)[^](#usage)UML Diagram
 ![UML](/Assets/UML.jpg)
-### [⮤](#index)[^](#usage)Requirements Traceability Matrix
-WIP: Some of the initial tests to run, and all of the different subsections of them
+### [⮤](#index)[^](#usage)Testing
+##### Requirements Traceability/Criteria
+This is a list of the tests that have been done, their status, and how/when they were last done.
+For a more in depth breakdown of the current/previous builds, a test list can be found at: [TRR 11/3/2019](https://github.com/atmarnat/TextForum/blob/master/TwaddleCate/README.md)
 
 | TestNo.      | Status     | Build     | TimeStamp | Requirement       | Test Description | Test Method | Test Procedure |
 | -----------: | :--------: | :-------: | :-------: | :---------------: | :--------------- | :---------: | :------------: |
-| 1            | Not Tested |           |           | User Login        | User shall make an account | Analysis | Enter the pw/username/(default)picture, update all three |
-| 1.1          | Not Tested |           |           |                   | User shall make a username | Test | unit test |
-| 1.2          | Not Tested |           |           |                   | User shall make a password | Test | unit test |
-| 1.3          | Not Tested |           |           |                   | User shall upload a profile picture | Demonstration | Enter the picture |
-| 1.4          | Not Tested |           |           |                   | User shall be able to update profile | Analysis | unit test group(checking if all information is changed) |
-| 2            | Not Tested |           |           | Message Creation  | User shall create a message | Test | unit test |
-| 2.1          | Not Tested |           |           |                   | User shall delete a message | Test | unit test |
-| 3            | Not Tested |           |           | Message Handling  | Website shall display messages | Inspection  | View the webpage to verify information |
-| 3.1          | Not Tested |           |           |                   | Website shall group messages by discussion | Analysis | unit test group verifying correct information from database |
-| 3.2          | Not Tested |           |           |                   | Website shall update discussion list when new discussion created | Analysis | unit test group checking for message on both pages |
+| 1            | Passed     | 1.0       | 11/3/2019 | User Login        | User shall make an account | Analysis | Enter the pw/username/(default)picture, update all three |
+| 1.1          | Passed     | 1.0       | 11/3/2019 |                   | User shall make a username | Demonstration | unit test |
+| 1.2          | Passed     | 1.0       | 11/3/2019 |                   | User shall make a password | Demonstration | unit test |
+| 1.4          | Passed     | 1.0       | 11/3/2019 |                   | User shall be able to update profile | Analysis | unit test group(checking if all information is changed) |
+| 2            | Passed     | 1.0       | 11/3/2019 | Message Creation  | User shall create a message | Test | unit test |
+| 2.1          | Passed     | 1.0       | 11/3/2019 |                   | User shall delete a message | Test | unit test |
+| 3            | Passed     | 1.0       | 11/3/2019 | Message Handling  | Website shall display messages | Inspection  | View the webpage to verify information |
+| 3.1          | Passed     | 1.0       | 11/3/2019 |                   | Website shall group messages by discussion | Analysis | unit test group verifying correct information from database |
+| 3.2          | Passed     | 1.0       | 11/3/2019 |                   | Website shall update discussion list when new discussion created | Analysis | unit test group checking for message on both pages |
 | 3.3          | Not Tested |           |           |                   | Website shall handle message linking to other messages in same discussion | Demonstration | Click generated links and see if they go to right spot |
 | 3.4          | Not Tested |           |           |                   | Website shall handle message linking to other messages across discussions/topics | Demonstration | Click generated links and see if they go to right spot |
-| 4            | Not Tested |           |           | Website Layout    | Views shall display correctly | Inspection | View page and see if everything is lined up correctly |
-| 4.1          | Not Tested |           |           |                   | Menu shall point to the correct views | Demonstration | Click links to see if they point to right locations |
-| 4.2          | Not Tested |           |           |                   | HomePage shall point to topic views and login information | Demonstration | Click links to see if they point to right locations |
-| 4.3          | Not Tested |           |           |                   | Topic views shall have list of discussions | Inspection | View the page and see if there are messages |
-| 4.3.1        | Not Tested |           |           |                   | Topic views shall arrange discussions by date of last post | Test | unit test (by time ordering) |
-| 4.4          | Not Tested |           |           |                   | Discussion views shall have a list of messages | Inspection  | View page and see if there are messages |
-| 4.4.1        | Not Tested |           |           |                   | User pictures shall display properly | Inspection | View if pictures are uploading correctly |
+| 4            | Passed     | 1.0       | 11/3/2019 | Website Layout    | Views shall display correctly | Inspection | View page and see if everything is lined up correctly |
+| 4.1          | Passed     | 1.0       | 11/3/2019 |                   | Menu shall point to the correct views | Demonstration | Click links to see if they point to right locations |
+| 4.2          | Passed     | 1.0       | 11/3/2019 |                   | HomePage shall point to topic views and login information | Demonstration | Click links to see if they point to right locations |
+| 4.3          | Passed     | 1.0       | 11/3/2019 |                   | Topic views shall have list of discussions | Inspection | View the page and see if there are messages |
+| 4.3.1        | Passed     | 1.0       | 11/3/2019 |                   | Topic views shall arrange discussions by date of last post | Test | unit test (by time ordering) |
+| 4.4          | Passed     | 1.0       | 11/3/2019 |                   | Discussion views shall have a list of messages | Inspection  | View page and see if there are messages |
+| 4.4.1        | Failed     | 1.0       | 11/3/2019 |                   | User pictures shall display properly | Inspection | View if pictures are uploading correctly |
 
 ## [⮤](#index)Product Backlog Items
 #### Complete:
