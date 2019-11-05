@@ -7,7 +7,6 @@ Currently deployed: http://twaddlecate.azurewebsites.net/
 TwattleCate is a text-based message board modeled after the Fubuta channel. Stylistically it works in a very similar manner to a Fubuta channel, but functionally it uses the MVC model in ASP.NET to provide users with a way to communicate with each other from anywhere on the planet in real time.
 ## Index
 1. [Concept](#concept)
-    1. [PowerPoint](#powerpoint)
 1. [Layout](#layout)
     1. [Wireframe](#wireframe)
 1. [Database Design](#database-design)
@@ -27,10 +26,6 @@ Each post is its own thread that can be viewed seperately from the topics page, 
 There are currently twelve different topic pages based on different categories that people can join to discuss the different topics. The current topics are Entertainment, Fashion, Fitness, Food, History, Language, Literature, Math, Miscellaneous, Places, Social, and Sports. Integrating new topics or removing them is a simple addition/deletion from the database, as the code will generate everything for it once it is declared.ensive. All of the posts are handled in either the Posts table (which are the starting points for each thread of discussion), or the Replies table (which contains a list of replies correlating to the post that they are created under).
 
 It is currently a functioning message board, and continues to expand as it is developed.
-
-### PowerPoint
-
-![PPT](/Assets/Presentation.gif)
 
 ## [⮤](#index)Layout
 The website is 3 layers deep. The homepage contains links to the topics, and the topics have a list of posts on them, with links to each thread of the post on them. There is no limit to the number of discussions that exist.
