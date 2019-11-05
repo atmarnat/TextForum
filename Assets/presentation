@@ -1,0 +1,30 @@
+Final Presentation
+1. SDLC
+  Start with github readme, and move down. Switch to testing stuff when reached
+  https://github.com/atmarnat/TextForum
+  Requirements, Design, Implementation & Test
+
+2. Solution
+  Technologies
+	MVC
+	.Net Core 2.2
+	Entity Framework
+	ASP.NET Identity
+	CSS/HTML/C#
+
+  Future development
+	Restructure database, and use CosmosDB:t o achieve low latency and high availability, instances of these applications need to be deployed in datacenters that are close to their users	 https://docs.microsoft.com/en-us/azure/cosmos-db/introduction. "Any web, mobile, gaming, and IoT application that needs to handle massive amounts of data, reads, and writes at a global scale with near-real response times for a variety of data will benefit from Cosmos DB's guaranteed high availability, high throughput, low latency, and tunable consistency."	
+	Figure out styling of user input, with JS
+3. Architecture/code walkthrough
+  Walk through the controllers, partial views, talk about view models, talk about identity
+4. Demonstration
+  Just walk through the application on the cloud
+5. Lessons learned
+  what did you do right?
+	  blob storage, handing of transmission of data between database/views. Controllers were all set up very nicely.
+	what did you do wrong?
+	  Database needed many tweaks to get correct post information, pagination took many different attempts to get correct
+	where were you lucky?
+	  Tables interacted each other very well without foreign keys, User authentication worked exactly how it was described in videos, delete methods just WERKED. Basic styling made viewing between the screens very nice
+	what would you change / what do you know now that you wish you knew "then"?
+	  Would restructure database again so that it would only be two tables (+ identity shit)
