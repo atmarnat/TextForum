@@ -178,11 +178,11 @@ For a more in depth breakdown of the current/previous builds, a test list can be
 1. Moderator role created and integrated
 1. Deletion of posts based on account level added
 1. Responsive design implemented
+1. Testing
 
 #### Current WIP:
-1. Validate login info
-1. Read into modifying user input
+1. Read into modifying user input (javascript)
+1. Applying responsiveness to user input (having spaces, links, etc)
 
 #### TODO:
-1. Applying responsiveness to user input
-1. Testing
+1. Validate login info
