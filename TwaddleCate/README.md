@@ -2,7 +2,7 @@
 This project contains the files that directly relate to the final project. All work shall be handled from here. For a more complete Readme, refer to [TwaddleCate](https://github.com/atmarnat/TwaddleCate#twaddlecate)
 Below is a list of the TRRs for the project. All test cases are done locally, as I do not want to deploy them.
 
-
+Azure account expiring soon, so I need to switch back to local.
 ## Test Readiness Review: 11/3/2019
 #### Entrance Criteria
 
