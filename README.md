@@ -183,6 +183,7 @@ For a more in depth breakdown of the current/previous builds, a test list can be
 #### Current WIP:
 1. Read into modifying user input (javascript)
 1. Applying responsiveness to user input (having spaces, links, etc)
+1. Restructure textarea to div
 
 #### TODO:
 1. Validate login info
